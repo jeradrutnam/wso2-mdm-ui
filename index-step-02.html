@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Device Manager</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom-common.css" rel="stylesheet">    
+    <link href="css/custom-mobile.css" rel="stylesheet">
+
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+<div class="container col-lg-12 col-md-12 col-sm-12">
+
+<!-- header -->
+<header>
+<div class="row wr-global-header">
+	<div class="col-sm-12 app-logo"><img src="images/logo.png" /><h2 class="app-title">Mobile Device Manager Registration</h2>
+	</div>
+</div>
+</header>
+<!-- /header -->
+
+
+<!-- content/body -->
+<div class="container c-both">
+
+	<div class="row wr-wizard">
+		<div class="col-md-3 col-xs-3">
+			<div class="itm-wiz"><div class="wiz-no">1</div><div class="wiz-lbl hidden-xs"><span>Download and Install Agent</span></div></div>
+			<br class="c-both" />
+		</div>
+		<div class="col-md-3 col-xs-3">
+			<div class="itm-wiz itm-wiz-current"><div class="wiz-no">2</div><div class="wiz-lbl hidden-xs"><span>Download the Root Certificate</span></div></div>
+			<br class="c-both" />
+		</div>
+		<div class="col-md-3 col-xs-3">
+			<div class="itm-wiz"><div class="wiz-no">3</div><div class="wiz-lbl hidden-xs"><span>Login to Mobile Device Manager</span></div></div>
+			<br class="c-both" />
+		</div>
+		<div class="col-md-3 col-xs-3">
+			<div class="itm-wiz"><div class="wiz-no">4</div><div class="wiz-lbl hidden-xs"><span>Complete MDM Registration</span></div></div>
+			<br class="c-both" />
+		</div>		
+	</div>
+	<div class="row">
+
+		<div class="container col-md-8 wr-text">
+			<div class="wr-head"><h2>Step 2. Download the Root Certificate</h2></div>
+			<p>The Root Certificate needs to be downloaded to your device before you can enroll to the Mobile Device Manager.</p>
+		</div>
+
+		<div class="container col-md-4">
+		</div>	
+
+	</div>
+
+	<div class="row">
+
+		<div class="container col-md-4 wr-buttons">
+			<a href="#" class="btn-download-agent">Download Root Certifcate</a>
+		</div>
+
+		<div class="container col-md-9">
+			
+		</div>	
+
+	</div>	
+
+</div>
+<!-- /content/body -->
+
+</div>
+    
+
+
+
+
+<!-- 
+<footer class="footer">
+        <p>&copy; 2014 WSO2 Inc. All Rights Reserved</p>
+</footer>
+-->
+
+
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+
+<script type="text/javascript">
+
+$( document ).ready(function() {
+
+    $('[data-toggle="tooltip"]').tooltip();   
+
+    $("[data-toggle=popover]").popover();
+
+    $(".ctrl-asset-type-switcher").popover({
+        html : true, 
+        content: function() {
+          return $('#content-asset-types').html();
+        }
+    });
+
+    $(".ctrl-filter-type-switcher").popover({
+        html : true, 
+        content: function() {
+          return $('#content-filter-types').html();
+        }
+    });    
+
+	$('#nav').affix({
+	      offset: {
+	        top: $('header').height()
+	      }
+	});	 
+}); 
+
+</script>
+
+</body>
+</html>

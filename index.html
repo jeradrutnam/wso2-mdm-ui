@@ -1,0 +1,423 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Device Manager</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom-common.css" rel="stylesheet">    
+    <link href="css/custom-desktop.css" rel="stylesheet">
+    <link href="css/custom-theme.css" rel="stylesheet">
+
+	<!--[if lt IE 9]>=================================================================================================================================i
+	<script src="js/html5shiv.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+<div class="container col-lg-12 col-md-12 col-sm-12">
+
+<!-- header -->
+<header>
+<div class="row wr-global-header">
+	<div class="col-sm-8 app-logo"><img src="images/logo.png" /><h2 class="app-title">Mobile Device Manager</h2>
+	</div>
+	<div class="col-sm-4 wr-auth-container">
+		<div class="wr-auth pull-right">
+			<a href="#" data-toggle="dropdown" class="">
+				<div class="auth-img">
+					<span>Dhanuka</span><img src="images/icons/ico-user.png" />
+				</div>
+			</a>
+			<div class="dropdown-menu">
+				<div class="cu-arrow"></div>
+				<div class="dropdown-menu-content">
+					<a class="filter-item">Logout</a>
+				</div>
+			</div>			
+		</div>
+	</div>
+</div>
+</header>
+<!-- /header -->
+
+<!-- secondary header - app bar -->
+<div id="nav" class="row wr-app-bar">
+	<div class="col-md-9 wr-action-container">
+
+		<div class="wr-action-btn-bar">
+			<a href="#" class="cu-btn btn-add-new">Enroll a Device</a>
+			<a href="#" class="cu-btn btn-prev">Go Back</a>
+		</div>
+	</div>
+</div>
+<!-- secondary header - app bar -->
+
+
+<!-- content/body -->
+<div class="row wr-operations-board">
+	<div class="col-lg-12 wr-secondary-bar">
+		<div class="col-lg-8 col-md-9 col-sm-6 wr-filters">
+			
+
+			<!-- asset filter -->
+			<div class="wr-asset-type-switcher">
+
+			    <a href="javascript:void(0);" class="ctrl-asset-type-switcher"><span class="btn-asset"></span></a>
+
+			    <div class="popover menu fade bottom in">
+			        <div class="arrow"></div>
+			        <div class="popover-content">
+			            <div class="title">Select type of your device</div>
+			                <div id="asset-selected"></div>
+			                <div id="asset-select">
+			                    <ul>
+			                        <li>Mobile</li>
+			                        <ul>
+			                            <li>Android</li>
+			                            <ul>
+			                                <li>ICS</li>
+			                                <ul>
+			                                    <li>3.0</li>
+			                                    <li>3.0.1</li>
+			                                </ul>
+			                           			<li>JB</li>
+			                            		<li>KK</li>
+			                            	<ul>
+			                                	<li>4.0</li>
+			                                	<li>4.4</li>
+			                            	</ul>
+			                        	</ul>
+			                        	<li>iOS</li>
+			                        	<li>Windows</li>
+			                    	</ul>
+			                        <li>Computer</li>
+			                        <ul>
+			                            <li>Desktop</li>
+			                            <li>Laptop</li>
+			                        </ul>
+			                        <li>IoT</li>
+			                    </ul>
+			                </div>
+			            </div>
+			        </div>
+			</div>
+
+			<div class="wr-search">
+			   <div>
+			        <div class="wr-search-tags"></div>
+			        <input type="text" class="" placeholder="Search devices ..." />
+			        <a href="#" class="btn-search"><span class="glyphicon glyphicon-search"></span></a>
+			   </div>
+			</div>
+			<!-- /asset filter -->
+
+
+		</div>
+		<div class="col-lg-4 col-md-3 col-sm-6 wr-filters wr-filters-right">
+
+			<div class="wr-filter-sort pull-right">
+					<a href="#" class="btn-select-devices">Select All Devices</a>
+					<a href="#" class="ico-filter ctrl-filter-grid"><img src="images/icons/ico-grid.png" /></a>
+					<a href="#" class="ico-filter ctrl-filter-list"><img src="images/icons/ico-list.png" /></a>
+					<span class="wr-filter-type-switcher"><a href="#" class="ico-filter ctrl-filter-type-switcher" data-placement="bottom" data-trigger="focus"><img src="images/icons/ico-sort.png" /></a></span>
+			</div>
+		</div>	
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		
+
+		<!-- content -->
+		<div class="container col-md-12 col-centered wr-content">
+
+			<!-- opearations container -->
+			<div class="wr-operations">
+				<a href="#"><img src="images/icons/ico-lock.png" /><span>Device Lock</span></a>
+				<a href="#"><img src="images/icons/ico-ring.png" /><span>Ring</span></a>
+				<a href="#"><img src="images/icons/ico-message.png" /><span>Message</span></a>
+				<a href="#"><img src="images/icons/ico-map.png" /><span>Locate</span></a>
+				<a href="#"><img src="images/icons/ico-wipe.png" /><span>Wipe</span></a>
+				<a href="#"><img src="images/icons/ico-camera.png" /><span>Camera</span></a>
+				<a href="#"><img src="images/icons/ico-wifi.png" /><span>Wi-Fi</span></a>
+				<a href="#"><img src="images/icons/ico-map.png" /><span>Locate</span></a>
+				<a href="#"><img src="images/icons/ico-wipe.png" /><span>Wipe</span></a>	
+				<a href="#"><img src="images/icons/ico-message.png" /><span>Message</span></a>
+				<br class="c-both" />
+			</div>
+			<!-- /opearations container -->
+
+
+
+			<!-- form content placeholder -->
+			<div class="ast-container">
+
+				<div class="ctrl-wr-asset">
+					<div class="itm-select"><input type="checkbox" /></div>
+					<div class="itm-ast">
+						<div class="ast-img"><img src="images/app2.png" /></div>
+						<div class="ast-desc">
+							<h3 class="ast-name">mymobile</h3>
+							<span class="ast-auth">navinda</span>
+							<span class="ast-ver">Android-KitKat</span>
+							<span class="ast-published">Samsung Galaxy S5</span>
+						</div>
+						<br class="c-both" />
+					</div><br class="c-both" />
+				</div>
+
+				<div class="ctrl-wr-asset selected">
+					<div class="itm-select"><input type="checkbox" checked="checked" /></div>
+					<div class="itm-ast">
+						<div class="ast-img"><img src="images/app8.png" /></div>
+						<div class="ast-desc">
+							<h3 class="ast-name">Ruwan's Phone</h3>
+							<span class="ast-auth">navinda</span>
+							<span class="ast-ver">Android-JellyBean</span>
+							<span class="ast-published">Samsung Galaxy S4</span>
+						</div>
+						<br class="c-both" />
+					</div><br class="c-both" />
+				</div>		
+
+				<div class="ctrl-wr-asset">
+					<div class="itm-select"><input type="checkbox" /></div>
+					<div class="itm-ast">
+						<div class="ast-img"><img src="images/app7.png" /></div>
+						<div class="ast-desc">
+							<h3 class="ast-name">Developer's Phone</h3>
+							<span class="ast-auth">navinda</span>
+							<span class="ast-ver">Windows Phone 8.1</span>
+							<span class="ast-published">Nokia Lumia 925</span>
+						</div>
+						<br class="c-both" />
+					</div><br class="c-both" />
+				</div>	
+
+				<div class="ctrl-wr-asset selected">
+					<div class="itm-select"><input type="checkbox" checked="checked" /></div>
+					<div class="itm-ast">
+						<div class="ast-img"><img src="images/app4.png" /></div>
+						<div class="ast-desc">
+							<h3 class="ast-name">Brother's iPad</h3>
+							<span class="ast-auth">navinda</span>
+							<span class="ast-ver">iOS6</span>
+							<span class="ast-published">Apple iPad3</span>
+						</div>
+						<br class="c-both" />
+					</div><br class="c-both" />
+				</div>	
+
+				<div class="ctrl-wr-asset selected">
+					<div class="itm-select"><input type="checkbox" checked="checked" /></div>
+					<div class="itm-ast">
+						<div class="ast-img"><img src="images/app5.png" /></div>
+						<div class="ast-desc">
+							<h3 class="ast-name">MySurface</h3>
+							<span class="ast-auth">admin</span>
+							<span class="ast-ver">Windows 8.1</span>
+							<span class="ast-published">Windows Surface Pro3</span>
+						</div>
+						<br class="c-both" />
+					</div><br class="c-both" />
+				</div>	
+
+				<div class="ctrl-wr-asset">
+					<div class="itm-select"><input type="checkbox" /></div>
+					<div class="itm-ast">
+						<div class="ast-img"><img src="images/app1.png" /></div>
+						<div class="ast-desc">
+							<h3 class="ast-name">Developer's Phone</h3>
+							<span class="ast-auth">navinda</span>
+							<span class="ast-ver">Windows Phone 8.1</span>
+							<span class="ast-published">Nokia Lumia 925</span>
+						</div>
+						<br class="c-both" />
+					</div><br class="c-both" />
+				</div>	
+
+				<div class="ctrl-wr-asset">
+					<div class="itm-select"><input type="checkbox" /></div>
+					<div class="itm-ast">
+						<div class="ast-img"><img src="images/app3.png" /></div>
+						<div class="ast-desc">
+							<h3 class="ast-name">Ruwan's Phone</h3>
+							<span class="ast-auth">navinda</span>
+							<span class="ast-ver">Android-JellyBean</span>
+							<span class="ast-published">Samsung Galaxy S4</span>
+						</div>
+						<br class="c-both" />
+					</div><br class="c-both" />
+				</div>		
+
+				<div class="ctrl-wr-asset">
+					<div class="itm-select"><input type="checkbox" /></div>
+					<div class="itm-ast">
+						<div class="ast-img"><img src="images/app1.png" /></div>
+						<div class="ast-desc">
+							<h3 class="ast-name">Developer's Phone</h3>
+							<span class="ast-auth">navinda</span>
+							<span class="ast-ver">Windows Phone 8.1</span>
+							<span class="ast-published">Nokia Lumia 925</span>
+						</div>
+						<br class="c-both" />
+					</div><br class="c-both" />
+				</div>	
+
+				<div class="ctrl-wr-asset">
+					<div class="itm-select"><input type="checkbox" /></div>
+					<div class="itm-ast">
+						<div class="ast-img"><img src="images/app8.png" /></div>
+						<div class="ast-desc">
+							<h3 class="ast-name">Brother's iPad</h3>
+							<span class="ast-auth">navinda</span>
+							<span class="ast-ver">iOS6</span>
+							<span class="ast-published">Apple iPad3</span>
+						</div>
+						<br class="c-both" />
+					</div><br class="c-both" />
+				</div>	
+
+				<div class="ctrl-wr-asset">
+					<div class="itm-select"><input type="checkbox" /></div>
+					<div class="itm-ast">
+						<div class="ast-img"><img src="images/app5.png" /></div>
+						<div class="ast-desc">
+							<h3 class="ast-name">MySurface</h3>
+							<span class="ast-auth">admin</span>
+							<span class="ast-ver">Windows 8.1</span>
+							<span class="ast-published">Windows Surface Pro3</span>
+						</div>
+						<br class="c-both" />
+					</div><br class="c-both" />
+				</div>	
+
+				<div class="ctrl-wr-asset">
+					<div class="itm-select"><input type="checkbox" /></div>
+					<div class="itm-ast">
+						<div class="ast-img"><img src="images/app1.png" /></div>
+						<div class="ast-desc">
+							<h3 class="ast-name">Developer's Phone</h3>
+							<span class="ast-auth">navinda</span>
+							<span class="ast-ver">Windows Phone 8.1</span>
+							<span class="ast-published">Nokia Lumia 925</span>
+						</div>
+						<br class="c-both" />
+					</div><br class="c-both" />	
+				</div>			
+
+				<div class="ctrl-wr-asset">
+					<div class="itm-select"><input type="checkbox" /></div>
+					<div class="itm-ast">
+						<div class="ast-img"><img src="images/app4.png" /></div>
+						<div class="ast-desc">
+							<h3 class="ast-name">Brother's iPad</h3>
+							<span class="ast-auth">navinda</span>
+							<span class="ast-ver">iOS6</span>
+							<span class="ast-published">Apple iPad3</span>
+						</div>
+						<br class="c-both" />
+					</div><br class="c-both" />
+				</div>
+
+				<div class="ctrl-wr-asset">
+					<div class="itm-select"><input type="checkbox" /></div>
+					<div class="itm-ast">
+						<div class="ast-img"><img src="images/app4.png" /></div>
+						<div class="ast-desc">
+							<h3 class="ast-name">Brother's iPad</h3>
+							<span class="ast-auth">navinda</span>
+							<span class="ast-ver">iOS6</span>
+							<span class="ast-published">Apple iPad3</span>
+						</div>
+						<br class="c-both" />
+					</div><br class="c-both" />
+				</div>	
+
+				<div class="ctrl-wr-asset">
+					<div class="itm-select"><input type="checkbox" /></div>
+					<div class="itm-ast">
+						<div class="ast-img"><img src="images/app5.png" /></div>
+						<div class="ast-desc">
+							<h3 class="ast-name">MySurface</h3>
+							<span class="ast-auth">admin</span>
+							<span class="ast-ver">Windows 8.1</span>
+							<span class="ast-published">Windows Surface Pro3</span>
+						</div>
+						<br class="c-both" />
+					</div><br class="c-both" />
+				</div>						
+
+				<br class="c-both" />			
+
+			</div>			
+			
+
+		</div>
+		<!-- /content -->
+
+
+	</div>
+</div>
+<!-- /content/body -->
+
+</div>
+    
+    
+          
+            
+
+
+<div id="content-filter-types" style="display: none">
+    <div class="sort-title">Sort By</div>
+    <div class="sort-options">
+    	<a href="#">Device Name<span class="ico-sort-asc"></span></a>
+    	<a href="#">OS</a>
+    	<a href="#">User</a>
+    	<a href="#">Model</a>   
+    </div>
+</div>  
+
+
+
+<!-- 
+<footer class="footer">
+        <p>&copy; 2014 WSO2 Inc. All Rights Reserved</p>
+</footer>
+-->
+
+
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/assetmenu.js"></script>
+
+
+<script type="text/javascript">
+
+$( document ).ready(function() {
+
+    $('[data-toggle="tooltip"]').tooltip();   
+
+    $("[data-toggle=popover]").popover();
+
+    $(".ctrl-filter-type-switcher").popover({
+        html : true, 
+        content: function() {
+          return $('#content-filter-types').html();
+        }
+    });    
+
+	$('#nav').affix({
+	      offset: {
+	        top: $('header').height()
+	      }
+	});	 
+}); 
+
+</script>
+
+</body>
+</html>
