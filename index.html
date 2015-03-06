@@ -1,3 +1,21 @@
+<!--
+* Copyright (c) 2015, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+*
+* WSO2 Inc. licenses this file to you under the Apache License,
+* Version 2.0 (the "License"); you may not use this file except
+* in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied. See the License for the
+* specific language governing permissions and limitations
+* under the License.
+-->
+
 <!doctype html>
 <html>
 <head>
@@ -27,9 +45,10 @@
 <!-- header -->
 <header>
 <div class="row wr-global-header">
-	<div class="col-sm-8 app-logo"><img src="images/logo.png" /><h2 class="app-title">Mobile Device Manager</h2>
+	<div class="col-xs-8 col-sm-6 col-lg-8 app-logo">
+        <img src="images/logo.png" /><h2 class="app-title">Mobile Device Manager</h2>
 	</div>
-	<div class="col-sm-4 wr-auth-container">
+	<div class="col-xs-4 col-sm-6 col-lg-4 wr-auth-container">
 		<div class="wr-auth pull-right">
 			<a href="#" data-toggle="dropdown" class="">
 				<div class="auth-img">
@@ -51,7 +70,6 @@
 <!-- secondary header - app bar -->
 <div id="nav" class="row wr-app-bar">
 	<div class="col-md-9 wr-action-container">
-
 		<div class="wr-action-btn-bar">
 			<a href="#" class="cu-btn btn-add-new">Enroll a Device</a>
 			<a href="#" class="cu-btn btn-prev">Go Back</a>
@@ -63,71 +81,65 @@
 <!-- content/body -->
 <div class="row wr-operations-board">
 	<div class="col-lg-12 wr-secondary-bar">
-		<div class="col-lg-8 col-md-9 col-sm-6 wr-filters">
 
-			<!-- asset filter -->
-			<div class="wr-asset-type-switcher">
-
-			    <a href="javascript:void(0)" class="ctrl-asset-type-switcher"><span class="btn-asset"></span></a>
-
-			    <div class="popover menu fade bottom in">
-			        <div class="arrow"></div>
-			        <div class="popover-content">
-			            <div class="title">Select type of your device</div>
-			                <div id="asset-selected"></div>
-			                <div id="asset-select">
-			                    <ul>
-			                        <li>Mobile</li>
-			                        <ul>
-			                            <li>Android</li>
-			                            <ul>
-			                                <li>ICS</li>
-			                                <ul>
-			                                    <li>3.0</li>
-			                                    <li>3.0.1</li>
-			                                </ul>
-			                           			<li>JB</li>
-			                            		<li>KK</li>
-			                            	<ul>
-			                                	<li>4.0</li>
-			                                	<li>4.4</li>
-			                            	</ul>
-			                        	</ul>
-			                        	<li>iOS</li>
-			                        	<li>Windows</li>
-			                    	</ul>
-			                        <li>Computer</li>
-			                        <ul>
-			                            <li>Desktop</li>
-			                            <li>Laptop</li>
-			                        </ul>
-			                        <li>IoT</li>
-			                    </ul>
-			                </div>
-			            </div>
-			        </div>
-			</div>
-
-			<div class="wr-search">
-			   <div>
-			        <div class="wr-search-tags"></div>
-			        <input type="text" class="" placeholder="Search devices ..." />
-			        <a href="#" class="btn-search"><span class="glyphicon glyphicon-search"></span></a>
-			   </div>
-			</div>
+		<div class="wr-filters col-xs-12 col-sm-7 col-md-8">
+            <!-- asset filter -->
+            <div class="wr-search">
+                <div class="wr-asset-type-switcher">
+                    <a href="javascript:void(0)" class="ctrl-asset-type-switcher"><span class="btn-asset"></span></a>
+                    <div class="popover menu fade bottom in">
+                        <div class="arrow"></div>
+                        <div class="popover-content">
+                            <div class="title">Select type of your device</div>
+                            <div id="asset-selected"></div>
+                            <div id="asset-select">
+                                <ul>
+                                    <li>Mobile</li>
+                                    <ul>
+                                        <li>Android</li>
+                                        <ul>
+                                            <li>ICS</li>
+                                            <ul>
+                                                <li>3.0</li>
+                                                <li>3.0.1</li>
+                                            </ul>
+                                                <li>JB</li>
+                                                <li>KK</li>
+                                            <ul>
+                                                <li>4.0</li>
+                                                <li>4.4</li>
+                                            </ul>
+                                        </ul>
+                                        <li>iOS</li>
+                                        <li>Windows</li>
+                                    </ul>
+                                    <li>Computer</li>
+                                    <ul>
+                                        <li>Desktop</li>
+                                        <li>Laptop</li>
+                                    </ul>
+                                    <li>IoT</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wr-search-tags"></div>
+                <input type="text" class="" placeholder="Search devices ..." />
+                <a href="#" class="btn-search"><span class="glyphicon glyphicon-search"></span></a>
+            </div>
 			<!-- /asset filter -->
-
-
 		</div>
-		<div class="col-lg-4 col-md-3 col-sm-6 wr-filters wr-filters-right">
 
+		<div class="wr-filters col-xs-12 col-sm-5 col-md-4 wr-filters-right">
 			<div class="wr-filter-sort pull-right">
-					<a href="#" class="btn-select-devices">Select All Devices</a>
-					<a href="#" class="ico-filter ctrl-filter-grid"><img src="images/icons/ico-grid.png" /></a>
-					<a href="#" class="ico-filter ctrl-filter-list"><img src="images/icons/ico-list.png" /></a>
-					<span class="wr-filter-type-switcher"><a href="#" class="ico-filter ctrl-filter-type-switcher" data-placement="bottom" data-trigger="focus"><img src="images/icons/ico-sort.png" /></a></span>
+                <a href="#" class="btn-select-devices">Select All Devices</a>
+                <a href="#" class="ico-filter ctrl-filter-grid"><img src="images/icons/ico-grid.png" /></a>
+                <a href="#" class="ico-filter ctrl-filter-list"><img src="images/icons/ico-list.png" /></a>
+                <span class="wr-filter-type-switcher"><a href="#" class="ico-filter ctrl-filter-type-switcher" data-placement="bottom" data-trigger="focus"><img src="images/icons/ico-sort.png" /></a></span>
 			</div>
-		</div>	
+		</div>
+
 	</div>
 </div>
 <div class="row">
@@ -135,7 +147,7 @@
 		
 
 		<!-- content -->
-		<div class="container col-md-12 col-centered wr-content">
+		<div class="container-fluid col-centered wr-content">
 
 			<!-- operations container -->
 			<div class="wr-operations">
@@ -207,7 +219,6 @@
 			<!-- /operations container -->
 
 
-
 			<!-- form content placeholder -->
 			<div class="ast-container">
 
@@ -216,13 +227,15 @@
 					<div class="itm-ast">
 						<div class="ast-img"><img src="images/app2.png" /></div>
 						<div class="ast-desc">
-							<h3 class="ast-name">mymobile</h3>
-							<span class="ast-auth">navinda</span>
-							<span class="ast-ver">Android-KitKat</span>
-							<span class="ast-published">Samsung Galaxy S5</span>
+                            <div class="ast-title">
+                                <h3 class="ast-name" title="mymobile">mymobile</h3>
+                                <span class="ast-auth" title="navinda">navinda</span>
+                            </div>
+							<span class="ast-ver" title="Android-KitKat">Android-KitKat</span>
+							<span class="ast-published" title="Samsung Galaxy S5">Samsung Galaxy S5</span>
 						</div>
 						<br class="c-both" />
-					</div><br class="c-both" />
+					</div>
 				</div>
 
 				<div class="ctrl-wr-asset selected">
@@ -230,153 +243,159 @@
 					<div class="itm-ast">
 						<div class="ast-img"><img src="images/app8.png" /></div>
 						<div class="ast-desc">
-							<h3 class="ast-name">Ruwan's Phone</h3>
-							<span class="ast-auth">navinda</span>
+                            <div class="ast-title">
+                                <h3 class="ast-name">Ruwan's Phone</h3>
+                                <span class="ast-auth">navinda</span>
+                            </div>
 							<span class="ast-ver">Android-JellyBean</span>
 							<span class="ast-published">Samsung Galaxy S4</span>
 						</div>
 						<br class="c-both" />
-					</div><br class="c-both" />
-				</div>		
+					</div>
+				</div>
 
 				<div class="ctrl-wr-asset">
 					<div class="itm-select"><input type="checkbox" /></div>
 					<div class="itm-ast">
 						<div class="ast-img"><img src="images/app7.png" /></div>
 						<div class="ast-desc">
-							<h3 class="ast-name">Developer's Phone</h3>
-							<span class="ast-auth">navinda</span>
+                            <div class="ast-title">
+                                <h3 class="ast-name">Developer's Phone</h3>
+                                <span class="ast-auth">navinda</span>
+                            </div>
 							<span class="ast-ver">Windows Phone 8.1</span>
 							<span class="ast-published">Nokia Lumia 925</span>
 						</div>
 						<br class="c-both" />
-					</div><br class="c-both" />
-				</div>	
+					</div>
+				</div>
 
 				<div class="ctrl-wr-asset selected">
 					<div class="itm-select"><input type="checkbox" checked="checked" /></div>
 					<div class="itm-ast">
 						<div class="ast-img"><img src="images/app4.png" /></div>
 						<div class="ast-desc">
-							<h3 class="ast-name">Brother's iPad</h3>
-							<span class="ast-auth">navinda</span>
+                            <div class="ast-title">
+                                <h3 class="ast-name">Brother's iPad</h3>
+                                <span class="ast-auth">navinda</span>
+                            </div>
 							<span class="ast-ver">iOS6</span>
 							<span class="ast-published">Apple iPad3</span>
 						</div>
 						<br class="c-both" />
-					</div><br class="c-both" />
-				</div>	
+					</div>
+				</div>
 
 				<div class="ctrl-wr-asset selected">
 					<div class="itm-select"><input type="checkbox" checked="checked" /></div>
 					<div class="itm-ast">
 						<div class="ast-img"><img src="images/app5.png" /></div>
 						<div class="ast-desc">
-							<h3 class="ast-name">MySurface</h3>
-							<span class="ast-auth">admin</span>
+                            <div class="ast-title">
+                                <h3 class="ast-name">MySurface</h3>
+                                <span class="ast-auth">admin</span>
+                            </div>
 							<span class="ast-ver">Windows 8.1</span>
 							<span class="ast-published">Windows Surface Pro3</span>
 						</div>
 						<br class="c-both" />
-					</div><br class="c-both" />
-				</div>	
+					</div>
+				</div>
 
 				<div class="ctrl-wr-asset">
 					<div class="itm-select"><input type="checkbox" /></div>
 					<div class="itm-ast">
 						<div class="ast-img"><img src="images/app1.png" /></div>
 						<div class="ast-desc">
-							<h3 class="ast-name">Developer's Phone</h3>
-							<span class="ast-auth">navinda</span>
+                            <div class="ast-title">
+                                <h3 class="ast-name">Developer's Phone</h3>
+                                <span class="ast-auth">navinda</span>
+                            </div>
 							<span class="ast-ver">Windows Phone 8.1</span>
 							<span class="ast-published">Nokia Lumia 925</span>
 						</div>
 						<br class="c-both" />
-					</div><br class="c-both" />
-				</div>	
+					</div>
+				</div>
 
 				<div class="ctrl-wr-asset">
 					<div class="itm-select"><input type="checkbox" /></div>
 					<div class="itm-ast">
 						<div class="ast-img"><img src="images/app3.png" /></div>
 						<div class="ast-desc">
-							<h3 class="ast-name">Ruwan's Phone</h3>
-							<span class="ast-auth">navinda</span>
+                            <div class="ast-title">
+                                <h3 class="ast-name">Ruwan's Phone</h3>
+                                <span class="ast-auth">navinda</span>
+                            </div>
 							<span class="ast-ver">Android-JellyBean</span>
 							<span class="ast-published">Samsung Galaxy S4</span>
 						</div>
 						<br class="c-both" />
-					</div><br class="c-both" />
-				</div>		
+					</div>
+				</div>
 
 				<div class="ctrl-wr-asset">
 					<div class="itm-select"><input type="checkbox" /></div>
 					<div class="itm-ast">
 						<div class="ast-img"><img src="images/app1.png" /></div>
 						<div class="ast-desc">
-							<h3 class="ast-name">Developer's Phone</h3>
-							<span class="ast-auth">navinda</span>
+                            <div class="ast-title">
+                                <h3 class="ast-name">Developer's Phone</h3>
+                                <span class="ast-auth">navinda</span>
+                            </div>
 							<span class="ast-ver">Windows Phone 8.1</span>
 							<span class="ast-published">Nokia Lumia 925</span>
 						</div>
 						<br class="c-both" />
-					</div><br class="c-both" />
-				</div>	
+					</div>
+				</div>
 
 				<div class="ctrl-wr-asset">
 					<div class="itm-select"><input type="checkbox" /></div>
 					<div class="itm-ast">
 						<div class="ast-img"><img src="images/app8.png" /></div>
 						<div class="ast-desc">
-							<h3 class="ast-name">Brother's iPad</h3>
-							<span class="ast-auth">navinda</span>
+                            <div class="ast-title">
+                                <h3 class="ast-name">Brother's iPad</h3>
+                                <span class="ast-auth">navinda</span>
+                            </div>
 							<span class="ast-ver">iOS6</span>
 							<span class="ast-published">Apple iPad3</span>
 						</div>
 						<br class="c-both" />
-					</div><br class="c-both" />
-				</div>	
+					</div>
+				</div>
 
 				<div class="ctrl-wr-asset">
 					<div class="itm-select"><input type="checkbox" /></div>
 					<div class="itm-ast">
 						<div class="ast-img"><img src="images/app5.png" /></div>
 						<div class="ast-desc">
-							<h3 class="ast-name">MySurface</h3>
-							<span class="ast-auth">admin</span>
+                            <div class="ast-title">
+                                <h3 class="ast-name">MySurface</h3>
+                                <span class="ast-auth">admin</span>
+                            </div>
 							<span class="ast-ver">Windows 8.1</span>
 							<span class="ast-published">Windows Surface Pro3</span>
 						</div>
 						<br class="c-both" />
-					</div><br class="c-both" />
-				</div>	
+					</div>
+				</div>
 
 				<div class="ctrl-wr-asset">
 					<div class="itm-select"><input type="checkbox" /></div>
 					<div class="itm-ast">
 						<div class="ast-img"><img src="images/app1.png" /></div>
 						<div class="ast-desc">
-							<h3 class="ast-name">Developer's Phone</h3>
-							<span class="ast-auth">navinda</span>
+                            <div class="ast-title">
+                                <h3 class="ast-name">Developer's Phone</h3>
+                                <span class="ast-auth">navinda</span>
+                            </div>
 							<span class="ast-ver">Windows Phone 8.1</span>
 							<span class="ast-published">Nokia Lumia 925</span>
 						</div>
 						<br class="c-both" />
-					</div><br class="c-both" />	
-				</div>			
-
-				<div class="ctrl-wr-asset">
-					<div class="itm-select"><input type="checkbox" /></div>
-					<div class="itm-ast">
-						<div class="ast-img"><img src="images/app4.png" /></div>
-						<div class="ast-desc">
-							<h3 class="ast-name">Brother's iPad</h3>
-							<span class="ast-auth">navinda</span>
-							<span class="ast-ver">iOS6</span>
-							<span class="ast-published">Apple iPad3</span>
-						</div>
-						<br class="c-both" />
-					</div><br class="c-both" />
+					</div>
 				</div>
 
 				<div class="ctrl-wr-asset">
@@ -384,30 +403,50 @@
 					<div class="itm-ast">
 						<div class="ast-img"><img src="images/app4.png" /></div>
 						<div class="ast-desc">
-							<h3 class="ast-name">Brother's iPad</h3>
-							<span class="ast-auth">navinda</span>
+                            <div class="ast-title">
+                                <h3 class="ast-name">Brother's iPad</h3>
+                                <span class="ast-auth">navinda</span>
+                            </div>
 							<span class="ast-ver">iOS6</span>
 							<span class="ast-published">Apple iPad3</span>
 						</div>
 						<br class="c-both" />
-					</div><br class="c-both" />
-				</div>	
+					</div>
+				</div>
+
+				<div class="ctrl-wr-asset">
+					<div class="itm-select"><input type="checkbox" /></div>
+					<div class="itm-ast">
+						<div class="ast-img"><img src="images/app4.png" /></div>
+						<div class="ast-desc">
+                            <div class="ast-title">
+                                <h3 class="ast-name">Brother's iPad</h3>
+                                <span class="ast-auth">navinda</span>
+                            </div>
+							<span class="ast-ver">iOS6</span>
+							<span class="ast-published">Apple iPad3</span>
+						</div>
+						<br class="c-both" />
+					</div>
+				</div>
 
 				<div class="ctrl-wr-asset">
 					<div class="itm-select"><input type="checkbox" /></div>
 					<div class="itm-ast">
 						<div class="ast-img"><img src="images/app5.png" /></div>
 						<div class="ast-desc">
-							<h3 class="ast-name">MySurface</h3>
-							<span class="ast-auth">admin</span>
+                            <div class="ast-title">
+							    <h3 class="ast-name">MySurface</h3>
+							    <span class="ast-auth">admin</span>
+                            </div>
 							<span class="ast-ver">Windows 8.1</span>
 							<span class="ast-published">Windows Surface Pro3</span>
 						</div>
 						<br class="c-both" />
-					</div><br class="c-both" />
-				</div>						
+					</div>
+				</div>
 
-				<br class="c-both" />			
+				<br class="c-both" />
 
 			</div>			
 			

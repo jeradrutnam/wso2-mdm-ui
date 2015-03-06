@@ -32,15 +32,25 @@ function operationSelect(selection){
     showPopup();
 }
 
+/*
+ * On operation click function.
+ * @param operation: Selected operation
+ */
+function runOperation(operation){
+    console.log(operation);
+}
+
+/*
+ * show popup function.
+ */
 function showPopup() {
     $(modelPopup).show();
 }
 
+/*
+ * hide popup function.
+ */
 function hidePopup() {
     $(modelPopupContent).html('');
     $(modelPopup).hide();
-}
-
-function runOperation(operation){
-    console.log(operation);
 }
