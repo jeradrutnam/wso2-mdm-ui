@@ -9,13 +9,18 @@
     <link href="css/custom-desktop.css" rel="stylesheet">
     <link href="css/custom-theme.css" rel="stylesheet">
 
-	<!--[if lt IE 9]>=================================================================================================================================i
+	<!--[if lt IE 9]>
 	<script src="js/html5shiv.min.js"></script>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 </head>
 
 <body>
+
+<div class="wr-modelpopup">
+    <div class="modelpopup-content"><!-- dynamic content --></div>
+    <div class="modelpopup-bg"></div>
+</div>
 
 <div class="container col-lg-12 col-md-12 col-sm-12">
 
@@ -55,17 +60,15 @@
 </div>
 <!-- secondary header - app bar -->
 
-
 <!-- content/body -->
 <div class="row wr-operations-board">
 	<div class="col-lg-12 wr-secondary-bar">
 		<div class="col-lg-8 col-md-9 col-sm-6 wr-filters">
-			
 
 			<!-- asset filter -->
 			<div class="wr-asset-type-switcher">
 
-			    <a href="javascript:void(0);" class="ctrl-asset-type-switcher"><span class="btn-asset"></span></a>
+			    <a href="javascript:void(0)" class="ctrl-asset-type-switcher"><span class="btn-asset"></span></a>
 
 			    <div class="popover menu fade bottom in">
 			        <div class="arrow"></div>
@@ -134,21 +137,74 @@
 		<!-- content -->
 		<div class="container col-md-12 col-centered wr-content">
 
-			<!-- opearations container -->
+			<!-- operations container -->
 			<div class="wr-operations">
-				<a href="#"><img src="images/icons/ico-lock.png" /><span>Device Lock</span></a>
-				<a href="#"><img src="images/icons/ico-ring.png" /><span>Ring</span></a>
-				<a href="#"><img src="images/icons/ico-message.png" /><span>Message</span></a>
-				<a href="#"><img src="images/icons/ico-map.png" /><span>Locate</span></a>
-				<a href="#"><img src="images/icons/ico-wipe.png" /><span>Wipe</span></a>
-				<a href="#"><img src="images/icons/ico-camera.png" /><span>Camera</span></a>
-				<a href="#"><img src="images/icons/ico-wifi.png" /><span>Wi-Fi</span></a>
-				<a href="#"><img src="images/icons/ico-map.png" /><span>Locate</span></a>
-				<a href="#"><img src="images/icons/ico-wipe.png" /><span>Wipe</span></a>	
-				<a href="#"><img src="images/icons/ico-message.png" /><span>Message</span></a>
+
+				<a href="javascript:operationSelect('devicelock')"><img src="images/icons/ico-lock.png" /><span>Device Lock</span></a>
+                <div class="operation" data-operation="devicelock">
+                    <div class="content">Are you sure you want to lock the selected devices ?</div>
+                    <div class="buttons">
+                        <a href="javascript:runOperation('lock')" class="btn-operations">Lock</a>
+                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
+                    </div>
+                </div>
+
+				<a href="javascript:operationSelect('ring')"><img src="images/icons/ico-ring.png" /><span>Ring</span></a>
+                <div class="operation" data-operation="ring">
+                    <div class="content">Please click ok to start ringing</div>
+                    <div class="buttons">
+                        <a href="javascript:runOperation('ring')" class="btn-operations">Ring</a>
+                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
+                    </div>
+                </div>
+
+				<a href="javascript:operationSelect('message')"><img src="images/icons/ico-message.png" /><span>Message</span></a>
+                <div class="operation" data-operation="message">
+                    <div class="content">
+                        <div>Type message</div>
+                        <div><textarea></textarea></div>
+                    </div>
+                    <div class="buttons">
+                        <a href="javascript:runOperation('msg-send')" class="btn-operations">Send</a>
+                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
+                    </div>
+                </div>
+
+				<a href="javascript:operationSelect('locate')"><img src="images/icons/ico-map.png" /><span>Locate</span></a>
+                <div class="operation" data-operation="locate">
+                    <div class="content">Locate</div>
+                    <div class="buttons">
+                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
+                    </div>
+                </div>
+
+				<a href="javascript:operationSelect('wipe')"><img src="images/icons/ico-wipe.png" /><span>Wipe</span></a>
+                <div class="operation" data-operation="wipe">
+                    <div class="content">Wipe</div>
+                    <div class="buttons">
+                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
+                    </div>
+                </div>
+
+				<a href="javascript:operationSelect('camera')"><img src="images/icons/ico-camera.png" /><span>Camera</span></a>
+                <div class="operation" data-operation="camera">
+                    <div class="content">Camera</div>
+                    <div class="buttons">
+                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
+                    </div>
+                </div>
+
+				<a href="javascript:operationSelect('wifi')"><img src="images/icons/ico-wifi.png" /><span>Wi-Fi</span></a>
+                <div class="operation" data-operation="wifi">
+                    <div class="content">Wi-Fi</div>
+                    <div class="buttons">
+                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
+                    </div>
+                </div>
+
 				<br class="c-both" />
 			</div>
-			<!-- /opearations container -->
+			<!-- /operations container -->
 
 
 
@@ -365,11 +421,6 @@
 <!-- /content/body -->
 
 </div>
-    
-    
-          
-            
-
 
 <div id="content-filter-types" style="display: none">
     <div class="sort-title">Sort By</div>
@@ -381,19 +432,16 @@
     </div>
 </div>  
 
-
-
 <!-- 
 <footer class="footer">
         <p>&copy; 2014 WSO2 Inc. All Rights Reserved</p>
 </footer>
 -->
 
-
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/assetmenu.js"></script>
-
+<script src="js/operationsmenu.js"></script>
 
 <script type="text/javascript">
 

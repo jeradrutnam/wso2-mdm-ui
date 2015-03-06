@@ -16,7 +16,9 @@
  * under the License.
  */
 
-/* Setting-up global variables */
+/*
+ * Setting-up global variables.
+ */
 var menuButton = '.ctrl-asset-type-switcher',
     menu = '.popover.menu',
     menuContainer = '#asset-select',
@@ -26,7 +28,9 @@ var menuButton = '.ctrl-asset-type-switcher',
     menuItemsID = 0,
     prevSelected = 0;
 
-/* DOM ready functions */
+/*
+ * DOM ready functions.
+ */
 $(document).ready(function(){
 
     /* Bind filter menu relationship on load */
@@ -43,22 +47,26 @@ $(document).ready(function(){
     });
 });
 
-/* Bind filter window hide function to the document */
+/*
+ * Bind filter window hide function to the document.
+ */
 $(document).bind('click', function(e) {
     if($(e.target).attr('rel') !== 'assetfilter') {
         $(menu).hide();
     }
 });
 
-/* On filter switch button click show filter option window */
+/*
+ * On filter switch button click show filter option window.
+ */
 $(menuButton).click(function(e){
     e.stopPropagation();
     $(menu).toggle();
 });
 
 /*
- * Update filter container
- * @param asset: Selected asset
+ * Update filter container.
+ * @param  asset: Selected asset
  */
 function containerUpdate(asset){
     var options = $(asset).next('ul').length ? $(asset).next('ul').html() : "";
@@ -81,8 +89,8 @@ function containerUpdate(asset){
 }
 
 /*
- * On asset click selecting filter
- * @param asset: Selected asset
+ * On asset click selecting filter.
+ * @param  asset: Selected asset
  */
 function selectAsset(asset){
     $(tagsContainer +' span').each(function(){
@@ -99,7 +107,9 @@ function selectAsset(asset){
     addTags(asset);
 }
 
-/* Adding asset filtering relationship menu child elements */
+/*
+ * Adding asset filtering relationship menu child elements.
+ */
 function addingIdentity(){
     $(menu).find('*').each(function(){
         $(this).attr('rel', 'assetfilter');
@@ -110,8 +120,8 @@ function addingIdentity(){
 }
 
 /*
- * Filter window go back function
- * @param backButton: Filter window back button
+ * Filter window go back function.
+ * @param  backButton: Filter window back button
  */
 function goBack(backButton){
     if($(backButton).prev('li').attr('level') == 1){
@@ -125,8 +135,8 @@ function goBack(backButton){
 }
 
 /*
- * Filter window reset function
- * @param backButton: Filter window reset button
+ * Filter window reset function.
+ * @param  backButton: Filter window reset button
  */
 function resetNav(reset){
     $('#goBack').remove();
@@ -136,16 +146,16 @@ function resetNav(reset){
 }
 
 /*
- * Find parent function
- * @param selection: Current asset parent search tag on search parent loop
+ * Find parent function.
+ * @param  selection: Current asset parent search tag on search parent loop
  */
 function getParent(selection){
     return $(menuContainer + ' [asset=' + $(selection).attr('asset') + ']').closest('ul').prev('li');
 }
 
 /*
- * On filter select ad asset & its parents to search field
- * @param tag: Selected filter search tag
+ * On filter select ad asset & its parents to search field.
+ * @param  tag: Selected filter search tag
  */
 function addTags(tag){
     var level = $(tag).attr('level'),
@@ -168,8 +178,8 @@ function addTags(tag){
 }
 
 /*
- * On filter tags click remove asset & its child from search field
- * @param tag: Selected filter search tag
+ * On filter tags click remove asset & its child from search field.
+ * @param  tag: Selected filter search tag
  */
 function removeTags(tag){
     $(tag).nextAll('span').andSelf().each(function(){
