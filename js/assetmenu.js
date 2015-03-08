@@ -187,15 +187,3 @@ function removeTags(tag){
         $(this).remove();
     });
 }
-
-var filterInput = $('.wr-search input'),
-    fontSize = parseInt( filterInput.css('font-size') ),
-    minWidth = parseInt( filterInput.css('min-width') ),
-    maxWidth = $('.wr-search').width();
-
-filterInput.bind('keydown', function(e){
-    var newVal = (this.value.length * fontSize) / 2;
-    if( newVal  > minWidth && newVal <= maxWidth ) {
-        this.style.width = newVal + 'px';
-    }
-});
