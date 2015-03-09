@@ -110,7 +110,7 @@ a.ast-type-item:hover {
 }
 
 .wr-operations-board:hover {
-	background:#f0f0f0;	
+	background:#f0f0f0;
 }
 
 
@@ -129,7 +129,7 @@ a.ast-type-item:hover {
 	font-size:12px;
 	text-decoration: none;
 	margin-right:10px;
-	color:#6b94f1;
+    color:#6b94f1;
 	min-width:70px;
 	border:1px solid #fafafa;
 	background:#fafafa;
@@ -139,7 +139,7 @@ a.ast-type-item:hover {
 }
 
 .wr-operations a:hover {
-	background:#444;
+	background:#eaf0f1;
 }
 
 .wr-operations span {
