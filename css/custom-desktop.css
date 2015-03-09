@@ -20,11 +20,15 @@
     padding-left: inherit;
 }
 
+@media (max-width:500px){
+    .wr-content {
+        padding: 0;
+    }
+
+}
+
 .wr-asset-type-switcher {
 	float:left;
-    /*position:absolute;*/
-	/*padding-right:0;*/
-    /*z-index: 1000;*/
     height:54px;
 }
 
@@ -433,18 +437,24 @@ a.cu-ico-button-stats {
 }
 
 .wr-filters-right {
-	padding:22px 18px;
+	padding:22px 18px 22px 0;
 }
 
-@media (max-width:768px) {
+@media (max-width:1100px) {
     .wr-filters-right {
-        padding-top: 0;
+        padding: 0 18px 22px 18px;
     }
 }
 
 .wr-secondary-bar {
-	border-bottom:0px solid #f0f0f0;
-	padding-right:0px;
+	border-bottom:0 solid #f0f0f0;
+	padding-right:0;
+}
+
+@media (max-width:500px) {
+    .wr-secondary-bar {
+       padding-left:0;
+    }
 }
 
 .wr-filter-sort a.ico-filter {
@@ -452,6 +462,12 @@ a.cu-ico-button-stats {
 	width:40px;
 	height:40px;
 	padding:5px;
+}
+
+@media (max-width:1100px) {
+    .wr-filters, .wr-filter-sort.pull-right {
+        float: none !important;
+    }
 }
 
 .wr-filter-sort a.ico-filter:hover {
@@ -602,8 +618,9 @@ span.ico-sort-desc {
 .wr-search-tags {
     display:block;
     float: left;
-    height: 54px;
+    min-height: 54px;
     padding:13px 5px;
+    max-width: 350px;
 }
 
 .wr-search-tags:empty {
@@ -617,7 +634,7 @@ span.ico-sort-desc {
     display: inline-block;
     cursor: pointer;
     padding: 6px 6px;
-    margin: 0 1px;
+    margin: 1px;
     border-radius: 2px;
 }
 
@@ -631,9 +648,23 @@ span.ico-sort-desc {
 	margin-left:0;
 	border:none;
 	background:#bbb;
-    height: 54px;
+    min-height: 54px;
     max-width:750px !important;
     width: 100%;
+}
+
+@media (max-width:1100px) {
+    .wr-search-tags:not(:empty) {
+        float: none;
+        padding-left:60px;
+        max-width: 100%;
+    }
+    .wr-search {
+        max-width: 100% !important;
+    }
+    .wr-filters.col-sm-7, .wr-filters.col-sm-7.col-md-8 {
+        width: 100%;
+    }
 }
 
 .wr-search .input {
@@ -648,6 +679,7 @@ span.ico-sort-desc {
     font-size:18px;
     white-space: nowrap;
     word-break: keep-all;
+    min-width: 200px;
 }
 
 .wr-search .input:focus {
