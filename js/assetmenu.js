@@ -77,7 +77,7 @@ function containerUpdate(asset){
         +'<a id="goBack" href="javascript:void(0);" onclick="goBack(this); return false;" '
         +'class="cu-btn btn-prev" title="Go Back"></a>'
         +'<a id="resetNav" href="javascript:void(0);" onclick="resetNav(this); return false;" '
-        +'class="cu-btn btn-add-new" title="Reset"></a>'
+        +'class="cu-btn btn-reset" title="Reset"></a>'
         +'</ul>' + '<ul class="options">'+ options +'</ul>');
 
     prevSelected = ($(menuSubContainer + ' ul.selected li').attr('asset'));
