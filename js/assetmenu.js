@@ -21,10 +21,12 @@
  */
 var menuButton = '.ctrl-asset-type-switcher',
     menu = '.popover.menu',
+    deviceOptions = '#device-filter-options',
     menuContainer = '#asset-select',
     menuSubContainer = '#asset-selected',
     menuItems = '#asset-select ul li',
     tagsContainer = '.wr-search-tags',
+    searchField = '#search',
     menuItemsID = 0,
     prevSelected = 0;
 
@@ -65,6 +67,22 @@ $(menuButton).click(function(e){
 });
 
 /*
+ * On asset filter options window advance filter radio button change function
+ */
+$('#advance-filter-options input[type=radio]').change(function() {
+    if(this.value !== 'devices'){
+        $(deviceOptions).hide();
+        resetNav();
+        $(tagsContainer).html('');
+    }
+    else {
+        $(deviceOptions).show();
+    }
+
+    $(searchField).attr('data-placeholder', 'Search '+ this.value + ' ...');
+});
+
+/*
  * Update filter container.
  * @param  asset: Selected asset
  */
@@ -76,7 +94,7 @@ function containerUpdate(asset){
         +'asset="' + $(asset).attr('asset') + '">'+ $(asset).html() +'</li>'
         +'<a id="goBack" href="javascript:void(0);" onclick="goBack(this); return false;" '
         +'class="cu-btn btn-prev" title="Go Back"></a>'
-        +'<a id="resetNav" href="javascript:void(0);" onclick="resetNav(this); return false;" '
+        +'<a id="resetNav" href="javascript:void(0);" onclick="resetNav(); return false;" '
         +'class="cu-btn btn-reset" title="Reset"></a>'
         +'</ul>' + '<ul class="options">'+ options +'</ul>');
 
@@ -138,7 +156,7 @@ function goBack(backButton){
  * Filter window reset function.
  * @param  backButton: Filter window reset button
  */
-function resetNav(reset){
+function resetNav(){
     $('#goBack').remove();
     $('#resetNav').remove();
     $(menuSubContainer).hide();
