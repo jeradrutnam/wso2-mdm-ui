@@ -47,337 +47,45 @@
 <!-- header -->
 <header>
 <div class="row wr-global-header">
-	<div class="col-xs-8 col-sm-6 col-lg-8 app-logo">
-        <img src="images/logo.png" /><h2 class="app-title">Mobile Device Manager</h2>
-	</div>
-	<div class="col-xs-4 col-sm-6 col-lg-4 wr-auth-container">
-		<div class="wr-auth pull-right">
-			<a href="#" data-toggle="dropdown" class="">
-				<div class="auth-img">
-					<span>Dhanuka</span><img src="images/icons/ico-user.png" />
-				</div>
-			</a>
-			<div class="dropdown-menu">
-				<div class="cu-arrow"></div>
-				<div class="dropdown-menu-content">
-					<a class="filter-item">Logout</a>
-				</div>
-			</div>			
-		</div>
+	<div class="col-lg-12 app-logo">
+        <a href="home.html"><img src="images/logo.png" /><h2 class="app-title">Mobile Device Manager</h2></a>
 	</div>
 </div>
 </header>
 <!-- /header -->
 
-<!-- secondary header - app bar -->
-<div id="nav" class="row wr-app-bar">
-	<div class="col-md-9 wr-action-container">
-		<div class="wr-action-btn-bar">
-			<a href="#" class="cu-btn btn-add-new">Enroll Device</a>
-			<a href="#" class="cu-btn btn-prev">Go Back</a>
-		</div>
-	</div>
-</div>
-<!-- secondary header - app bar -->
-
-<!-- content/body -->
-<div class="row wr-operations-board">
-	<div class="col-lg-12 wr-secondary-bar">
-
-		<div class="wr-filters col-xs-12 col-sm-7 col-md-8">
-            <!-- asset filter -->
-            <div class="wr-search">
-                <div class="wr-asset-type-switcher">
-                    <a href="javascript:void(0)" class="ctrl-asset-type-switcher"><span class="btn-asset"></span></a>
-                    <div class="popover menu fade bottom in">
-                        <div class="arrow"></div>
-                        <div class="popover-content">
-                            <div class="title">Select type of your device</div>
-                            <div id="asset-selected"></div>
-                            <div id="asset-select">
-                                <ul>
-                                    <li>Mobile</li>
-                                    <ul>
-                                        <li>Android</li>
-                                        <ul>
-                                            <li>ICS</li>
-                                            <ul>
-                                                <li>3.0</li>
-                                                <li>3.0.1</li>
-                                            </ul>
-                                                <li>JB</li>
-                                                <li>KK</li>
-                                            <ul>
-                                                <li>4.0</li>
-                                                <li>4.4</li>
-                                            </ul>
-                                        </ul>
-                                        <li>iOS</li>
-                                        <li>Windows</li>
-                                    </ul>
-                                    <li>Computer</li>
-                                    <ul>
-                                        <li>Desktop</li>
-                                        <li>Laptop</li>
-                                    </ul>
-                                    <li>IoT</li>
-                                </ul>
-                            </div>
-                            <div id="asset-selected">liuyhlkjljk</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="wr-search-tags"></div>
-                <a href="#" class="btn-search"><span class="glyphicon glyphicon-search"></span></a>
-                <div class="input" data-value="" data-placeholder="Search devices ..." contenteditable="true"></div>
-                <div class="clearfix"></div>
-            </div>
-			<!-- /asset filter -->
-		</div>
-
-		<div class="wr-filters col-xs-12 col-sm-5 col-md-4 wr-filters-right">
-			<div class="wr-filter-sort pull-right">
-                <a href="#" class="btn-select-devices">Select All Devices</a>
-                <a href="#" class="ico-filter ctrl-filter-grid"><img src="images/icons/ico-grid.png" /></a>
-                <a href="#" class="ico-filter ctrl-filter-list"><img src="images/icons/ico-list.png" /></a>
-                <span class="wr-filter-type-switcher"><a href="#" class="ico-filter ctrl-filter-type-switcher" data-placement="bottom" data-trigger="focus"><img src="images/icons/ico-sort.png" /></a></span>
-			</div>
-		</div>
-
-	</div>
-</div>
 <div class="row">
 	<div class="col-md-12">
-		
 
-		<!-- content -->
-		<div class="container-fluid col-centered wr-content">
+        <!-- content -->
+        <div class="container col-md-12 col-lg-3 col-centered wr-content wr-login col-centered">
 
-			<!-- operations container -->
-			<div class="wr-operations">
+            <h2 class="wr-title">Login</h2>
+            Mobile Device Manager credentials to login.
 
-				<a href="javascript:operationSelect('devicelock')"><img src="images/icons/ico-lock.png" /><span>Device Lock</span></a>
-                <div class="operation" data-operation="devicelock">
-                    <div class="content">Are you sure you want to lock the selected devices ?</div>
-                    <div class="buttons">
-                        <a href="javascript:runOperation('lock')" class="btn-operations">Lock</a>
-                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
-                    </div>
-                </div>
+            <hr />
 
-				<a href="javascript:operationSelect('ring')"><img src="images/icons/ico-ring.png" /><span>Ring</span></a>
-                <div class="operation" data-operation="ring">
-                    <div class="content">Please click ok to start ringing</div>
-                    <div class="buttons">
-                        <a href="javascript:runOperation('ring')" class="btn-operations">Ring</a>
-                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
-                    </div>
-                </div>
+            <!-- validation -->
+            <span class="wr-validation-summary">
+                <p>Login failed. Check your credentials and try again.</p>
+            </span>
 
-				<a href="javascript:operationSelect('message')"><img src="images/icons/ico-message.png" /><span>Message</span></a>
-                <div class="operation" data-operation="message">
-                    <div class="content">
-                        <div>Type message</div>
-                        <div><textarea></textarea></div>
-                    </div>
-                    <div class="buttons">
-                        <a href="javascript:runOperation('msg-send')" class="btn-operations">Send</a>
-                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
-                    </div>
-                </div>
+            <label class="wr-input-label">Username</label>
+            <div class="wr-input-control">
+                <input type="text" value="" placeholder="input text"/>
+            </div>
 
-				<a href="javascript:operationSelect('locate')"><img src="images/icons/ico-map.png" /><span>Locate</span></a>
-                <div class="operation" data-operation="locate">
-                    <div class="content">Locate</div>
-                    <div class="buttons">
-                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
-                    </div>
-                </div>
+            <label class="wr-input-label">Password</label>
+            <div class="wr-input-control">
+                <input type="password" value="" placeholder="input text"/>
+            </div>
 
-				<a href="javascript:operationSelect('wipe')"><img src="images/icons/ico-wipe.png" /><span>Wipe</span></a>
-                <div class="operation" data-operation="wipe">
-                    <div class="content">Wipe</div>
-                    <div class="buttons">
-                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
-                    </div>
-                </div>
+            <div class="wr-input-control">
+                <button class="wr-btn">Login</button>
+            </div>
 
-				<a href="javascript:operationSelect('camera')"><img src="images/icons/ico-camera.png" /><span>Camera</span></a>
-                <div class="operation" data-operation="camera">
-                    <div class="content">Camera</div>
-                    <div class="buttons">
-                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
-                    </div>
-                </div>
-
-				<a href="javascript:operationSelect('wifi')"><img src="images/icons/ico-wifi.png" /><span>Wi-Fi</span></a>
-                <div class="operation" data-operation="wifi">
-                    <div class="content">Wi-Fi</div>
-                    <div class="buttons">
-                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
-                    </div>
-                </div>
-
-				<br class="c-both" />
-			</div>
-			<!-- /operations container -->
-
-
-			<!-- form content placeholder -->
-			<div class="ast-container">
-
-				<div class="ctrl-wr-asset">
-					<div class="itm-select"><input type="checkbox" /></div>
-					<div class="itm-ast">
-						<a href="device.html"><div class="ast-img"><img src="images/device_icons/windows-mobile.png" /></div></a>
-                        <div class="ast-desc">
-                            <div class="ast-title">
-                                <h3 class="ast-name" title="mymobile">mymobile</h3>
-                                <span class="ast-auth" title="navinda">navinda</span>
-                            </div>
-							<span class="ast-ver" title="Android-KitKat">Android-KitKat</span>
-							<span class="ast-published" title="Samsung Galaxy S5">Samsung Galaxy S5</span>
-						</div>
-						<br class="c-both" />
-					</div>
-				</div>
-
-				<div class="ctrl-wr-asset selected">
-					<div class="itm-select"><input type="checkbox" checked="checked" /></div>
-					<div class="itm-ast">
-                        <a href="device.html"><div class="ast-img"><img src="images/device_icons/android-mobile.png" /></div></a>
-						<div class="ast-desc">
-                            <div class="ast-title">
-                                <h3 class="ast-name">Ruwan's Phone</h3>
-                                <span class="ast-auth">navinda</span>
-                            </div>
-							<span class="ast-ver">Android-JellyBean</span>
-							<span class="ast-published">Samsung Galaxy S4</span>
-						</div>
-						<br class="c-both" />
-					</div>
-				</div>
-
-				<div class="ctrl-wr-asset">
-					<div class="itm-select"><input type="checkbox" /></div>
-					<div class="itm-ast">
-                        <a href="device.html"><div class="ast-img"><img src="images/device_icons/iphone.png" /></div></a>
-						<div class="ast-desc">
-                            <div class="ast-title">
-                                <h3 class="ast-name">Developer's Phone</h3>
-                                <span class="ast-auth">navinda</span>
-                            </div>
-							<span class="ast-ver">Windows Phone 8.1</span>
-							<span class="ast-published">Nokia Lumia 925</span>
-						</div>
-						<br class="c-both" />
-					</div>
-				</div>
-
-				<div class="ctrl-wr-asset selected">
-					<div class="itm-select"><input type="checkbox" checked="checked" /></div>
-					<div class="itm-ast">
-                        <a href="device.html"><div class="ast-img"><img src="images/device_icons/ipad.png" /></div></a>
-						<div class="ast-desc">
-                            <div class="ast-title">
-                                <h3 class="ast-name">Brother's iPad</h3>
-                                <span class="ast-auth">navinda</span>
-                            </div>
-							<span class="ast-ver">iOS6</span>
-							<span class="ast-published">Apple iPad3</span>
-						</div>
-						<br class="c-both" />
-					</div>
-				</div>
-
-				<div class="ctrl-wr-asset selected">
-					<div class="itm-select"><input type="checkbox" checked="checked" /></div>
-					<div class="itm-ast">
-                        <a href="device.html"><div class="ast-img"><img src="images/device_icons/windows-tab.png" /></div></a>
-						<div class="ast-desc">
-                            <div class="ast-title">
-                                <h3 class="ast-name">MySurface</h3>
-                                <span class="ast-auth">admin</span>
-                            </div>
-							<span class="ast-ver">Windows 8.1</span>
-							<span class="ast-published">Windows Surface Pro3</span>
-						</div>
-						<br class="c-both" />
-					</div>
-				</div>
-
-				<div class="ctrl-wr-asset">
-					<div class="itm-select"><input type="checkbox" /></div>
-					<div class="itm-ast">
-                        <a href="device.html"><div class="ast-img"><img src="images/device_icons/mac-pc.png" /></div></a>
-						<div class="ast-desc">
-                            <div class="ast-title">
-                                <h3 class="ast-name">Designer's PC</h3>
-                                <span class="ast-auth">navinda</span>
-                            </div>
-							<span class="ast-ver">Windows Phone 8.1</span>
-							<span class="ast-published">Nokia Lumia 925</span>
-						</div>
-						<br class="c-both" />
-					</div>
-				</div>
-
-				<div class="ctrl-wr-asset">
-					<div class="itm-select"><input type="checkbox" /></div>
-					<div class="itm-ast">
-                        <a href="device.html"><div class="ast-img"><img src="images/device_icons/windows-pc.png" /></div></a>
-						<div class="ast-desc">
-                            <div class="ast-title">
-                                <h3 class="ast-name">Developer's PC</h3>
-                                <span class="ast-auth">navinda</span>
-                            </div>
-							<span class="ast-ver">Android-JellyBean</span>
-							<span class="ast-published">Samsung Galaxy S4</span>
-						</div>
-						<br class="c-both" />
-					</div>
-				</div>
-
-				<div class="ctrl-wr-asset">
-					<div class="itm-select"><input type="checkbox" /></div>
-					<div class="itm-ast">
-                        <a href="device.html"><div class="ast-img"><img src="images/device_icons/laptop.png" /></div></a>
-						<div class="ast-desc">
-                            <div class="ast-title">
-                                <h3 class="ast-name">Developer's Laptop</h3>
-                                <span class="ast-auth">navinda</span>
-                            </div>
-							<span class="ast-ver">Windows Phone 8.1</span>
-							<span class="ast-published">Nokia Lumia 925</span>
-						</div>
-						<br class="c-both" />
-					</div>
-				</div>
-
-				<div class="ctrl-wr-asset">
-					<div class="itm-select"><input type="checkbox" /></div>
-					<div class="itm-ast">
-                        <a href="device.html"><div class="ast-img"><img src="images/device_icons/android-tab.png" /></div></a>
-						<div class="ast-desc">
-                            <div class="ast-title">
-                                <h3 class="ast-name">Brother's Galaxy Tab</h3>
-                                <span class="ast-auth">navinda</span>
-                            </div>
-							<span class="ast-ver">iOS6</span>
-							<span class="ast-published">Apple iPad3</span>
-						</div>
-						<br class="c-both" />
-					</div>
-				</div>
-
-				<br class="c-both" />
-
-			</div>			
-			
-
-		</div>
-		<!-- /content -->
-
+        </div>
+        <!-- /content -->
 
 	</div>
 </div>

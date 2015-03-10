@@ -386,8 +386,8 @@ a.ctrl-filter-category:hover {
 /* buttons */
 .btn-primary {
 	color: #fff;
-	background-color: #533565;
-	border-color: #533565;
+	background-color: #6b94f1;
+	border-color: #6b94f1;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
@@ -415,28 +415,8 @@ a.ctrl-filter-category:hover {
 	user-select: none;
 	background-image: none;
 	border: 1px solid transparent;
-	border-radius: 0px;
+	border-radius: 0;
 }
-
-
-/* testing */
-
-/*GROW*/
-/*
-.ast-img img {
-  -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-          transition: all 0.5s ease;
-}
- 
-.ast-img img:hover {
-  width: 150px;
-  height: 150px;
-}
-*/
-
 
 /* filter type switcher */
 #content-filter-types {
@@ -515,4 +495,9 @@ a.ctrl-filter-category:hover {
 
 .wr-filter-type-switcher .popover {
     left: -148px !important;
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
 }

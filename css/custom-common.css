@@ -144,6 +144,9 @@ body {
 	font-family:'Open Sans';
 	margin-bottom: 60px;	
 	background:#fff;
+    font-weight: 100;
+    color: #444444;
+    font-size: 14px;
 }
 
 .wr-content {
@@ -166,6 +169,10 @@ h2.app-title {
 .app-logo {
 	height:50px;
 	padding:12px 10px;
+}
+
+.app-logo a {
+    text-decoration: none;
 }
 
 .app-logo img {

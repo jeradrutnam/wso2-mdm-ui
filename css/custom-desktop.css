@@ -162,19 +162,21 @@ a.ast-type-item:hover {
 	margin-bottom:10px;
 }
 
-a.btn-select-devices {
+.wr-btn {
 	font-weight: normal;
 	font-size:13px;
 	color:#fff;
-	background:#6b94f1;
+	background:#5d81d2;
 	padding:10px 10px;
 	display:inline-block;
 	margin-right:20px;
+    border: none;
 }
 
-a.btn-select-devices:hover {
+.wr-btn:hover {
 	text-decoration: none;
-	background-color:#6b94f1;
+    color: #ffffff;
+	background-color: #6b94f1;
 }
 
 .ast-container {
@@ -517,13 +519,13 @@ span.ico-sort-desc {
 }
 
 
-
 /* asset filter window styles */
 .wr-asset-type-switcher .popover.menu {
     display:none;
     top: 70px;
     left: 17px !important;
     min-width: 290px;
+    color: #ffffff;
 }
 
 .wr-asset-type-switcher .popover.menu .arrow {
@@ -595,7 +597,7 @@ span.ico-sort-desc {
 }
 
 #asset-selected .selected {
-	padding:0px 0px;
+	padding:0 0;
 }
 
 #asset-selected .selected li {
@@ -615,6 +617,43 @@ span.ico-sort-desc {
 	background:#555;
 }
 
+/* login page styles */
+
+.wr-login {
+    padding-top:50px;
+}
+
+/* form styles */
+.wr-validation-summary p {
+    display: block;
+    color: #ff2353 !important;
+    margin-top: 15px;
+    font-weight: 400 !important;
+    background: #fff2f2;
+    padding: 7px 17px;
+    font-size: 13px !important;
+    border-left: 3px solid #ff2353;
+}
+
+.wr-input-label {
+    font-weight:100;
+    font-size:14px;
+    color:#555;
+}
+
+.wr-input-control {
+    margin-bottom: 20px;
+}
+
+.wr-input-control input, .wr-input-control textarea {
+    border: 1px #999 solid;
+    width: 100%;
+    height: 100%;
+    padding: 6px 10px;
+    z-index: 1;
+    -webkit-appearance: none;
+}
+
 /* asset filter tags on search field styles */
 .wr-search-tags {
     display:block;
@@ -624,6 +663,7 @@ span.ico-sort-desc {
     max-width: 350px;
 }
 
+/* search field styles */
 .wr-search-tags:empty {
     padding:0;
 }
