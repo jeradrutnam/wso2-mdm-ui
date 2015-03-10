@@ -263,6 +263,7 @@ a.btn-select-devices:hover {
     width: 100%;
     height: 0;
     padding-bottom: 100%;
+    background: #ffffff;
 }
 
 .ast-img img {
