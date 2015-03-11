@@ -181,26 +181,16 @@ a.ast-type-item:hover {
 
 .ast-container {
 	clear:both;
-	/*padding-top:20px;*/
-	/*padding-left:20px;*/
-}
-
-.ast-container .itm-ast {
-	/*float:left;*/
-	/*margin-bottom:10px;*/
 }
 
 .ctrl-wr-asset {
 	position:relative;
-	/*min-width:160px;*/
     width:100%;
 	min-height:280px;
 	float:left;
 	margin: 0.5%;
-	/*border:0px solid #e4e4e4;*/
 	padding:10px;
 	background:#fbfbfb;
-	/*margin-bottom:15px;*/
 	border-bottom:4px solid #fff;
 }
 
@@ -235,7 +225,6 @@ a.ast-type-item:hover {
 
 .ctrl-wr-asset:hover {
 	background: #eaf0f1;
-	border-bottom:4px solid #6b94f1;
 }
 
 .itm-select {
@@ -348,6 +337,31 @@ h3.ast-name {
     white-space: nowrap;
     word-break: keep-all;
 
+}
+
+.ast-container.list-view {
+    margin: 10px 0;
+}
+
+.ast-container.list-view .ctrl-wr-asset {
+    width: auto;
+    margin:0;
+    float: none;
+}
+
+.ast-container.list-view .itm-select {
+    position: static;
+}
+
+.ast-container.list-view .ast-title {
+    height: inherit;
+}
+.ast-container.list-view h3.ast-name {
+    margin-top: 0;
+}
+
+.ast-container.list-view .ast-auth {
+    margin-bottom: 0;
 }
 
 /* tooltip */
@@ -473,7 +487,7 @@ a.cu-ico-button-stats {
     }
 }
 
-.wr-filter-sort a.ico-filter:hover {
+.wr-filter-sort a.ico-filter:hover, .wr-filter-sort a.ico-filter.selected {
 	background:#e4e4e4;
 }
 
