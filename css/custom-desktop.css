@@ -339,29 +339,56 @@ h3.ast-name {
 
 }
 
-.ast-container.list-view {
-    margin: 10px 0;
-}
-
-.ast-container.list-view .ctrl-wr-asset {
-    width: auto;
-    margin:0;
-    float: none;
-}
-
+/* device list-view styles */
 .ast-container.list-view .itm-select {
     position: static;
+    float: left;
+    padding-left: 5px;
+}
+
+
+.ast-container.list-view .ctrl-wr-asset {
+    width: 100%;
+    min-height: 50px;
+    margin: 0;
+}
+
+.ast-container.list-view .itm-ast {
+    display: inline-block;
+    width: auto;
+}
+
+.ast-container.list-view .itm-ast a {
+    width: 50px;
+    display: inline-block;
+    float: left;
+    margin-left:20px;
+}
+
+.ast-container.list-view .ast-desc span:before {
+    width: 0;
+}
+
+.ast-container.list-view .ast-title, .ast-container.list-view .ast-ver, .ast-container.list-view .ast-published {
+    height: inherit;
+    float: left;
+    margin-left: 20px;
 }
 
 .ast-container.list-view .ast-title {
-    height: inherit;
-}
-.ast-container.list-view h3.ast-name {
-    margin-top: 0;
+    min-width: 1000px;
 }
 
-.ast-container.list-view .ast-auth {
-    margin-bottom: 0;
+.ast-container.list-view .ast-ver {
+    min-width: 100px;
+}
+
+.ast-container.list-view .ast-published {
+    min-width: 100px;
+}
+
+.ast-container.list-view h3.ast-name, .ast-container.list-view .ast-auth {
+    margin: 0;
 }
 
 /* tooltip */

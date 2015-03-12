@@ -145,8 +145,8 @@
 		<div class="wr-filters col-xs-12 col-sm-5 col-md-4 wr-filters-right">
 			<div class="wr-filter-sort pull-right">
                 <a href="#" class="wr-btn">Select All Devices</a>
-                <a href="home.html" class="ico-filter ctrl-filter-grid selected"><img src="images/icons/ico-grid.png" /></a>
-                <a href="home-list.html" class="ico-filter ctrl-filter-list"><img src="images/icons/ico-list.png" /></a>
+                <a href="javascript:changeDeviceView('grid', this)" class="ico-filter ctrl-filter-grid view-toggle"><img src="images/icons/ico-grid.png" /></a>
+                <a href="javascript:changeDeviceView('list', this)" class="ico-filter ctrl-filter-list view-toggle"><img src="images/icons/ico-list.png" /></a>
                 <span class="wr-filter-type-switcher"><a href="#" class="ico-filter ctrl-filter-type-switcher" data-placement="bottom" data-trigger="focus"><img src="images/icons/ico-sort.png" /></a></span>
 			</div>
 		</div>
@@ -231,7 +231,7 @@
 
 
 			<!-- form content placeholder -->
-			<div class="ast-container">
+			<div id="ast-container" class="ast-container">
 
 				<div class="ctrl-wr-asset">
 					<div class="itm-select"><input type="checkbox" /></div>
@@ -449,7 +449,21 @@ $( document ).ready(function() {
 	        top: $('header').height()
 	      }
 	});	 
-}); 
+});
+
+function changeDeviceView(view, selection){
+    $('.view-toggle').each(function() {
+        $(this).removeClass('selected');
+    });
+    $(selection).addClass('selected');
+
+    if(view == 'list'){
+        $('#ast-container').addClass('list-view');
+    }
+    else {
+        $('#ast-container').removeClass('list-view');
+    }
+}
 
 </script>
 
