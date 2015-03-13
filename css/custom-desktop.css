@@ -20,6 +20,12 @@
     padding-left: inherit;
 }
 
+.wr-title {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 26px;
+}
+
 @media (max-width:500px){
     .wr-content {
         padding: 0;
@@ -162,7 +168,7 @@ a.ast-type-item:hover {
 	margin-bottom:10px;
 }
 
-.wr-btn {
+.wr-btn, a.wr-btn  {
 	font-weight: normal;
 	font-size:13px;
 	color:#fff;
@@ -171,6 +177,7 @@ a.ast-type-item:hover {
 	display:inline-block;
 	margin-right:20px;
     border: none;
+    text-decoration: none;
 }
 
 .wr-btn:hover {
@@ -431,12 +438,16 @@ a.filter-item:hover {
 
 
 /* action buttons */
+.btn-col {
+    padding-left: 0;
+}
+
 a.cu-btn {
 	color:#fff;
 	text-decoration: none;
-	border:0px solid #ff0000;
+	border:0 solid #ff0000;
 	padding:17px 10px 16px 45px;
-	margin:0 0 0 0px;
+	margin:0 0 0 0;
 	font-weight:100;
 	display:inline-block;
 	text-transform: uppercase;
@@ -447,8 +458,38 @@ a.cu-btn:hover {
 	background-color:#555;
 }
 
+a.cu-btn.dark {
+    color: #333;
+    background-size: 26px 26px;
+    padding:8px 8px 7px 40px;
+}
+
+a.cu-btn.dark:hover {
+    background-color:#e4e4e4;
+}
+
 .btn-add-new {
 	background:url('../images/icons/ico-add-new.png') 0.8em 1em no-repeat;
+}
+
+.btn-add-new.dark {
+    background:url('../images/icons/ico-add-new-dark.png') 0.6em 0.3em no-repeat;
+}
+
+.btn-view.dark {
+    background:url('../images/icons/ico-view-dark.png') 0.6em 0.3em no-repeat;
+}
+
+.btn-configure.dark {
+    background:url('../images/icons/ico-configure-dark.png') 0.6em 0.3em no-repeat;
+}
+
+.btn-delete.dark {
+    background:url('../images/icons/ico-delete-dark.png') 0.6em 0.3em no-repeat;
+}
+
+.btn-cancel {
+    background:url('../images/icons/ico-cancel.png') 0.8em 1em no-repeat;
 }
 
 .btn-prev {
@@ -843,11 +884,11 @@ a.btn-operations {
     text-decoration: none;
 }
 
-.wr-modelpopup {
+.wr-modalpopup {
     display: none;
 }
 
-.wr-modelpopup .modelpopup-content {
+.wr-modalpopup .modalpopup-content {
     display: block;
     min-height: 100px;
     width: 100%;
@@ -860,11 +901,11 @@ a.btn-operations {
     padding: 30px;
 }
 
-.wr-modelpopup .modelpopup-content .buttons {
+.wr-modalpopup .modalpopup-content .buttons {
     margin-top: 20px;
 }
 
-.wr-modelpopup .modelpopup-bg {
+.wr-modalpopup .modalpopup-bg {
     position:absolute;
     z-index: 10000;
     width: 100%;
@@ -991,6 +1032,109 @@ a.btn-operations {
 
 .wr-app-listing > div > img {
     width:60px;
+}
+
+.wr-form {
+    margin: 0 0 30px 0;
+}
+
+.wr-form button {
+    margin-right: 5px;
+}
+
+.wr-help-tip {
+    font-size: 14px;
+    padding: 0 10px;
+    color: #666;
+}
+
+/* enabled/disabled switch styles */
+.wr-input-control.switch {
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 18px;
+    cursor: pointer;
+    position: relative;
+}
+.wr-input-control.switch  > input[type=checkbox] {
+    position: absolute;
+    opacity: 0;
+}
+.wr-input-control.switch .helper {
+    padding-left: 52px;
+    position: relative;
+}
+
+.wr-input-control.switch .text {
+    display: none;
+    margin-left: 5px;
+    font-weight: 100;
+}
+
+.wr-input-control.switch input[type="checkbox"]:checked + .helper + .text {
+    display: inline-block;
+}
+
+.wr-input-control.switch .helper:before {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    display: block;
+    content: "";
+    width: 43px;
+    height: 16px;
+    outline: 2px #a6a6a6 solid;
+    border: 1px #fff solid;
+    cursor: pointer;
+    background: #5d81d2;
+    margin-left: 2px;
+    z-index: 1;
+}
+.wr-input-control.switch input[type="checkbox"] + .helper:after {
+    position: absolute;
+    left: 36px;
+    top: 2px;
+    display: block;
+    content: "";
+    width: 9px;
+    height: 16px;
+    outline: 2px #333 solid;
+    border: 1px #333 solid;
+    cursor: pointer;
+    background: #333;
+    z-index: 2;
+}
+.wr-input-control.switch input[type="checkbox"]:not(:checked) + .helper:after {
+    left: 2px !important;
+}
+
+.wr-input-control.switch input[type="checkbox"]:not(:checked) + .helper:before {
+    background: #a6a6a6 !important;
+}
+.wr-input-control.switch input[type="checkbox"]:disabled + .helper:after {
+    background: #a6a6a6 !important;
+    outline: 2px #a6a6a6 solid !important;
+    border: 1px #a6a6a6 solid !important;
+}
+.wr-input-control.switch input[type="checkbox"]:disabled + .helper:before {
+    cursor: default !important;
+    background: #e0e0e0 !important;
+    outline: 2px #ccc solid !important;
+}
+
+.wr-list-group {
+    margin: 40px 0;
+}
+
+.wr-list-group .list-group-item {
+    padding: 10px 15px;
+    position: relative;
+}
+
+.wr-list-group .list-group-item-actions {
+    position: absolute;
+    right:0;
+    top: 2px;
 }
 
 

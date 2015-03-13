@@ -47,45 +47,58 @@
 <!-- header -->
 <header>
 <div class="row wr-global-header">
-	<div class="col-lg-12 app-logo">
+	<div class="col-xs-8 col-sm-6 col-lg-8 app-logo">
         <a href="home.html"><img src="images/logo.png" /><h2 class="app-title">Mobile Device Manager</h2></a>
+	</div>
+	<div class="col-xs-4 col-sm-6 col-lg-4 wr-auth-container">
+		<div class="wr-auth pull-right">
+			<a href="#" data-toggle="dropdown" class="">
+				<div class="auth-img">
+					<span>Administrator</span><img src="images/icons/ico-user.png" />
+				</div>
+			</a>
+			<div class="dropdown-menu">
+				<div class="cu-arrow"></div>
+				<div class="dropdown-menu-content">
+					<a class="filter-item">Logout</a>
+				</div>
+			</div>			
+		</div>
 	</div>
 </div>
 </header>
 <!-- /header -->
 
+<!-- secondary header - app bar -->
+<div id="nav" class="row wr-app-bar">
+	<div class="col-md-9 wr-action-container">
+		<div class="wr-action-btn-bar">
+			<a href="dashboard.html" class="cu-btn btn-prev">Go Back To Dashboard</a>
+		</div>
+	</div>
+</div>
+<!-- secondary header - app bar -->
+
+<!-- content/body -->
 <div class="row">
 	<div class="col-md-12">
+		
 
-        <!-- content -->
-        <div class="container col-md-12 col-lg-3 col-centered wr-content wr-login col-centered">
+		<!-- content -->
+		<div class="container-fluid col-centered wr-content">
 
-            <h1 class="wr-title">Login</h1>
-            Mobile Device Manager credentials to login.
+            <div class="wr-form">
 
-            <hr />
+                <h1 class="wr-title">Policy creation successful</h1>
+                Please click <b>"Finish"</b> to complete the process and go back to the policy list
+                <hr />
+                <button class="wr-btn" onclick="window.location.href='policies.html'">Finish</button>
 
-            <!-- validation -->
-            <span class="wr-validation-summary">
-                <p>Login failed. Check your credentials and try again.</p>
-            </span>
-
-            <label class="wr-input-label">Username</label>
-            <div class="wr-input-control">
-                <input type="text" value="" placeholder="input text"/>
             </div>
 
-            <label class="wr-input-label">Password</label>
-            <div class="wr-input-control">
-                <input type="password" value="" placeholder="input text"/>
-            </div>
+		</div>
+		<!-- /content -->
 
-            <div class="wr-input-control">
-                <button class="wr-btn" onclick="document.location.href='home.html';">Login</button>
-            </div>
-
-        </div>
-        <!-- /content -->
 
 	</div>
 </div>

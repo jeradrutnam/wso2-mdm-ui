@@ -19,6 +19,11 @@
 
 <body>
 
+<div class="wr-modelpopup">
+    <div class="modelpopup-content"><!-- dynamic content --></div>
+    <div class="modelpopup-bg"></div>
+</div>
+
 <div class="container col-lg-12 col-md-12 col-sm-12">
 
 <!-- header -->
@@ -51,8 +56,7 @@
 	<div class="col-md-9 wr-action-container">
 
 		<div class="wr-action-btn-bar">
-			<a href="#" class="cu-btn btn-add-new">Enroll a Device</a>
-			<a href="#" class="cu-btn btn-prev">Go Back</a>
+			<a href="javascript:history.go(-1)" class="cu-btn btn-prev">Go Back</a>
 		</div>
 	</div>
 </div>
@@ -73,21 +77,74 @@
 		<!-- content -->
 		<div class="container col-md-12 col-centered wr-content">
 
-			<!-- opearations container -->
-			<div class="wr-operations">
-				<a href="#"><img src="images/icons/ico-lock.png" /><span>Device Lock</span></a>
-				<a href="#"><img src="images/icons/ico-ring.png" /><span>Ring</span></a>
-				<a href="#"><img src="images/icons/ico-message.png" /><span>Message</span></a>
-				<a href="#"><img src="images/icons/ico-map.png" /><span>Locate</span></a>
-				<a href="#"><img src="images/icons/ico-wipe.png" /><span>Wipe</span></a>
-				<a href="#"><img src="images/icons/ico-camera.png" /><span>Camera</span></a>
-				<a href="#"><img src="images/icons/ico-wifi.png" /><span>Wi-Fi</span></a>
-				<a href="#"><img src="images/icons/ico-map.png" /><span>Locate</span></a>
-				<a href="#"><img src="images/icons/ico-wipe.png" /><span>Wipe</span></a>	
-				<a href="#"><img src="images/icons/ico-message.png" /><span>Message</span></a>
-				<br class="c-both" />
-			</div>
-			<!-- /opearations container -->
+            <!-- operations container -->
+            <div class="wr-operations">
+
+                <a href="javascript:operationSelect('devicelock')"><img src="images/icons/ico-lock.png" /><span>Device Lock</span></a>
+                <div class="operation" data-operation="devicelock">
+                    <div class="content">Are you sure you want to lock the selected devices ?</div>
+                    <div class="buttons">
+                        <a href="javascript:runOperation('lock')" class="btn-operations">Lock</a>
+                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
+                    </div>
+                </div>
+
+                <a href="javascript:operationSelect('ring')"><img src="images/icons/ico-ring.png" /><span>Ring</span></a>
+                <div class="operation" data-operation="ring">
+                    <div class="content">Please click ok to start ringing</div>
+                    <div class="buttons">
+                        <a href="javascript:runOperation('ring')" class="btn-operations">Ring</a>
+                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
+                    </div>
+                </div>
+
+                <a href="javascript:operationSelect('message')"><img src="images/icons/ico-message.png" /><span>Message</span></a>
+                <div class="operation" data-operation="message">
+                    <div class="content">
+                        <div>Type message</div>
+                        <div><textarea></textarea></div>
+                    </div>
+                    <div class="buttons">
+                        <a href="javascript:runOperation('msg-send')" class="btn-operations">Send</a>
+                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
+                    </div>
+                </div>
+
+                <a href="javascript:operationSelect('locate')"><img src="images/icons/ico-map.png" /><span>Locate</span></a>
+                <div class="operation" data-operation="locate">
+                    <div class="content">Locate</div>
+                    <div class="buttons">
+                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
+                    </div>
+                </div>
+
+                <a href="javascript:operationSelect('wipe')"><img src="images/icons/ico-wipe.png" /><span>Wipe</span></a>
+                <div class="operation" data-operation="wipe">
+                    <div class="content">Wipe</div>
+                    <div class="buttons">
+                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
+                    </div>
+                </div>
+
+                <a href="javascript:operationSelect('camera')"><img src="images/icons/ico-camera.png" /><span>Camera</span></a>
+                <div class="operation" data-operation="camera">
+                    <div class="content">Camera</div>
+                    <div class="buttons">
+                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
+                    </div>
+                </div>
+
+                <a href="javascript:operationSelect('wifi')"><img src="images/icons/ico-wifi.png" /><span>Wi-Fi</span></a>
+                <div class="operation" data-operation="wifi">
+                    <div class="content">Wi-Fi</div>
+                    <div class="buttons">
+                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
+                    </div>
+                </div>
+
+                <br class="c-both" />
+            </div>
+            <!-- /operations container -->
 
 		</div>
 		<!-- /content -->
@@ -102,57 +159,59 @@
 
 		<!-- content -->
 
-		<div class="container col-md-10 wr-stats-board">
+		<div class="container col-lg-10 wr-stats-board">
 
-			<!-- device summary -->
-			<div class="ctrl-tile-status tile-bg">
-				<div class="tile-name">BATTERY</div>
-				<div >
-					<div class="tile-icon"><img src="images/icons/ico-batt.png" /></div>
-					<div class="tile-stats">10%</div>
-				</div>
-			</div>
+            <div class="col-md-2">
+                <img src="images/device_icons/android-mobile.png" style="width:200px" />
+            </div>
 
-			<div class="ctrl-tile-status tile-bg">
-				<div class="tile-name">LOCAL STORAGE</div>
-				<div>
-					<div class="tile-icon"><img src="images/icons/ico-storage-local.png" /></div>
-					<div class="tile-stats">80%<span class="tile-stats-free">6 GB Free</span></div>
-				</div>				
-			</div>
+            <div class="col-lg-10">
+                <!-- device summary -->
+                <div class="ctrl-tile-status tile-bg">
+                    <div class="tile-name">BATTERY</div>
+                    <div >
+                        <div class="tile-icon"><img src="images/icons/ico-batt.png" /></div>
+                        <div class="tile-stats">10%</div>
+                    </div>
+                </div>
 
-			<div class="ctrl-tile-status tile-bg">
-				<div class="tile-name">EXTERNAL STORAGE</div>
-				<div>
-					<div class="tile-icon"><img src="images/icons/ico-ext-data.png" /></div>
-					<div class="tile-stats">20%<span class="tile-stats-free">14 GB Free</span></div>
-				</div>				
-			</div>
+                <div class="ctrl-tile-status tile-bg">
+                    <div class="tile-name">LOCAL STORAGE</div>
+                    <div>
+                        <div class="tile-icon"><img src="images/icons/ico-storage-local.png" /></div>
+                        <div class="tile-stats">80%<span class="tile-stats-free">6 GB Free</span></div>
+                    </div>
+                </div>
 
-			<div class="ctrl-tile-status-2x tile-bg">
-				<div class="tile-name">USAGE /DATA<span class="tile-sup-lbl">Last 30 days</span></div>
-				
-				<div class="tile-stats-v">
-					<div><span class="tile-stats-sm">721 Mb </span><span class="tile-stats-type">Cellular</span></div>
-					<div><span class="tile-stats-sm">3.2 Gb </span><span class="tile-stats-type">Wi-Fi</span></div>
-				</div>
-				<div class="tile-graph"><img src="images/graph.png" /></div>
-			</div>
+                <div class="ctrl-tile-status tile-bg">
+                    <div class="tile-name">EXTERNAL STORAGE</div>
+                    <div>
+                        <div class="tile-icon"><img src="images/icons/ico-ext-data.png" /></div>
+                        <div class="tile-stats">20%<span class="tile-stats-free">14 GB Free</span></div>
+                    </div>
+                </div>
 
-			<div class="ctrl-tile-status tile-bg">
-				<div class="tile-name">USAGE /VOICE</div>
-				<div>
-					<div class="tile-icon"><img src="images/icons/ico-voice.png" /></div>
-					<div class="tile-stats">80%<span class="tile-stats-free">6 GB Free</span></div>
-				</div>
-			</div>												
-			<!-- /device summary -->
+                <div class="ctrl-tile-status-2x tile-bg">
+                    <div class="tile-name">USAGE /DATA<span class="tile-sup-lbl">Last 30 days</span></div>
 
-		</div>			
+                    <div class="tile-stats-v">
+                        <div><span class="tile-stats-sm">721 Mb </span><span class="tile-stats-type">Cellular</span></div>
+                        <div><span class="tile-stats-sm">3.2 Gb </span><span class="tile-stats-type">Wi-Fi</span></div>
+                    </div>
+                    <div class="tile-graph"><img src="images/graph.png" /></div>
+                </div>
 
-		<div class="container col-md-2">
-            <img src="images/device_icons/android-mobile.png" style="width:200px" />
-		</div>	
+                <div class="ctrl-tile-status tile-bg">
+                    <div class="tile-name">USAGE /VOICE</div>
+                    <div>
+                        <div class="tile-icon"><img src="images/icons/ico-voice.png" /></div>
+                        <div class="tile-stats">80%<span class="tile-stats-free">6 GB Free</span></div>
+                    </div>
+                </div>
+                <!-- /device summary -->
+            </div>
+
+		</div>
 
 		<!-- /content -->
 
@@ -206,12 +265,9 @@
 	</div>
 </div>
 
-
 <!-- /content/body -->
 
 </div>
-    
-   
 
 <div id="content-filter-types" style="display: none">
     <div class="sort-title">Sort By</div>
@@ -231,6 +287,9 @@
 
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/assetmenu.js"></script>
+<script src="js/operationsmenu.js"></script>
+<script src="js/deviceview.js"></script>
 
 <script type="text/javascript">
 

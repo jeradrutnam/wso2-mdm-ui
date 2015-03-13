@@ -432,7 +432,7 @@ a.ctrl-filter-category:hover {
 	z-index: 1060;
 	display: none;
 	width: 200px;
-	padding: 1px;
+	padding: 1px 1px 8px 1px;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-size: 14px;
 	font-weight: 400;
@@ -442,12 +442,11 @@ a.ctrl-filter-category:hover {
 	background-color: #232323;
 	-webkit-background-clip: padding-box;
 	background-clip: padding-box;
-	border: 0px solid #232323;
-	border: 0px solid rgba(0,0,0,.2);
-	border-radius: 0px;
-	-webkit-box-shadow: 0 0px 0px rgba(0,0,0,.2);
-	box-shadow: 0 0px 0px rgba(0,0,0,.2);
-	padding-bottom:8px;
+	/*border: 0px solid #232323;*/
+	border: 0 solid rgba(0,0,0,.2);
+	border-radius: 0;
+	-webkit-box-shadow: 0 0 0 rgba(0,0,0,.2);
+	box-shadow: 0 0 0 rgba(0,0,0,.2);
 	margin-right: -400px !important;
 }
 
@@ -456,7 +455,6 @@ a.ctrl-filter-category:hover {
 	left: 50%;
 	margin-left: 130px;
 	border-top-width: 0;
-	border-bottom-color: #232323;
 	border-bottom-color: #232323;
 }
 
@@ -500,4 +498,8 @@ a.ctrl-filter-category:hover {
 .col-centered {
     float: none;
     margin: 0 auto;
+}
+
+b, strong {
+    font-weight: 500;
 }

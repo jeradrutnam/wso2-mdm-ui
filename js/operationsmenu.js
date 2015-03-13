@@ -20,8 +20,9 @@
  * Setting-up global variables.
  */
 var operations = '.wr-operations',
-    modelPopup = '.wr-modelpopup',
-    modelPopupContent = modelPopup + ' .modelpopup-content';
+    modelPopup = '.wr-modalpopup',
+    modelPopupContent = modelPopup + ' .modalpopup-content',
+    deviceCheckbox = '#ast-container .ctrl-wr-asset .itm-select input[type="checkbox"]';
 
 /*
  * On operation click function.
@@ -53,4 +54,21 @@ function showPopup() {
 function hidePopup() {
     $(modelPopupContent).html('');
     $(modelPopup).hide();
+}
+
+/*
+ * Function to get selected devices ID's
+ */
+function getSelectedDeviceIds(){
+    var deviceIdentifierList = [];
+    $(deviceCheckbox).each(function(index){
+        var device = $(this);
+        var deviceId = device.data('deviceid');
+        var deviceType = device.data('type');
+        deviceIdentifierList.push({
+            "id" : deviceId,
+            "type" : deviceType
+        });
+    });
+    return deviceIdentifierList;
 }
