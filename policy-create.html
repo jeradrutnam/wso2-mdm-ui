@@ -25,6 +25,7 @@
 
     <link rel="icon" href="favicon.png" type="image/x-icon" />
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/select2.min.css" rel="stylesheet">
     <link href="css/custom-common.css" rel="stylesheet">    
     <link href="css/custom-desktop.css" rel="stylesheet">
     <link href="css/custom-theme.css" rel="stylesheet">
@@ -102,22 +103,31 @@
 
                         <label class="wr-input-label">Profile<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
                         <div class="wr-input-control">
-                            <select class="form-control">
-                                <option>Select..</option>
+                            <select class="form-control select2">
+                                <option>Profile 1</option>
+                                <option>Profile 2</option>
+                                <option>Role 3</option>
+                                <option>Role 4</option>
                             </select>
                         </div>
 
                         <label class="wr-input-label">User Roles<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
                         <div class="wr-input-control">
-                            <select class="form-control">
-                                <option>Select..</option>
+                            <select class="form-control select2" multiple="multiple">
+                                <option>Role 1</option>
+                                <option>Role 2</option>
+                                <option>Role 3</option>
+                                <option>Role 4</option>
                             </select>
                         </div>
 
                         <label class="wr-input-label">Users<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
                         <div class="wr-input-control">
-                            <select class="form-control">
-                                <option>Select..</option>
+                            <select class="form-control select2" multiple="multiple">
+                                <option>User 1</option>
+                                <option>User 2</option>
+                                <option>User 3</option>
+                                <option>User 4</option>
                             </select>
                         </div>
 
@@ -127,8 +137,11 @@
 
                         <label class="wr-input-label">Non compliance Actions<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
                         <div class="wr-input-control">
-                            <select class="form-control">
-                                <option>Select..</option>
+                            <select class="form-control select2" multiple="multiple">
+                                <option>Action 1</option>
+                                <option>Action 2</option>
+                                <option>Action 3</option>
+                                <option>Action 4</option>
                             </select>
                         </div>
 
@@ -168,6 +181,7 @@
 
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/select2.full.min.js"></script>
 <script src="js/assetmenu.js"></script>
 <script src="js/operationsmenu.js"></script>
 
@@ -190,7 +204,18 @@ $( document ).ready(function() {
 	      offset: {
 	        top: $('header').height()
 	      }
-	});	 
+	});
+
+    $('select.select2').select2({
+        placeholder: 'Select..'
+    });
+
+    $('select.select2[multiple=multiple]').select2({
+        placeholder: 'Select..',
+        tags: true
+    });
+
+
 }); 
 
 </script>

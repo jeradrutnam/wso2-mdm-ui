@@ -915,6 +915,83 @@ a.btn-operations {
     display: block;
 }
 
+/* filter type switcher */
+#content-filter-types {
+    position:absolute;
+    right: -300px !important;
+    float: right;
+}
+
+.wr-filter-type-switcher .popover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1060;
+    display: none;
+    width: 200px;
+    padding: 1px 1px 8px 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: left;
+    white-space: normal;
+    background-color: #232323;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    /*border: 0px solid #232323;*/
+    border: 0 solid rgba(0,0,0,.2);
+    border-radius: 0;
+    -webkit-box-shadow: 0 0 0 rgba(0,0,0,.2);
+    box-shadow: 0 0 0 rgba(0,0,0,.2);
+    margin-right: -400px !important;
+}
+
+.wr-filter-type-switcher .popover.bottom>.arrow {
+    top: -11px;
+    left: 50%;
+    margin-left: 130px;
+    border-top-width: 0;
+    border-bottom-color: #232323;
+}
+
+.wr-filter-type-switcher .popover>.arrow {
+    border-width: 11px;
+}
+
+.wr-filter-type-switcher .popover.bottom>.arrow:after {
+    top: 1px;
+    margin-left: -10px;
+    content: " ";
+    border-top-width: 0;
+    border-bottom-color: #232323;
+}
+
+.wr-filter-type-switcher .popover>.arrow, .popover>.arrow:after {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+}
+
+.wr-filter-type-switcher {
+    position: relative;
+}
+
+.wr-filter-type-switcher .popover-content {
+    padding: 6px 6px;
+}
+
+.wr-filter-type-switcher .arrow {
+    left:25px !important;
+}
+
+.wr-filter-type-switcher .popover {
+    left: -148px !important;
+}
+
 /* status */
 .wr-stats-board {
     margin-top:20px;
