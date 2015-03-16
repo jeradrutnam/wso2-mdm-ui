@@ -190,6 +190,10 @@ a.ast-type-item:hover {
 	clear:both;
 }
 
+.ast-device-desc {
+    margin: 6px 0;
+}
+
 .ctrl-wr-asset {
 	position:relative;
     width:100%;

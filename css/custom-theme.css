@@ -427,6 +427,33 @@ b, strong {
     font-weight: 500;
 }
 
+.panel-group .panel-heading + .panel-collapse > .panel-body, .panel-group .panel-heading + .panel-collapse > .list-group {
+    border-top: none;
+}
+
+.panel-default > .panel-heading {
+    background: transparent;
+    padding: 0;
+}
+
+.panel-title a {
+    color: #333333;
+    padding:15px 35px;
+    background-size: 26px 26px !important;
+    display: inline-block;
+    background: url('../images/icons/ico-down-dark.png') 0.1em 0.65em no-repeat;
+}
+
+.panel-title a.collapsed {
+    background: url('../images/icons/ico-next-dark.png') 0.1em 0.65em no-repeat;
+}
+
+.panel-body {
+    background: transparent;
+    padding: 0;
+}
+
+
 select.select2 {
     height:0 !important;
     overflow: hidden;
