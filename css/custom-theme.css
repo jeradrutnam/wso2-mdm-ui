@@ -1,3 +1,6 @@
+.container {
+    overflow: hidden;
+}
 
 /* asset type switcher */
 .wr-asset-type-switcher .popover {
