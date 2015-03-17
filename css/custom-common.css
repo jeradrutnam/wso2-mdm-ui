@@ -177,7 +177,7 @@ h2.app-title {
 
 .app-logo img {
 	float:left;
-	margin-right:20px;
+	margin-right:10px;
 }
 
 @media (max-width: 768px) {

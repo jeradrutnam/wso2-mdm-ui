@@ -1,5 +1,6 @@
-.container {
-    overflow: hidden;
+body {
+    overflow-x: hidden;
+    -ms-overflow-x: hidden;
 }
 
 /* asset type switcher */

@@ -43,6 +43,15 @@ $(window).resize(function(){
 });
 
 /*
+ * On main div.container resize functions.
+ * @required  jquery.resize.js
+ */
+$('.container').resize(function(){
+    setNotificationbarHeight();
+    notificationbarPositionFix();
+});
+
+/*
  * On window scroll functions.
  */
 $(function(){ // document ready
@@ -80,5 +89,5 @@ function openNotificationbar(){
  * Set notification bar height to fill window height
  */
 function setNotificationbarHeight(){
-    $(notificationBar).height($(document).height() - offset);
+    $(notificationBar).height($('html').height() - (offset+20));
 }
