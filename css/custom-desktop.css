@@ -1056,6 +1056,14 @@ a.wr-notification-toggle-btn.selected {
     margin-top:20px;
 }
 
+.wr-stats-board-tile {
+    background: #6b94f1;
+    color: #fff;
+    padding: 10px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
 .ctrl-tile-status {
     width:220px;
     height:110px;
@@ -1132,6 +1140,10 @@ a.wr-notification-toggle-btn.selected {
     text-align: right;
 }
 
+.tile-stats-free a {
+    color: #ffffff;
+}
+
 .tile-stats-type {
     font-size:12px;
     display:block;
@@ -1140,6 +1152,7 @@ a.wr-notification-toggle-btn.selected {
 .tile-icon {
     width:49%;
     float:left;
+    margin-top: 5px;
 }
 
 .tile-icon img {
@@ -1272,5 +1285,27 @@ a.wr-notification-toggle-btn.selected {
     right:0;
     top: 2px;
 }
+
+.wr-list-group h3.wr-list-name {
+    margin: 0;
+    font-weight: 400;
+    font-size: 20px;
+    color: #555;
+}
+
+.wr-list-group .wr-list-username {
+    font-weight: 100;
+    font-size: 13px;
+}
+
+.wr-list-email, .wr-list-email:hover {
+    font-weight: 300;
+    font-size: 13px;
+    color: #237bd5;
+}
+
+/*.container { padding: 5px;}*/
+/*.row {margin:-5px;}*/
+/*.row > div {padding:5px;}*/
 
 

@@ -1,4 +1,5 @@
 /* */
+@import "wso2metro-font.css";
 
 /* Regular */
 @font-face {
@@ -151,6 +152,10 @@ body {
 
 .wr-content {
 	padding-left:0;
+}
+
+.wr-icon {
+    font-size: 25px;
 }
 
 /* application top level header */

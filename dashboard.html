@@ -42,6 +42,24 @@
     <div class="modelpopup-bg"></div>
 </div>
 
+<div class="wr-notification-bar">
+    <div class="wr-notification-desc new">
+        <div class="wr-notification-operation">Device Lock Operation Successful!</div>
+        <div class="wr-notification-time">14 seconds ago</div>
+        <hr />
+    </div>
+    <div class="wr-notification-desc new">
+        <div class="wr-notification-operation">Device Lock Operation Successful!</div>
+        <div class="wr-notification-time">14 seconds ago</div>
+        <hr />
+    </div>
+    <div class="wr-notification-desc">
+        <div class="wr-notification-operation">Device Lock Operation Successful!</div>
+        <div class="wr-notification-time">14 seconds ago</div>
+        <hr />
+    </div>
+</div>
+
 <div class="container col-lg-12 col-md-12 col-sm-12">
 
 <!-- header -->
@@ -69,61 +87,77 @@
 </header>
 <!-- /header -->
 
-<!-- secondary header - app bar -->
-<div id="nav" class="row wr-app-bar">
-	<div class="col-md-9 wr-action-container">
-		<div class="wr-action-btn-bar"></div>
-	</div>
-</div>
-<!-- secondary header - app bar -->
+    <!-- secondary header - app bar -->
+    <div id="nav" class="row wr-app-bar">
+        <div class="wr-action-container">
+            <div class="wr-action-btn-bar">
+                <a href="javascript:openNotificationbar()" class="cu-btn btn-notification wr-notification-toggle-btn"><span class="wr-notification-bubble">35</span></a>
+            </div>
+        </div>
+    </div>
+    <!-- secondary header - app bar -->
 
 <!-- content/body -->
-<div class="row">
-	<div class="col-md-12">
 
-		<!-- content -->
-		<div class="container-fluid col-centered wr-content">
+    <!-- content -->
+    <div class="container-fluid col-centered wr-content">
 
-            <div class="wr-stats-board">
+        <div class="row wr-stats-board">
 
-                <a href="home.html">
-                    <div class="ctrl-tile-status-2x tile-bg">
-                        <div class="tile-name">Devices <br /><img src="images/icons/ico-device.png" /></div>
-                        <div class="tile-stats-v">
-                            <div><span class="tile-stats-sm">25 </span><span class="tile-stats-type">Mobiles</span></div>
-                            <div><span class="tile-stats-sm">2 </span><span class="tile-stats-type">Others</span></div>
-                        </div>
-                        <div class="tile-graph"><img src="images/graph.png" /></div>
-                    </div>
-                </a>
-
-                <a href="profiles.html">
-                    <div class="ctrl-tile-status tile-bg">
-                        <div class="tile-name">Config Profiles</div>
-                        <div>
-                            <div class="tile-icon"><img src="images/icons/ico-configure.png" /></div>
-                            <div class="tile-stats">26<span class="tile-stats-free">Add Profile</span></div>
+            <div class="col-md-3">
+                <div class="wr-stats-board-tile">
+                    <div class="tile-name">Devices</div>
+                    <div>
+                        <div class="tile-icon"><img src="images/icons/ico-device.png" /></div>
+                        <div class="tile-stats">
+                            532
+                            <span class="tile-stats-free"><a href="home.html">View</a></span>
                         </div>
                     </div>
-                </a>
-
-                <a href="policies.html">
-                    <div class="ctrl-tile-status tile-bg">
-                        <div class="tile-name">Policies</div>
-                        <div>
-                            <div class="tile-icon"><img src="images/icons/ico-policy.png" /></div>
-                            <div class="tile-stats">26<span class="tile-stats-free">Add Policy</span></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="wr-stats-board-tile">
+                    <div class="tile-name">Users</div>
+                    <div>
+                        <div class="tile-icon"><img src="images/icons/ico-user.png" /></div>
+                        <div class="tile-stats">
+                            503
+                            <span class="tile-stats-free"><a href="users.html">View</a> | <a href="user-create.html">Add</a></span>
                         </div>
                     </div>
-                </a>
-
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="wr-stats-board-tile">
+                    <div class="tile-name">Configuration Profiles</div>
+                    <div>
+                        <div class="tile-icon"><img src="images/icons/ico-configure.png" /></div>
+                        <div class="tile-stats">
+                            26
+                            <span class="tile-stats-free"><a href="profiles.html">View</a> | <a href="profile-create.html">Add</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="wr-stats-board-tile">
+                    <div class="tile-name">Policies</div>
+                    <div>
+                        <div class="tile-icon"><img src="images/icons/ico-policy.png" /></div>
+                        <div class="tile-stats">
+                            8
+                            <span class="tile-stats-free"><a href="policies.html">View</a> | <a href="policy-create.html">Add</a></span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-		</div>
-		<!-- /content -->
+        </div>
 
-	</div>
-</div>
+    </div>
+    <!-- /content -->
+
 <!-- /content/body -->
 
 </div>
@@ -146,8 +180,8 @@
 
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/assetmenu.js"></script>
-<script src="js/operationsmenu.js"></script>
+<script src="js/jquery.resize.js"></script>
+<script src="js/notificationbar.js"></script>
 
 <script type="text/javascript">
 
