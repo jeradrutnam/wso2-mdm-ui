@@ -89,7 +89,7 @@
 
             <div class="wr-list-group wr-sortable">
 
-                <span class="list-group-item">
+                <span class="list-group-item" id="user1">
                     <i class="wr-icon wso2ico-sort-move" style="float:left;"></i>
                     <div style="float:left;">
                         <h3 class="wr-list-name">John Doe</h3>
@@ -102,11 +102,11 @@
                     <div class="clearfix"></div>
                 </span>
 
-                <span class="list-group-item">
+                <span class="list-group-item" id="user2">
                     <i class="wr-icon wso2ico-sort-move"></i>
                     <div class="wr-list-desc">
                         <h3 class="wr-list-name">Alice Wonder</h3>
-                        <span class="wr-list-username">johndoe0005</span> | <a href="#" class="wr-list-email">johndoe2015@gmail.com</a>
+                        <span class="wr-list-username">alicew</span> | <a href="#" class="wr-list-email">alice_w@gmail.com</a>
                     </div>
                     <span class="list-group-item-actions">
                         <a href="#" class="cu-btn btn-view dark"><span>Invite</span></a>
@@ -115,11 +115,11 @@
                     <div class="clearfix"></div>
                 </span>
 
-                <span class="list-group-item">
+                <span class="list-group-item" id="user3">
                     <i class="wr-icon wso2ico-sort-move"></i>
                     <div class="wr-list-desc">
                         <h3 class="wr-list-name">Denver J Mike</h3>
-                        <span class="wr-list-username">johndoe0005</span> | <a href="#" class="wr-list-email">johndoe2015@gmail.com</a>
+                        <span class="wr-list-username">denverjmike</span> | <a href="#" class="wr-list-email">denverjmike@gmail.com</a>
                     </div>
                     <span class="list-group-item-actions">
                         <a href="#" class="cu-btn btn-view dark"><span>Invite</span></a>
@@ -128,11 +128,11 @@
                     <div class="clearfix"></div>
                 </span>
 
-                <span class="list-group-item">
+                <span class="list-group-item" id="user4">
                     <i class="wr-icon wso2ico-sort-move"></i>
                     <div class="wr-list-desc">
                         <h3 class="wr-list-name">Mark Spencer</h3>
-                        <span class="wr-list-username">johndoe0005</span> | <a href="#" class="wr-list-email">johndoe2015@gmail.com</a>
+                        <span class="wr-list-username">marks7</span> | <a href="#" class="wr-list-email">marks2015@gmail.com</a>
                     </div>
                     <span class="list-group-item-actions">
                         <a href="#" class="cu-btn btn-view dark"><span>Invite</span></a>
@@ -141,11 +141,11 @@
                     <div class="clearfix"></div>
                 </span>
 
-                <span class="list-group-item">
+                <span class="list-group-item" id="user5">
                     <i class="wr-icon wso2ico-sort-move"></i>
                     <div class="wr-list-desc">
                         <h3 class="wr-list-name">Jay Luke</h3>
-                        <span class="wr-list-username">johndoe0005</span> | <a href="#" class="wr-list-email">johndoe2015@gmail.com</a>
+                        <span class="wr-list-username">jayluke569</span> | <a href="#" class="wr-list-email">jayluke@gmail.com</a>
                     </div>
                     <span class="list-group-item-actions">
                         <a href="#" class="cu-btn btn-view dark"><span>Invite</span></a>
@@ -208,9 +208,15 @@ $( document ).ready(function() {
 	      }
 	});
 
+    /* sorting function */
     $(function() {
         var sortableElem = '.wr-sortable';
-        $(sortableElem).sortable();
+        $(sortableElem).sortable({
+            beforeStop: function(event, ui){
+                var sortedIDs = $(this).sortable('toArray');
+                console.log(sortedIDs);
+            }
+        });
         $(sortableElem).disableSelection();
     });
 }); 
