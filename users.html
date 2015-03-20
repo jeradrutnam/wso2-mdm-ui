@@ -87,51 +87,73 @@
 		<!-- content -->
 		<div class="container-fluid col-centered wr-content">
 
-            <div class="wr-list-group">
+            <div class="wr-list-group wr-sortable">
+
                 <span class="list-group-item">
-                    <h3 class="wr-list-name">John Doe</h3>
-                    <span class="wr-list-username">johndoe0005</span> | <a href="#" class="wr-list-email">johndoe2015@gmail.com</a>
+                    <i class="wr-icon wso2ico-sort-move" style="float:left;"></i>
+                    <div style="float:left;">
+                        <h3 class="wr-list-name">John Doe</h3>
+                        <span class="wr-list-username">johndoe0005</span> | <a href="#" class="wr-list-email">johndoe2015@gmail.com</a>
+                    </div>
                     <span class="list-group-item-actions">
                         <a href="#" class="cu-btn btn-view dark"><span>Invite</span></a>
                         <a href="#" class="cu-btn btn-delete dark"><span>Delete</span></a>
                     </span>
+                    <div class="clearfix"></div>
                 </span>
 
                 <span class="list-group-item">
-                    <h3 class="wr-list-name">John Doe</h3>
-                    <span class="wr-list-username">johndoe0005</span> | <a href="#" class="wr-list-email">johndoe2015@gmail.com</a>
+                    <i class="wr-icon wso2ico-sort-move"></i>
+                    <div class="wr-list-desc">
+                        <h3 class="wr-list-name">Alice Wonder</h3>
+                        <span class="wr-list-username">johndoe0005</span> | <a href="#" class="wr-list-email">johndoe2015@gmail.com</a>
+                    </div>
                     <span class="list-group-item-actions">
                         <a href="#" class="cu-btn btn-view dark"><span>Invite</span></a>
                         <a href="#" class="cu-btn btn-delete dark"><span>Delete</span></a>
                     </span>
+                    <div class="clearfix"></div>
                 </span>
 
                 <span class="list-group-item">
-                    <h3 class="wr-list-name">John Doe</h3>
-                    <span class="wr-list-username">johndoe0005</span> | <a href="#" class="wr-list-email">johndoe2015@gmail.com</a>
+                    <i class="wr-icon wso2ico-sort-move"></i>
+                    <div class="wr-list-desc">
+                        <h3 class="wr-list-name">Denver J Mike</h3>
+                        <span class="wr-list-username">johndoe0005</span> | <a href="#" class="wr-list-email">johndoe2015@gmail.com</a>
+                    </div>
                     <span class="list-group-item-actions">
                         <a href="#" class="cu-btn btn-view dark"><span>Invite</span></a>
                         <a href="#" class="cu-btn btn-delete dark"><span>Delete</span></a>
                     </span>
+                    <div class="clearfix"></div>
                 </span>
 
                 <span class="list-group-item">
-                    <h3 class="wr-list-name">John Doe</h3>
-                    <span class="wr-list-username">johndoe0005</span> | <a href="#" class="wr-list-email">johndoe2015@gmail.com</a>
+                    <i class="wr-icon wso2ico-sort-move"></i>
+                    <div class="wr-list-desc">
+                        <h3 class="wr-list-name">Mark Spencer</h3>
+                        <span class="wr-list-username">johndoe0005</span> | <a href="#" class="wr-list-email">johndoe2015@gmail.com</a>
+                    </div>
                     <span class="list-group-item-actions">
                         <a href="#" class="cu-btn btn-view dark"><span>Invite</span></a>
                         <a href="#" class="cu-btn btn-delete dark"><span>Delete</span></a>
                     </span>
+                    <div class="clearfix"></div>
                 </span>
 
                 <span class="list-group-item">
-                    <h3 class="wr-list-name">John Doe</h3>
-                    <span class="wr-list-username">johndoe0005</span> | <a href="#" class="wr-list-email">johndoe2015@gmail.com</a>
+                    <i class="wr-icon wso2ico-sort-move"></i>
+                    <div class="wr-list-desc">
+                        <h3 class="wr-list-name">Jay Luke</h3>
+                        <span class="wr-list-username">johndoe0005</span> | <a href="#" class="wr-list-email">johndoe2015@gmail.com</a>
+                    </div>
                     <span class="list-group-item-actions">
                         <a href="#" class="cu-btn btn-view dark"><span>Invite</span></a>
                         <a href="#" class="cu-btn btn-delete dark"><span>Delete</span></a>
                     </span>
+                    <div class="clearfix"></div>
                 </span>
+
             </div>
 
 		</div>
@@ -160,6 +182,7 @@
 -->
 
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/assetmenu.js"></script>
 <script src="js/operationsmenu.js"></script>
@@ -183,7 +206,13 @@ $( document ).ready(function() {
 	      offset: {
 	        top: $('header').height()
 	      }
-	});	 
+	});
+
+    $(function() {
+        var sortableElem = '.wr-sortable';
+        $(sortableElem).sortable();
+        $(sortableElem).disableSelection();
+    });
 }); 
 
 </script>

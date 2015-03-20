@@ -1281,9 +1281,11 @@ a.wr-notification-toggle-btn.selected {
 }
 
 .wr-list-group .list-group-item-actions {
-    position: absolute;
-    right:0;
-    top: 2px;
+    float: right;
+}
+
+.wr-list-group .wr-list-desc {
+    float: left;
 }
 
 .wr-list-group h3.wr-list-name {
@@ -1302,6 +1304,17 @@ a.wr-notification-toggle-btn.selected {
     font-weight: 300;
     font-size: 13px;
     color: #237bd5;
+}
+
+.wr-sortable .list-group-item {
+    cursor: move;
+}
+
+.wr-sortable .list-group-item .wr-icon {
+    margin-right: 10px;
+    opacity: 0.5;
+    float: left;
+    padding-top: 8px;
 }
 
 /*.container { padding: 5px;}*/
