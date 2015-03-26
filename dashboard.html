@@ -45,17 +45,17 @@
 <div class="wr-notification-bar">
     <div class="wr-notification-desc new">
         <div class="wr-notification-operation">Device Lock Operation Successful!</div>
-        <div class="wr-notification-time">14 seconds ago</div>
+        <div class="wr-notification-time"><i class="wso2icon wso2-clock"></i> 14 seconds ago</div>
         <hr />
     </div>
     <div class="wr-notification-desc new">
         <div class="wr-notification-operation">Device Lock Operation Successful!</div>
-        <div class="wr-notification-time">14 seconds ago</div>
+        <div class="wr-notification-time"><i class="wso2icon wso2-clock"></i> 14 seconds ago</div>
         <hr />
     </div>
     <div class="wr-notification-desc">
         <div class="wr-notification-operation">Device Lock Operation Successful!</div>
-        <div class="wr-notification-time">14 seconds ago</div>
+        <div class="wr-notification-time"><i class="wso2icon wso2-clock"></i> 14 seconds ago</div>
         <hr />
     </div>
 </div>
@@ -64,38 +64,38 @@
 
 <!-- header -->
 <header>
-<div class="row wr-global-header">
-	<div class="col-xs-8 col-sm-6 col-lg-8 app-logo">
-        <a href="home.html"><img src="images/logo.png" /><h2 class="app-title">Mobile Device Manager</h2></a>
-	</div>
-	<div class="col-xs-4 col-sm-6 col-lg-4 wr-auth-container">
-		<div class="wr-auth pull-right">
-			<a href="#" data-toggle="dropdown" class="">
-				<div class="auth-img">
-					<span>Administrator</span><img src="images/icons/ico-user.png" />
-				</div>
-			</a>
-			<div class="dropdown-menu">
-				<div class="cu-arrow"></div>
-				<div class="dropdown-menu-content">
-					<a class="filter-item">Logout</a>
-				</div>
-			</div>			
-		</div>
-	</div>
-</div>
-</header>
-<!-- /header -->
-
-    <!-- secondary header - app bar -->
-    <div id="nav" class="row wr-app-bar">
-        <div class="wr-action-container">
-            <div class="wr-action-btn-bar">
-                <a href="javascript:openNotificationbar()" class="cu-btn btn-notification wr-notification-toggle-btn"><span class="wr-notification-bubble">35</span></a>
+    <div class="row wr-global-header">
+        <div class="col-xs-8 col-sm-6 col-lg-8 app-logo">
+            <a href="home.html"><img src="images/logo.png" /><h2 class="app-title">Mobile Device Manager</h2></a>
+        </div>
+        <div class="col-xs-4 col-sm-6 col-lg-4 wr-auth-container">
+            <div class="wr-auth pull-right">
+                <a href="#" data-toggle="dropdown" class="">
+                    <div class="auth-img">
+                        <span>Administrator</span> <i class="wso2icon wso2-user-profile"></i>
+                    </div>
+                </a>
+                <div class="dropdown-menu">
+                    <div class="cu-arrow"></div>
+                    <div class="dropdown-menu-content">
+                        <a class="filter-item">Logout</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <!-- secondary header - app bar -->
+</header>
+<!-- /header -->
+
+<!-- secondary header - app bar -->
+<div id="nav" class="row wr-app-bar">
+    <div class="wr-action-container">
+        <div class="wr-action-btn-bar">
+            <a href="javascript:openNotificationbar()" class="cu-btn wr-notification-toggle-btn"><i class="wso2icon wso2-bell"></i><span class="wr-notification-bubble">35</span></a>
+        </div>
+    </div>
+</div>
+<!-- secondary header - app bar -->
 
 <!-- content/body -->
 
@@ -108,7 +108,7 @@
                 <div class="wr-stats-board-tile">
                     <div class="tile-name">Devices</div>
                     <div>
-                        <div class="tile-icon"><img src="images/icons/ico-device.png" /></div>
+                        <div class="tile-icon"><i class="wso2icon wso2-devices"></i></div>
                         <div class="tile-stats">
                             532
                             <span class="tile-stats-free"><a href="home.html">View</a></span>
@@ -120,7 +120,7 @@
                 <div class="wr-stats-board-tile">
                     <div class="tile-name">Users</div>
                     <div>
-                        <div class="tile-icon"><img src="images/icons/ico-user.png" /></div>
+                        <div class="tile-icon"><i class="wso2icon wso2-user-profile"></i></div>
                         <div class="tile-stats">
                             503
                             <span class="tile-stats-free"><a href="users.html">View</a> | <a href="user-create.html">Add</a></span>
@@ -132,7 +132,7 @@
                 <div class="wr-stats-board-tile">
                     <div class="tile-name">Configuration Profiles</div>
                     <div>
-                        <div class="tile-icon"><img src="images/icons/ico-configure.png" /></div>
+                        <div class="tile-icon"><i class="wso2icon wso2-c-settings"></i></div>
                         <div class="tile-stats">
                             26
                             <span class="tile-stats-free"><a href="profiles.html">View</a> | <a href="profile-create.html">Add</a></span>
@@ -144,7 +144,7 @@
                 <div class="wr-stats-board-tile">
                     <div class="tile-name">Policies</div>
                     <div>
-                        <div class="tile-icon"><img src="images/icons/ico-policy.png" /></div>
+                        <div class="tile-icon"><i class="wso2icon wso2-policy"></i></div>
                         <div class="tile-stats">
                             8
                             <span class="tile-stats-free"><a href="policies.html">View</a> | <a href="policy-create.html">Add</a></span>

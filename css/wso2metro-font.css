@@ -9,252 +9,466 @@
 	font-style: normal;
 }
 
-[class^="wso2ico-"], [class*=" wso2ico-"] {
-    font-family: 'wso2metro';
+.wso2icon, [class^="wso2-"], [class*=" wso2-"] {
+    font: normal normal normal 25px/1 wso2metro;
+    font-size: inherit;
     speak: none;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
     text-transform: none;
-    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
 
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    text-rendering: auto;
+    transform: translate(0, 0);
 }
 
-.wso2ico-bell:before {
-    content: "\e635";
+/* icon options */
+
+.wso2icon-lg {
+    font-size: 1.33333333em;
+    line-height: 0.75em;
+    vertical-align: -15%;
+}
+.wso2icon-2x {
+    font-size: 2em;
+}
+.wso2icon-3x {
+    font-size: 3em;
+}
+.wso2icon-4x {
+    font-size: 4em;
+}
+.wso2icon-5x {
+    font-size: 5em;
+}
+.wso2icon-fw {
+    width: 1.28571429em;
+    text-align: center;
+}
+.wso2icon-ul {
+    padding-left: 0;
+    margin-left: 2.14285714em;
+    list-style-type: none;
+}
+.wso2icon-ul > li {
+    position: relative;
+}
+.wso2icon-li {
+    position: absolute;
+    left: -2.14285714em;
+    width: 2.14285714em;
+    top: 0.14285714em;
+    text-align: center;
+}
+.wso2icon-li.wso2icon-lg {
+    left: -1.85714286em;
+}
+.wso2icon-border {
+    padding: .2em .25em .15em;
+    border: solid 0.08em #eeeeee;
+    border-radius: .1em;
+}
+.pull-right {
+    float: right;
+}
+.pull-left {
+    float: left;
+}
+.wso2icon.pull-left {
+    margin-right: .3em;
+}
+.wso2icon.pull-right {
+    margin-left: .3em;
+}
+.wso2icon-spin {
+    -webkit-animation: wso2icon-spin 2s infinite linear;
+    animation: wso2icon-spin 2s infinite linear;
+}
+.wso2icon-pulse {
+    -webkit-animation: wso2icon-spin 1s infinite steps(8);
+    animation: wso2icon-spin 1s infinite steps(8);
+}
+@-webkit-keyframes wso2icon-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+@keyframes wso2icon-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+.wso2icon-rotate-90 {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.wso2icon-rotate-180 {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.wso2icon-rotate-270 {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+.wso2icon-flip-horizontal {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
+    -webkit-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+}
+.wso2icon-flip-vertical {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
+    -webkit-transform: scale(1, -1);
+    -ms-transform: scale(1, -1);
+    transform: scale(1, -1);
+}
+:root .wso2icon-rotate-90,
+:root .wso2icon-rotate-180,
+:root .wso2icon-rotate-270,
+:root .wso2icon-flip-horizontal,
+:root .wso2icon-flip-vertical {
+    filter: none;
+}
+.wso2icon-stack {
+    position: relative;
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    vertical-align: middle;
+}
+.wso2icon-stack-1x,
+.wso2icon-stack-2x {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+.wso2icon-stack-1x {
+    line-height: inherit;
+}
+.wso2icon-stack-2x {
+    font-size: 2em;
+}
+.wso2icon-inverse {
+    color: #ffffff;
 }
 
-.wso2ico-wifi:before {
+/* icons */
+
+.wso2-usb:before {
+    content: "\e643";
+}
+
+.wso2-hdd:before {
+    content: "\e644";
+}
+
+.wso2-dial-up:before {
+    content: "\e645";
+}
+
+.wso2-devices:before {
+    content: "\e646";
+}
+
+.wso2-battery:before {
+    content: "\e647";
+}
+
+.wso2-search:before {
+    content: "\e640";
+}
+
+.wso2-wifi:before {
     content: "\e636";
 }
 
-.wso2ico-camera:before {
+.wso2-bell:before {
+    content: "\e635";
+}
+
+.wso2-camera:before {
     content: "\e637";
 }
 
-.wso2ico-clean:before {
+.wso2-clean:before {
     content: "\e630";
 }
 
-.wso2ico-map-location:before {
+.wso2-map-location:before {
     content: "\e631";
 }
 
-.wso2ico-message:before {
+.wso2-message:before {
     content: "\e632";
 }
 
-.wso2ico-incoming-call:before {
+.wso2-incoming-call:before {
     content: "\e633";
 }
 
-.wso2ico-lock:before {
+.wso2-lock:before {
     content: "\e634";
 }
 
-.wso2ico-list:before {
+.wso2-list:before {
     content: "\e638";
 }
 
-.wso2ico-tile-menu:before {
-    content: "\e639";
-}
-
-.wso2ico-sort-move:before {
-    content: "\e63a";
-}
-
-.wso2ico-menu:before {
+.wso2-menu:before {
     content: "\e62f";
 }
 
-.wso2ico-c-minus:before {
+.wso2-tile-menu:before {
+    content: "\e639";
+}
+
+.wso2-sort-move:before {
+    content: "\e63a";
+}
+
+.wso2-sort:before {
+    content: "\e641";
+}
+
+.wso2-c-settings:before {
+    content: "\e648";
+}
+
+.wso2-c-delete:before {
+    content: "\e63e";
+}
+
+.wso2-c-cancel:before {
+    content: "\e642";
+}
+
+.wso2-c-minus:before {
     content: "\e624";
 }
 
-.wso2ico-c-add:before {
+.wso2-c-add:before {
     content: "\e625";
 }
 
-.wso2ico-c-up-arrow:before {
+.wso2-c-up-arrow:before {
     content: "\e62b";
 }
 
-.wso2ico-c-right-arrow:before {
+.wso2-c-right-arrow:before {
     content: "\e62c";
 }
 
-.wso2ico-c-left-arrow:before {
+.wso2-c-left-arrow:before {
     content: "\e62d";
 }
 
-.wso2ico-c-down-arrow:before {
+.wso2-c-down-arrow:before {
     content: "\e62e";
 }
 
-.wso2ico-c-warning:before {
-    content: "\e622";
-}
-
-.wso2ico-c-ok:before {
+.wso2-c-ok:before {
     content: "\e623";
 }
 
-.wso2ico-clock:before {
+.wso2-c-error:before {
+    content: "\e63f";
+}
+
+.wso2-c-warning:before {
+    content: "\e622";
+}
+
+.wso2-clock:before {
     content: "\e621";
 }
 
-.wso2ico-user-profile:before {
+.wso2-user-profile:before {
     content: "\e606";
 }
 
-.wso2ico-share:before {
+.wso2-settings:before {
+    content: "\e649";
+}
+
+.wso2-share:before {
     content: "\e60d";
 }
 
-.wso2ico-xml:before {
+.wso2-xml:before {
     content: "\e601";
 }
 
-.wso2ico-xsd:before {
+.wso2-xsd:before {
     content: "\e600";
 }
 
-.wso2ico-xacml:before {
+.wso2-xslt:before {
+    content: "\e63b";
+}
+
+.wso2-xq:before {
+    content: "\e63c";
+}
+
+.wso2-xacml:before {
     content: "\e602";
 }
 
-.wso2ico-wsdl:before {
+.wso2-wsdl:before {
     content: "\e604";
 }
 
-.wso2ico-wadl:before {
+.wso2-wadl:before {
     content: "\e605";
 }
 
-.wso2ico-soap:before {
+.wso2-soap:before {
     content: "\e60b";
 }
 
-.wso2ico-html:before {
+.wso2-html:before {
     content: "\e61d";
 }
 
-.wso2ico-uri:before {
+.wso2-uri:before {
     content: "\e607";
 }
 
-.wso2ico-blank_document:before {
+.wso2-blank-document:before {
     content: "\e628";
 }
 
-.wso2ico-text:before {
+.wso2-text:before {
     content: "\e609";
 }
 
-.wso2ico-throttling_policy:before {
-    content: "\e608";
-}
-
-.wso2ico-swagger:before {
+.wso2-swagger:before {
     content: "\e60a";
 }
 
-.wso2ico-site:before {
+.wso2-site:before {
     content: "\e60c";
 }
 
-.wso2ico-service_provider:before {
-    content: "\e60e";
-}
-
-.wso2ico-service:before {
-    content: "\e60f";
-}
-
-.wso2ico-sequence:before {
-    content: "\e610";
-}
-
-.wso2ico-security_policy:before {
-    content: "\e611";
-}
-
-.wso2ico-rules:before {
-    content: "\e612";
-}
-
-.wso2ico-rest_service:before {
-    content: "\e613";
-}
-
-.wso2ico-rest_api:before {
-    content: "\e614";
-}
-
-.wso2ico-proxy:before {
+.wso2-proxy:before {
     content: "\e615";
 }
 
-.wso2ico-policy:before {
+.wso2-service-provider:before {
+    content: "\e60e";
+}
+
+.wso2-service:before {
+    content: "\e60f";
+}
+
+.wso2-sequence:before {
+    content: "\e610";
+}
+
+.wso2-rules:before {
+    content: "\e612";
+}
+
+.wso2-rest-service:before {
+    content: "\e613";
+}
+
+.wso2-rest-api:before {
+    content: "\e614";
+}
+
+.wso2-policy:before {
     content: "\e616";
 }
 
-.wso2ico-pdf:before {
+.wso2-security-policy:before {
+    content: "\e611";
+}
+
+.wso2-throttling-policy:before {
+    content: "\e608";
+}
+
+.wso2-pdf:before {
     content: "\e617";
 }
 
-.wso2ico-ms_document:before {
+.wso2-ms-document:before {
     content: "\e618";
 }
 
-.wso2ico-java:before {
+.wso2-java:before {
     content: "\e61b";
 }
 
-.wso2ico-javaee:before {
+.wso2-javaee:before {
     content: "\e61a";
 }
 
-.wso2ico-javascript:before {
+.wso2-javascript:before {
     content: "\e619";
 }
 
-.wso2ico-jaggery:before {
+.wso2-jaggery:before {
     content: "\e61c";
 }
 
-.wso2ico-gadget:before {
+.wso2-jquery:before {
+    content: "\e63d";
+}
+
+.wso2-gadget:before {
     content: "\e61e";
 }
 
-.wso2ico-endpoint:before {
+.wso2-endpoint:before {
     content: "\e61f";
 }
 
-.wso2ico-dss:before {
+.wso2-dss:before {
     content: "\e620";
 }
 
-.wso2ico-bpmn:before {
+.wso2-bpmn:before {
     content: "\e626";
 }
 
-.wso2ico-bpel:before {
+.wso2-bpel:before {
     content: "\e627";
 }
 
-.wso2ico-aqpplication:before {
+.wso2-application:before {
     content: "\e629";
 }
 
-.wso2ico-api:before {
+.wso2-api:before {
     content: "\e62a";
 }
 
-.wso2ico-wso2:before {
+.wso2-wso2:before {
     content: "\e603";
 }

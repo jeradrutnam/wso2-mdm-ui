@@ -46,26 +46,26 @@
 
 <!-- header -->
 <header>
-<div class="row wr-global-header">
-    <div class="col-xs-8 col-sm-6 col-lg-8 app-logo">
-        <a href="home.html"><img src="images/logo.png" /><h2 class="app-title">Mobile Device Manager</h2></a>
+    <div class="row wr-global-header">
+        <div class="col-xs-8 col-sm-6 col-lg-8 app-logo">
+            <a href="home.html"><img src="images/logo.png" /><h2 class="app-title">Mobile Device Manager</h2></a>
+        </div>
+        <div class="col-xs-4 col-sm-6 col-lg-4 wr-auth-container">
+            <div class="wr-auth pull-right">
+                <a href="#" data-toggle="dropdown" class="">
+                    <div class="auth-img">
+                        <span>Dhanuka</span> <i class="wso2icon wso2-user-profile"></i>
+                    </div>
+                </a>
+                <div class="dropdown-menu">
+                    <div class="cu-arrow"></div>
+                    <div class="dropdown-menu-content">
+                        <a class="filter-item">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-	<div class="col-xs-4 col-sm-6 col-lg-4 wr-auth-container">
-		<div class="wr-auth pull-right">
-			<a href="#" data-toggle="dropdown" class="">
-				<div class="auth-img">
-					<span>Dhanuka</span><img src="images/icons/ico-user.png" />
-				</div>
-			</a>
-			<div class="dropdown-menu">
-				<div class="cu-arrow"></div>
-				<div class="dropdown-menu-content">
-					<a class="filter-item">Logout</a>
-				</div>
-			</div>			
-		</div>
-	</div>
-</div>
 </header>
 <!-- /header -->
 
@@ -73,8 +73,8 @@
 <div id="nav" class="row wr-app-bar">
 	<div class="col-md-9 wr-action-container">
 		<div class="wr-action-btn-bar">
-			<a href="#" class="cu-btn btn-add-new">Enroll Device</a>
-			<a href="dashboard.html" class="cu-btn btn-prev">Go Back To Dashboard</a>
+			<a href="#" class="cu-btn"><i class="wso2icon wso2-c-add"></i>Enroll Device</a>
+			<a href="dashboard.html" class="cu-btn"><i class="wso2icon wso2-c-left-arrow"></i>Go Back To Dashboard</a>
 		</div>
 	</div>
 </div>
@@ -160,10 +160,10 @@
 		<!-- content -->
 		<div class="container-fluid col-centered wr-content">
 
-			<!-- operations container -->
-			<div class="wr-operations">
+            <!-- operations container -->
+            <div class="wr-operations">
 
-				<a href="javascript:operationSelect('devicelock')"><img src="images/icons/ico-lock.png" /><span>Device Lock</span></a>
+                <a href="javascript:operationSelect('devicelock')"><i class="wso2icon wso2-lock"></i><span>Device Lock</span></a>
                 <div class="operation" data-operation="devicelock">
                     <div class="content">Are you sure you want to lock the selected devices ?</div>
                     <div class="buttons">
@@ -172,7 +172,7 @@
                     </div>
                 </div>
 
-				<a href="javascript:operationSelect('ring')"><img src="images/icons/ico-ring.png" /><span>Ring</span></a>
+                <a href="javascript:operationSelect('ring')"><i class="wso2icon wso2-incoming-call"></i><span>Ring</span></a>
                 <div class="operation" data-operation="ring">
                     <div class="content">Please click ok to start ringing</div>
                     <div class="buttons">
@@ -181,7 +181,7 @@
                     </div>
                 </div>
 
-				<a href="javascript:operationSelect('message')"><img src="images/icons/ico-message.png" /><span>Message</span></a>
+                <a href="javascript:operationSelect('message')"><i class="wso2icon wso2-message"></i><span>Message</span></a>
                 <div class="operation" data-operation="message">
                     <div class="content">
                         <div>Type message</div>
@@ -193,7 +193,7 @@
                     </div>
                 </div>
 
-				<a href="javascript:operationSelect('locate')"><img src="images/icons/ico-map.png" /><span>Locate</span></a>
+                <a href="javascript:operationSelect('locate')"><i class="wso2icon wso2-map-location"></i><span>Locate</span></a>
                 <div class="operation" data-operation="locate">
                     <div class="content">Locate</div>
                     <div class="buttons">
@@ -201,7 +201,7 @@
                     </div>
                 </div>
 
-				<a href="javascript:operationSelect('wipe')"><img src="images/icons/ico-wipe.png" /><span>Wipe</span></a>
+                <a href="javascript:operationSelect('wipe')"><i class="wso2icon wso2-clean"></i><span>Wipe</span></a>
                 <div class="operation" data-operation="wipe">
                     <div class="content">Wipe</div>
                     <div class="buttons">
@@ -209,7 +209,7 @@
                     </div>
                 </div>
 
-				<a href="javascript:operationSelect('camera')"><img src="images/icons/ico-camera.png" /><span>Camera</span></a>
+                <a href="javascript:operationSelect('camera')"><i class="wso2icon wso2-camera"></i><span>Camera</span></a>
                 <div class="operation" data-operation="camera">
                     <div class="content">Camera</div>
                     <div class="buttons">
@@ -217,7 +217,7 @@
                     </div>
                 </div>
 
-				<a href="javascript:operationSelect('wifi')"><img src="images/icons/ico-wifi.png" /><span>Wi-Fi</span></a>
+                <a href="javascript:operationSelect('wifi')"><i class="wso2icon wso2-wifi"></i><span>Wi-Fi</span></a>
                 <div class="operation" data-operation="wifi">
                     <div class="content">Wi-Fi</div>
                     <div class="buttons">
@@ -225,9 +225,9 @@
                     </div>
                 </div>
 
-				<br class="c-both" />
-			</div>
-			<!-- /operations container -->
+                <br class="c-both" />
+            </div>
+            <!-- /operations container -->
 
 
 			<!-- form content placeholder -->

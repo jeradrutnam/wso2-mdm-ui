@@ -42,13 +42,13 @@ function selectAllDevices(button){
             $(this).prop('checked', true);
         });
         $(button).data('select', true);
-        $(button).html('Select All Devices');
+        $(button).html('Deselect All Devices');
     }else{
         $(deviceCheckbox).each(function(index){
             $(this).prop('checked', false);
         });
         $(button).data('select', false);
-        $(button).html('Deselect All Devices');
+        $(button).html('Select All Devices');
     }
 }
 

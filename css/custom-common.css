@@ -1,4 +1,3 @@
-/* */
 @import "wso2metro-font.css";
 
 /* Regular */
@@ -154,10 +153,6 @@ body {
 	padding-left:0;
 }
 
-.wr-icon {
-    font-size: 25px;
-}
-
 /* application top level header */
 h2.app-title {
 	font-weight:100;
@@ -227,7 +222,7 @@ header {
 }
 
 .wr-auth-container {
-	padding-right:0px;
+	padding-right:0;
 }
 
 .auth-img {
@@ -235,7 +230,6 @@ header {
 	display:inline-block;
 	height:50px;
 	padding:8px 10px;
-	font-size:12px;
 	color:#fff;
 	text-decoration: none;
 }
@@ -244,13 +238,14 @@ header {
 	background:#86a7f4;
 }
 
-.auth-img img {
-	margin-left:5px;
+.auth-img .wso2icon {
+    font-size: 20px;
 }
 
 .auth-img span {
 	display:inline-block;
 	padding-top:8px;
+    font-size:12px;
 }
 
 

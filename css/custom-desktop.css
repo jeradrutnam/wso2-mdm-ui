@@ -58,7 +58,7 @@ a.ctrl-asset-type-switcher:hover {
 .wr-asset-type-switcher span.btn-asset {
 	width:54px;
 	height:54px;
-	margin-right:0px;
+	margin-right:0;
 	display:inline-block;
 	background:#5d81d2 url('../images/icons/ico-menu.png') 1em 1em no-repeat;
 }
@@ -149,6 +149,11 @@ a.ast-type-item:hover {
 
 .wr-operations a:hover {
 	background:#eaf0f1;
+}
+
+.wr-operations .wso2icon {
+    margin:10px 0;
+    font-size: 32px;
 }
 
 .wr-operations span {
@@ -446,29 +451,32 @@ a.filter-item:hover {
     padding-left: 0;
 }
 
-a.cu-btn {
+a.cu-btn, a.cu-btn-inner {
 	color:#fff;
 	text-decoration: none;
-	border:0 solid #ff0000;
-	padding:17px 10px 16px 45px;
-	margin:0 0 0 0;
 	font-weight:100;
-	display:inline-block;
+	display: inline-block;
 	text-transform: uppercase;
-	background-size: 26px 26px;
+    height: 53px;
+    padding: 13px 10px;
 }
 
 a.cu-btn:hover {
 	background-color:#555;
 }
 
-a.cu-btn.dark {
-    color: #333;
-    background-size: 26px 26px;
-    padding:8px 8px 7px 40px;
+a.cu-btn .wso2icon, a.cu-btn-inner .wso2icon {
+    font-size: 25px;
+    padding-right: 5px;
+    padding-bottom: 3px;
 }
 
-a.cu-btn.dark:hover {
+a.cu-btn-inner {
+    color: #333;
+    padding: 5px 10px;
+    height: 35px;
+}
+a.cu-btn-inner:hover {
     background-color:#e4e4e4;
 }
 
@@ -490,10 +498,6 @@ a.cu-btn.dark:hover {
 
 .btn-delete.dark {
     background:url('../images/icons/ico-delete-dark.png') 0.6em 0.3em no-repeat;
-}
-
-.btn-notification {
-    background:url('../images/icons/ico-notification.png') 0.8em 1em no-repeat;
 }
 
 .btn-cancel {
@@ -944,29 +948,21 @@ a.btn-operations {
     font-weight: 500;
 }
 
-.wr-notification-desc .wr-notification-time {
-    background:url('../images/icons/ico-time.png') 0em 0.4em no-repeat;
-    background-size: 10px;
-    padding-left: 15px;
+.wr-notification-desc .wso2icon {
+    font-size: 12px;
 }
 
-
 a.wr-notification-toggle-btn {
-    min-height: 53px;
-    min-width: 53px;
     float: right;
-    background-position:1.3em 1.3em;
-    background-size: 20px;
-    position: relative;
 }
 
 .wr-notification-bubble {
+    display: inline-block;
     background: #fafafa;
     color: #555;
     padding: 2px 4px;
     border-radius: 5px;
     min-width: 10px;
-    height: 10px;
     font-weight: 500;
 }
 
@@ -1155,8 +1151,8 @@ a.wr-notification-toggle-btn.selected {
     margin-top: 5px;
 }
 
-.tile-icon img {
-    width:32px;
+.tile-icon .wso2icon {
+    font-size:25px;
 }
 
 .tile-sup-lbl {
@@ -1310,13 +1306,13 @@ a.wr-notification-toggle-btn.selected {
     cursor: move;
 }
 
-.wr-sortable .list-group-item .wr-icon {
-    margin-right: 10px;
+.wr-sortable .list-group-item .wso2icon.wso2-sort-move {
     opacity: 0.5;
+    padding-top: 10px;
+    margin-right: 10px;
     float: left;
-    padding-top: 8px;
+    font-size: 25px;
 }
-
 /*.container { padding: 5px;}*/
 /*.row {margin:-5px;}*/
 /*.row > div {padding:5px;}*/
