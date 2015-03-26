@@ -40,12 +40,14 @@ function selectAllDevices(button){
     if(!$(button).data('select')){
         $(deviceCheckbox).each(function(index){
             $(this).prop('checked', true);
+            addDeviceSelectedClass(this);
         });
         $(button).data('select', true);
         $(button).html('Deselect All Devices');
     }else{
         $(deviceCheckbox).each(function(index){
             $(this).prop('checked', false);
+            addDeviceSelectedClass(this);
         });
         $(button).data('select', false);
         $(button).html('Select All Devices');

@@ -561,6 +561,19 @@ a.cu-ico-button-stats {
 	padding:5px;
 }
 
+.wr-filter-sort a.ico-filter .wso2icon {
+    width:30px;
+    height:30px;
+    line-height: 30px;
+    text-align: center;
+    color: #333;
+    font-size: 15px;
+}
+
+.wr-filter-sort a.ico-filter .wso2icon.wso2-sort {
+    font-size: 23px;
+}
+
 @media (max-width:1100px) {
     .wr-filters, .wr-filter-sort.pull-right {
         float: none !important;
@@ -570,7 +583,6 @@ a.cu-ico-button-stats {
 .wr-filter-sort a.ico-filter:hover, .wr-filter-sort a.ico-filter.selected {
 	background:#e4e4e4;
 }
-
 
 .sort-title, .sort-options {
 	padding:0px 15px;
@@ -1152,7 +1164,7 @@ a.wr-notification-toggle-btn.selected {
 }
 
 .tile-icon .wso2icon {
-    font-size:25px;
+    font-size:px;
 }
 
 .tile-sup-lbl {
