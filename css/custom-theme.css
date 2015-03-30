@@ -441,14 +441,23 @@ b, strong {
 
 .panel-title a {
     color: #333333;
-    padding:15px 35px;
-    background-size: 26px 26px !important;
+    padding:15px 0;
     display: inline-block;
-    background: url('../images/icons/ico-down-dark.png') 0.1em 0.65em no-repeat;
 }
 
-.panel-title a.collapsed {
-    background: url('../images/icons/ico-next-dark.png') 0.1em 0.65em no-repeat;
+.panel-title a:before {
+    font-family: wso2metro;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 100%;
+    padding-bottom: 5px;
+    margin-right: 7px;
+    font-size: 25px;
+    content: "\e62e";
+}
+
+.panel-title a.collapsed:before {
+    content: "\e62c";
 }
 
 .panel-body {
