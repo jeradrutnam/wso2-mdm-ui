@@ -1174,7 +1174,7 @@ a.wr-notification-toggle-btn.selected {
 }
 
 .wr-form {
-    margin: 0 0 30px 0;
+    margin: 30px 0;
 }
 
 .wr-form button {
@@ -1187,11 +1187,17 @@ a.wr-notification-toggle-btn.selected {
     color: #666;
 }
 
+.wr-form .wr-operation-icon {
+    font-size: 32px;
+    margin-right: 10px;
+    color: #6b94f1;
+}
+
+
 /* enabled/disabled switch styles */
 .wr-input-control.switch {
     display: inline-block;
     margin-right: 10px;
-    margin-top: 18px;
     cursor: pointer;
     position: relative;
 }
