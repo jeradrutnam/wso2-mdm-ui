@@ -212,6 +212,10 @@
     content: "\e612";
 }
 
+.wso2-view:before {
+    content: "\e652";
+}
+
 .wso2-search:before {
     content: "\e613";
 }
