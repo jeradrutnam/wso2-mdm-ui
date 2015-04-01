@@ -804,9 +804,9 @@ span.ico-sort-desc {
 	display:block;
 	font-size:21px;
 	font-weight:500;
-	color:#333;
+    color:#fff;
 	background:#bbb;
-	padding:12px;
+	padding:8px 12px;
     height: 54px;
     float: right;
 }
@@ -815,7 +815,7 @@ span.ico-sort-desc {
     .btn-search { display: none; }
 }
 
-.wr-search .glyphicon {
+.wr-search:hover .wso2icon {
 	color:#fff;
 }
 
