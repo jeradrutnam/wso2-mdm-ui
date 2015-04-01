@@ -52,9 +52,12 @@
         </div>
         <div class="col-xs-4 col-sm-6 col-lg-4 wr-auth-container">
             <div class="wr-auth pull-right">
-                <a href="#" data-toggle="dropdown" class="">
+                <a href="#" data-toggle="dropdown">
                     <div class="auth-img">
-                        <span>Dhanuka</span> <i class="wso2icon wso2-user-profile"></i>
+                        Dhanuka
+                        <span class="wso2icon-stack-md wso2icon-lg">
+                            <i class="wso2icon wso2-user wso2icon-stack-1-5x"></i>
+                        </span>
                     </div>
                 </a>
                 <div class="dropdown-menu">
@@ -73,8 +76,20 @@
 <div id="nav" class="row wr-app-bar">
 	<div class="col-md-9 wr-action-container">
 		<div class="wr-action-btn-bar">
-			<a href="#" class="cu-btn"><i class="wso2icon wso2-c-add"></i>Enroll Device</a>
-			<a href="dashboard.html" class="cu-btn"><i class="wso2icon wso2-c-left-arrow"></i>Go Back To Dashboard</a>
+			<a href="#" class="cu-btn">
+                <span class="wso2icon-stack">
+                    <i class="wso2icon wso2-ring wso2icon-stack-2x"></i>
+                    <i class="wso2icon wso2-add wso2icon-stack-1x"></i>
+                </span>
+                Enroll Device
+            </a>
+			<a href="dashboard.html" class="cu-btn">
+                <span class="wso2icon-stack">
+                    <i class="wso2icon wso2-ring wso2icon-stack-2x"></i>
+                    <i class="wso2icon wso2-left-arrow wso2icon-stack-1x"></i>
+                </span>
+                Go Back To Dashboard
+            </a>
 		</div>
 	</div>
 </div>
@@ -88,7 +103,7 @@
             <!-- asset filter -->
             <div class="wr-search">
                 <div class="wr-asset-type-switcher">
-                    <a href="javascript:void(0)" class="ctrl-asset-type-switcher"><span class="btn-asset"><i class="wso2icon wso2-tile-menu"></i></span></a>
+                    <a href="javascript:void(0)" class="ctrl-asset-type-switcher"><span class="btn-asset"><i class="wso2icon wso2-tiles"></i></span></a>
                     <div class="popover menu fade bottom in">
                         <div class="arrow"></div>
                         <div class="popover-content">
@@ -154,9 +169,9 @@
 		<div class="wr-filters col-xs-12 col-sm-5 col-md-4 wr-filters-right">
 			<div class="wr-filter-sort pull-right">
                 <a href="javascript:void(0)" onclick="selectAllDevices(this)" class="wr-btn">Select All Devices</a>
-                <a href="javascript:void(0)" onclick="changeDeviceView('grid', this)" class="ico-filter ctrl-filter-grid view-toggle selected"><i class="wso2icon wso2-tile-menu"></i></a>
+                <a href="javascript:void(0)" onclick="changeDeviceView('grid', this)" class="ico-filter ctrl-filter-grid view-toggle selected"><i class="wso2icon wso2-grid"></i></a>
                 <a href="javascript:void(0)" onclick="changeDeviceView('list', this)" class="ico-filter ctrl-filter-list view-toggle"><i class="wso2icon wso2-list"></i></a>
-                <span class="wr-filter-type-switcher"><a href="#" class="ico-filter ctrl-filter-type-switcher" data-placement="bottom" data-trigger="focus"><i class="wso2icon wso2-sort"></i></a></span>
+                <span class="wr-filter-type-switcher"><a href="#" class="ico-filter ctrl-filter-type-switcher" data-placement="bottom" data-trigger="focus"><i class="wso2icon wso2-list-sort"></i></a></span>
 			</div>
 		</div>
 

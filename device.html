@@ -52,9 +52,12 @@
         </div>
         <div class="col-xs-4 col-sm-6 col-lg-4 wr-auth-container">
             <div class="wr-auth pull-right">
-                <a href="#" data-toggle="dropdown" class="">
+                <a href="#" data-toggle="dropdown">
                     <div class="auth-img">
-                        <span>Dhanuka</span> <i class="wso2icon wso2-user-profile"></i>
+                        Dhanuka
+                        <span class="wso2icon-stack-md wso2icon-lg">
+                            <i class="wso2icon wso2-user wso2icon-stack-1-5x"></i>
+                        </span>
                     </div>
                 </a>
                 <div class="dropdown-menu">
@@ -73,8 +76,20 @@
 <div id="nav" class="row wr-app-bar">
 	<div class="wr-action-container">
 		<div class="wr-action-btn-bar">
-			<a href="javascript:history.go(-1)" class="cu-btn"><i class="wso2icon wso2-c-left-arrow"></i>Go Back</a>
-            <a href="javascript:openNotificationbar()" class="cu-btn wr-notification-toggle-btn"><i class="wso2icon wso2-bell"></i><span class="wr-notification-bubble">35</span></a>
+            <a href="javascript:history.go(-1)" class="cu-btn">
+                <span class="wso2icon-stack">
+                    <i class="wso2icon wso2-ring wso2icon-stack-2x"></i>
+                    <i class="wso2icon wso2-left-arrow wso2icon-stack-1x"></i>
+                </span>
+                Go Back
+            </a>
+
+            <a href="javascript:openNotificationbar()" class="cu-btn wr-notification-toggle-btn">
+                <span class="wso2icon-stack-md">
+                    <i class="wso2icon wso2-bell wso2icon-stack-1-5x"></i>
+                </span>
+                <span class="wr-notification-bubble">35</span>
+            </a>
 		</div>
 	</div>
 </div>
@@ -214,7 +229,7 @@
                     <div class="ctrl-tile-status tile-bg">
                         <div class="tile-name">EXTERNAL STORAGE</div>
                         <div>
-                            <div class="tile-icon"><i class="wso2icon wso2-usb"></i></div>
+                            <div class="tile-icon"><i class="wso2icon wso2-usb-drive"></i></div>
                             <div class="tile-stats">20%<span class="tile-stats-free">14 GB Free</span></div>
                         </div>
                     </div>
@@ -232,7 +247,7 @@
                     <div class="ctrl-tile-status tile-bg">
                         <div class="tile-name">USAGE /VOICE</div>
                         <div>
-                            <div class="tile-icon"><i class="wso2icon wso2-incoming-call"></i></div>
+                            <div class="tile-icon"><i class="wso2icon wso2-dial-up"></i></div>
                             <div class="tile-stats">80%<span class="tile-stats-free">6 GB Free</span></div>
                         </div>
                     </div>
@@ -246,7 +261,15 @@
                     <!-- device location -->
                     <div class="panel panel-default">
                         <div class="panel-heading" role="tab" id="headingOne">
-                            <h2 class="sub-title panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Device Location</a></h2>
+                            <h2 class="sub-title panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <span class="wso2icon-stack">
+                                        <i class="wso2icon wso2-ring wso2icon-stack-2x"></i>
+                                        <i class="wso2icon wso2-down-arrow wso2icon-stack-1x"></i>
+                                    </span>
+                                    Device Location
+                                </a>
+                            </h2>
                         </div>
                         <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                             <div class="panel-body">
@@ -259,7 +282,15 @@
                     <!-- policies -->
                     <div class="panel panel-default">
                         <div class="panel-heading" role="tab" id="headingTwo">
-                            <h2 class="sub-title panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Policies</a></h2>
+                            <h2 class="sub-title panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <span class="wso2icon-stack">
+                                        <i class="wso2icon wso2-ring wso2icon-stack-2x"></i>
+                                        <i class="wso2icon wso2-right-arrow wso2icon-stack-1x"></i>
+                                    </span>
+                                    Policies
+                                </a>
+                            </h2>
                         </div>
                         <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                             <div class="panel-body">
@@ -271,7 +302,15 @@
                     <!-- installed applications -->
                     <div class="panel panel-default">
                         <div class="panel-heading" role="tab" id="headingThree">
-                            <h2 class="sub-title panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Installed Applications</a></h2>
+                            <h2 class="sub-title panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <span class="wso2icon-stack">
+                                        <i class="wso2icon wso2-ring wso2icon-stack-2x"></i>
+                                        <i class="wso2icon wso2-right-arrow wso2icon-stack-1x"></i>
+                                    </span>
+                                    Installed Applications
+                                </a>
+                            </h2>
                         </div>
                         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                             <div class="panel-body">

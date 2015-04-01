@@ -144,7 +144,6 @@ a.ast-type-item:hover {
     color:#6b94f1;
 	min-width:70px;
 	background:#fafafa;
-	/*border-radius: 4px;*/
 	padding:2px 4px 6px 4px;
 	margin-bottom:10px;
 }
@@ -155,7 +154,7 @@ a.ast-type-item:hover {
 
 .wr-operations .wso2icon {
     margin:10px;
-    font-size: 32px;
+    font-size: 28px;
 }
 
 .wr-operations span {
@@ -466,9 +465,9 @@ a.cu-btn:hover {
 }
 
 a.cu-btn .wso2icon, a.cu-btn-inner .wso2icon {
-    font-size: 25px;
-    padding-right: 5px;
-    padding-bottom: 3px;
+    /*font-size: 26px;*/
+    /*padding-right: 5px;*/
+    /*padding-bottom: 3px;*/
 }
 
 a.cu-btn-inner {
@@ -479,35 +478,6 @@ a.cu-btn-inner {
 a.cu-btn-inner:hover {
     background-color:#e4e4e4;
 }
-
-.btn-add-new.dark {
-    background:url('../images/icons/ico-add-new-dark.png') 0.6em 0.3em no-repeat;
-}
-
-.btn-view.dark {
-    background:url('../images/icons/ico-view-dark.png') 0.6em 0.3em no-repeat;
-}
-
-.btn-configure.dark {
-    background:url('../images/icons/ico-configure-dark.png') 0.6em 0.3em no-repeat;
-}
-
-.btn-delete.dark {
-    background:url('../images/icons/ico-delete-dark.png') 0.6em 0.3em no-repeat;
-}
-
-.btn-prev {
-	background:url('../images/icons/ico-prev.png') 0.8em 1em no-repeat;
-}
-
-.btn-reset {
-	background:url('../images/icons/ico-reset.png') 0.8em 1em no-repeat;
-}
-
-a.cu-ico-button-stats {
-	background:url('../images/icons/ico-meter.png') right  no-repeat;
-}
-
 
 /* filter */
 .wr-filters {
@@ -551,7 +521,7 @@ a.cu-ico-button-stats {
     font-size: 15px;
 }
 
-.wr-filter-sort a.ico-filter .wso2icon.wso2-sort {
+.wr-filter-sort a.ico-filter .wso2icon.wso2-list-sort {
     font-size: 23px;
 }
 
@@ -946,7 +916,7 @@ a.btn-operations {
     font-size: 12px;
 }
 
-a.wr-notification-toggle-btn {
+.wr-notification-toggle-btn {
     float: right;
 }
 
@@ -1329,7 +1299,7 @@ a.wr-notification-toggle-btn.selected {
     border-color: #919191;
 }
 .wr-input-control.radio:active input:not(:disabled) + .helper:before {
-    border-color: #1e1e1e;
+    border-color: #919191;
 }
 
 /* checkbox style */
@@ -1365,8 +1335,8 @@ a.wr-notification-toggle-btn.selected {
 .wr-input-control.checkbox input[type="checkbox"]:checked + .helper:after {
     position: absolute;
     display: block;
-    content: "\e64a";
-    font-size: 10pt;
+    content: "\e631";
+    font-size: 7pt;
     height: 16px;
     width: 16px;
     line-height: 16px;
@@ -1391,10 +1361,10 @@ a.wr-notification-toggle-btn.selected {
     color: #8a8a8a;
 }
 .wr-input-control.checkbox:hover input:not(:disabled) + .helper:before {
-    border-color: #919191;
+    border-color: #eaf0f1;
 }
 .wr-input-control.checkbox:active input:not(:disabled) + .helper:before {
-    border-color: #1e1e1e;
+    border-color: #eaf0f1;
 }
 
 /* list group styles */
@@ -1437,12 +1407,12 @@ a.wr-notification-toggle-btn.selected {
     cursor: move;
 }
 
-.wr-sortable .list-group-item .wso2icon.wso2-sort-move {
+.wr-sortable .list-group-item .wso2icon.wr-sortable-icon {
     opacity: 0.5;
     padding-top: 10px;
     margin-right: 10px;
     float: left;
-    font-size: 25px;
+    font-size: 14px;
 }
 /*.container { padding: 5px;}*/
 /*.row {margin:-5px;}*/
