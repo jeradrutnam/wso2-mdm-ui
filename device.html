@@ -1,0 +1,412 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Device Manager</title>
+
+    <link rel="icon" href="favicon.png" type="image/x-icon" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom-common.css" rel="stylesheet">    
+    <link href="css/custom-desktop.css" rel="stylesheet">
+    <link href="css/custom-theme.css" rel="stylesheet">
+
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+<div class="wr-modalpopup">
+    <div class="modalpopup-content"><!-- dynamic content --></div>
+    <div class="modalpopup-bg"></div>
+</div>
+
+<div class="wr-notification-bar">
+    <div class="wr-notification-desc new">
+        <div class="wr-notification-operation">Device Lock Operation Successful!</div>
+        <div class="wr-notification-time"><i class="wso2icon wso2-clock"></i> 14 seconds ago</div>
+        <hr />
+    </div>
+    <div class="wr-notification-desc new">
+        <div class="wr-notification-operation">Device Lock Operation Successful!</div>
+        <div class="wr-notification-time"><i class="wso2icon wso2-clock"></i> 14 seconds ago</div>
+        <hr />
+    </div>
+    <div class="wr-notification-desc">
+        <div class="wr-notification-operation">Device Lock Operation Successful!</div>
+        <div class="wr-notification-time"><i class="wso2icon wso2-clock"></i> 14 seconds ago</div>
+        <hr />
+    </div>
+</div>
+
+<div class="container col-lg-12 col-md-12 col-sm-12">
+
+<!-- header -->
+<header>
+    <div class="row wr-global-header">
+        <div class="col-xs-8 col-sm-6 col-lg-8 app-logo">
+            <a href="home.html"><img src="images/logo.png" /><h2 class="app-title">Mobile Device Manager</h2></a>
+        </div>
+        <div class="col-xs-4 col-sm-6 col-lg-4 wr-auth-container">
+            <div class="wr-auth pull-right">
+                <a href="#" data-toggle="dropdown">
+                    <div class="auth-img">
+                        Dhanuka
+                        <span class="wso2icon-stack-md wso2icon-lg">
+                            <i class="wso2icon wso2-user wso2icon-stack-1-5x"></i>
+                        </span>
+                    </div>
+                </a>
+                <div class="dropdown-menu">
+                    <div class="cu-arrow"></div>
+                    <div class="dropdown-menu-content">
+                        <a class="filter-item">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- /header -->
+
+<!-- secondary header - app bar -->
+<div id="nav" class="row wr-app-bar">
+	<div class="wr-action-container">
+		<div class="wr-action-btn-bar">
+            <a href="javascript:history.go(-1)" class="cu-btn">
+                <span class="wso2icon-stack">
+                    <i class="wso2icon wso2-ring wso2icon-stack-2x"></i>
+                    <i class="wso2icon wso2-left-arrow wso2icon-stack-1x"></i>
+                </span>
+                Go Back
+            </a>
+
+            <a href="javascript:openNotificationbar()" class="cu-btn wr-notification-toggle-btn">
+                <span class="wso2icon-stack-md">
+                    <i class="wso2icon wso2-bell wso2icon-stack-1-5x"></i>
+                </span>
+                <span class="wr-notification-bubble">35</span>
+            </a>
+		</div>
+	</div>
+</div>
+<!-- secondary header - app bar -->
+
+
+<!-- content/body -->
+<div class="row wr-device-board">
+	<div class="col-lg-12 wr-secondary-bar">
+	<label>Dulitha's iPad <span class="lbl-device">(Apple iPad Air 2)</span></label>
+	</div>
+</div>
+
+<div class="row">
+
+	<div class="col-md-12">
+		
+
+		<!-- content -->
+		<div class="container col-md-12 col-centered wr-content">
+
+            <!-- operations container -->
+            <div class="wr-operations">
+
+                <a href="javascript:operationSelect('devicelock')"><i class="wso2icon wso2-lock"></i><span>Device Lock</span></a>
+                <div class="operation" data-operation="devicelock">
+                    <div class="content">Are you sure you want to lock the selected devices ?</div>
+                    <div class="buttons">
+                        <a href="javascript:runOperation('lock')" class="btn-operations">Lock</a>
+                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
+                    </div>
+                </div>
+
+                <a href="javascript:operationSelect('ring')"><i class="wso2icon wso2-incoming-call"></i><span>Ring</span></a>
+                <div class="operation" data-operation="ring">
+                    <div class="content">Please click ok to start ringing</div>
+                    <div class="buttons">
+                        <a href="javascript:runOperation('ring')" class="btn-operations">Ring</a>
+                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
+                    </div>
+                </div>
+
+                <a href="javascript:operationSelect('message')"><i class="wso2icon wso2-message"></i><span>Message</span></a>
+                <div class="operation" data-operation="message">
+                    <div class="content">
+                        <div>Type message</div>
+                        <div><textarea></textarea></div>
+                    </div>
+                    <div class="buttons">
+                        <a href="javascript:runOperation('msg-send')" class="btn-operations">Send</a>
+                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
+                    </div>
+                </div>
+
+                <a href="javascript:operationSelect('locate')"><i class="wso2icon wso2-map-location"></i><span>Locate</span></a>
+                <div class="operation" data-operation="locate">
+                    <div class="content">Locate</div>
+                    <div class="buttons">
+                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
+                    </div>
+                </div>
+
+                <a href="javascript:operationSelect('wipe')"><i class="wso2icon wso2-clean"></i><span>Wipe</span></a>
+                <div class="operation" data-operation="wipe">
+                    <div class="content">Wipe</div>
+                    <div class="buttons">
+                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
+                    </div>
+                </div>
+
+                <a href="javascript:operationSelect('camera')"><i class="wso2icon wso2-camera"></i><span>Camera</span></a>
+                <div class="operation" data-operation="camera">
+                    <div class="content">Camera</div>
+                    <div class="buttons">
+                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
+                    </div>
+                </div>
+
+                <a href="javascript:operationSelect('wifi')"><i class="wso2icon wso2-wifi"></i><span>Wi-Fi</span></a>
+                <div class="operation" data-operation="wifi">
+                    <div class="content">Wi-Fi</div>
+                    <div class="buttons">
+                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
+                    </div>
+                </div>
+
+                <br class="c-both" />
+            </div>
+            <!-- /operations container -->
+
+		</div>
+		<!-- /content -->
+
+
+	</div>
+</div>
+
+
+<div class="row">
+	<div class="col-md-12">
+
+		<!-- content -->
+
+		<div class="container col-lg-10 wr-stats-board">
+
+            <div class="col-md-2">
+                <div class="row">
+                    <img src="images/device_icons/android-mobile.png" style="width:200px" />
+                </div>
+                <div class="row ast-desc">
+                    <div class="ast-device-desc"><b>Device:</b> Samsung Galaxy S4</div>
+                    <div class="ast-device-desc"><b>Model:</b>  GT-i9505</div>
+                    <div class="ast-device-desc"><b>IMEI:</b>  351776060691383</div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+
+                <!-- device summary -->
+                <div>
+                    <div class="ctrl-tile-status tile-bg">
+                        <div class="tile-name">BATTERY</div>
+                        <div>
+                            <div class="tile-icon"><i class="wso2icon wso2-battery"></i></div>
+                            <div class="tile-stats">10%</div>
+                        </div>
+                    </div>
+
+                    <div class="ctrl-tile-status tile-bg">
+                        <div class="tile-name">LOCAL STORAGE</div>
+                        <div>
+                            <div class="tile-icon"><i class="wso2icon wso2-hdd"></i></div>
+                            <div class="tile-stats">80%<span class="tile-stats-free">6 GB Free</span></div>
+                        </div>
+                    </div>
+
+                    <div class="ctrl-tile-status tile-bg">
+                        <div class="tile-name">EXTERNAL STORAGE</div>
+                        <div>
+                            <div class="tile-icon"><i class="wso2icon wso2-usb-drive"></i></div>
+                            <div class="tile-stats">20%<span class="tile-stats-free">14 GB Free</span></div>
+                        </div>
+                    </div>
+
+                    <div class="ctrl-tile-status-2x tile-bg">
+                        <div class="tile-name">USAGE /DATA<span class="tile-sup-lbl">Last 30 days</span></div>
+
+                        <div class="tile-stats-v">
+                            <div><span class="tile-stats-sm">721 Mb </span><span class="tile-stats-type">Cellular</span></div>
+                            <div><span class="tile-stats-sm">3.2 Gb </span><span class="tile-stats-type">Wi-Fi</span></div>
+                        </div>
+                        <div class="tile-graph"><img src="images/graph.png" /></div>
+                    </div>
+
+                    <div class="ctrl-tile-status tile-bg">
+                        <div class="tile-name">USAGE /VOICE</div>
+                        <div>
+                            <div class="tile-icon"><i class="wso2icon wso2-dial-up"></i></div>
+                            <div class="tile-stats">80%<span class="tile-stats-free">6 GB Free</span></div>
+                        </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+                </div>
+                <!-- /device summary -->
+
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+                    <!-- device location -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h2 class="sub-title panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <span class="wso2icon-stack">
+                                        <i class="wso2icon wso2-ring wso2icon-stack-2x"></i>
+                                        <i class="wso2icon wso2-down-arrow wso2icon-stack-1x"></i>
+                                    </span>
+                                    Device Location
+                                </a>
+                            </h2>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d31685.790279428384!2d79.85860875927737!3d6.923585351516181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2slk!4v1426479547647" width="680" height="450" frameborder="0" style="border:0"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /device location -->
+
+                    <!-- policies -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h2 class="sub-title panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <span class="wso2icon-stack">
+                                        <i class="wso2icon wso2-ring wso2icon-stack-2x"></i>
+                                        <i class="wso2icon wso2-right-arrow wso2icon-stack-1x"></i>
+                                    </span>
+                                    Policies
+                                </a>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /policies -->
+
+                    <!-- installed applications -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h2 class="sub-title panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <span class="wso2icon-stack">
+                                        <i class="wso2icon wso2-ring wso2icon-stack-2x"></i>
+                                        <i class="wso2icon wso2-right-arrow wso2icon-stack-1x"></i>
+                                    </span>
+                                    Installed Applications
+                                </a>
+                            </h2>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <div class="wr-app-listing">
+                                    <div><img src="images/app9.png" /></div>
+                                    <div><img src="images/app10.png" /></div>
+                                    <div><img src="images/app11.png" /></div>
+                                    <div><img src="images/app12.png" /></div>
+                                    <div><img src="images/app13.png" /></div>
+                                    <div><img src="images/app14.png" /></div>
+                                    <div><img src="images/app15.png" /></div>
+                                    <div><img src="images/app16.png" /></div>
+                                    <div><img src="images/app17.png" /></div>
+                                    <div><img src="images/app18.png" /></div>
+                                    <div><img src="images/app19.png" /></div>
+                                    <div><img src="images/app20.png" /></div>
+                                    <div><img src="images/app21.png" /></div>
+                                    <div><img src="images/app22.png" /></div>
+                                    <div><img src="images/app23.png" /></div>
+                                    <div><img src="images/app21.png" /></div>
+                                    <div><img src="images/app10.png" /></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /installed applications -->
+
+                </div>
+
+            </div>
+
+		</div>
+
+		<!-- /content -->
+
+	</div>
+</div>
+
+<!-- /content/body -->
+
+</div>
+
+<div id="content-filter-types" style="display: none">
+    <div class="sort-title">Sort By</div>
+    <div class="sort-options">
+    	<a href="#">Device Name</a>
+    	<a href="#">OS</a>
+    	<a href="#">User</a>
+    	<a href="#">Model</a>   
+    </div>
+</div>  
+
+<!--
+<footer class="footer">
+        <p>&copy; 2015 WSO2 Inc. All Rights Reserved</p>
+</footer>
+-->
+
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.resize.js"></script>
+<script src="js/assetmenu.js"></script>
+<script src="js/operationsmenu.js"></script>
+<script src="js/deviceview.js"></script>
+<script src="js/notificationbar.js"></script>
+
+<script type="text/javascript">
+
+$( document ).ready(function() {
+
+    $('[data-toggle="tooltip"]').tooltip();   
+
+    $("[data-toggle=popover]").popover();
+
+    $(".ctrl-asset-type-switcher").popover({
+        html : true, 
+        content: function() {
+          return $('#content-asset-types').html();
+        }
+    });
+
+    $(".ctrl-filter-type-switcher").popover({
+        html : true, 
+        content: function() {
+          return $('#content-filter-types').html();
+        }
+    });    
+
+	$('#nav').affix({
+	      offset: {
+	        top: $('header').height()
+	      }
+	});
+}); 
+
+</script>
+
+</body>
+</html>

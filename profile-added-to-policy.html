@@ -1,0 +1,165 @@
+<!--
+* Copyright (c) 2015, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+*
+* WSO2 Inc. licenses this file to you under the Apache License,
+* Version 2.0 (the "License"); you may not use this file except
+* in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied. See the License for the
+* specific language governing permissions and limitations
+* under the License.
+-->
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Device Manager</title>
+
+    <link rel="icon" href="favicon.png" type="image/x-icon" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom-common.css" rel="stylesheet">    
+    <link href="css/custom-desktop.css" rel="stylesheet">
+    <link href="css/custom-theme.css" rel="stylesheet">
+
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+<div class="wr-modelpopup">
+    <div class="modelpopup-content"><!-- dynamic content --></div>
+    <div class="modelpopup-bg"></div>
+</div>
+
+<div class="container col-lg-12 col-md-12 col-sm-12">
+
+<!-- header -->
+<header>
+    <div class="row wr-global-header">
+        <div class="col-xs-8 col-sm-6 col-lg-8 app-logo">
+            <a href="home.html"><img src="images/logo.png" /><h2 class="app-title">Mobile Device Manager</h2></a>
+        </div>
+        <div class="col-xs-4 col-sm-6 col-lg-4 wr-auth-container">
+            <div class="wr-auth pull-right">
+                <a href="#" data-toggle="dropdown">
+                    <div class="auth-img">
+                        Administrator
+                        <span class="wso2icon-stack-md wso2icon-lg">
+                            <i class="wso2icon wso2-user wso2icon-stack-1-5x"></i>
+                        </span>
+                    </div>
+                </a>
+                <div class="dropdown-menu">
+                    <div class="cu-arrow"></div>
+                    <div class="dropdown-menu-content">
+                        <a class="filter-item">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- /header -->
+
+<!-- secondary header - app bar -->
+<div id="nav" class="row wr-app-bar">
+	<div class="col-md-9 wr-action-container">
+		<div class="wr-action-btn-bar">
+            <a href="dashboard.html" class="cu-btn">
+                <span class="wso2icon-stack">
+                    <i class="wso2icon wso2-ring wso2icon-stack-2x"></i>
+                    <i class="wso2icon wso2-left-arrow wso2icon-stack-1x"></i>
+                </span>
+                Go Back To Dashboard
+            </a>
+		</div>
+	</div>
+</div>
+<!-- secondary header - app bar -->
+
+<!-- content/body -->
+<div class="row">
+	<div class="col-md-12">
+		
+
+		<!-- content -->
+		<div class="container col-centered wr-content">
+
+            <div class="wr-form">
+
+                <h1 class="wr-title">Profile is added to the "this" policy</h1>
+                Please click <b>"Finish"</b> to complete the process and go back to policy list
+                <hr />
+
+                <button class="wr-btn"  onclick="window.location.href='policies.html'">Finish</button>
+
+            </div>
+
+		</div>
+		<!-- /content -->
+
+
+	</div>
+</div>
+<!-- /content/body -->
+
+</div>
+
+<div id="content-filter-types" style="display: none">
+    <div class="sort-title">Sort By</div>
+    <div class="sort-options">
+    	<a href="#">Device Name<span class="ico-sort-asc"></span></a>
+    	<a href="#">OS</a>
+    	<a href="#">User</a>
+    	<a href="#">Model</a>   
+    </div>
+</div>  
+
+<!-- 
+<footer class="footer">
+        <p>&copy; 2015 WSO2 Inc. All Rights Reserved</p>
+</footer>
+-->
+
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/assetmenu.js"></script>
+<script src="js/operationsmenu.js"></script>
+
+<script type="text/javascript">
+
+$( document ).ready(function() {
+
+    $('[data-toggle="tooltip"]').tooltip();   
+
+    $("[data-toggle=popover]").popover();
+
+    $(".ctrl-filter-type-switcher").popover({
+        html : true, 
+        content: function() {
+          return $('#content-filter-types').html();
+        }
+    });    
+
+	$('#nav').affix({
+	      offset: {
+	        top: $('header').height()
+	      }
+	});	 
+}); 
+
+</script>
+
+</body>
+</html>
