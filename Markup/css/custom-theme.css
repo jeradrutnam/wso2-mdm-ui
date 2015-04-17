@@ -437,14 +437,6 @@ b, strong {
     display: inline-block;
 }
 
-.panel-title a .wso2icon-stack {
-    font-size: 14px;
-}
-
-.panel-title a.collapsed .wso2-down-arrow:before {
-    content: "\e634";
-}
-
 .panel-body {
     background: transparent;
     padding: 0;
