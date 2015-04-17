@@ -1,4 +1,5 @@
-@import "wso2metro-font.css";
+@import "fontwso2.css";
+@import "fontwso2-extend.css";
 
 /* Regular */
 @font-face {
@@ -155,15 +156,16 @@ body {
 
 /* application top level header */
 h2.app-title {
-	font-weight:100;
-	font-size:20px;
-	margin:0;
-	padding:0;
-	color:#fff;
+    font-weight:500;
+    font-size:17px;
+    margin:0;
+    padding:3px 0 0 0;
+    color:#fafafa;
+    text-transform: uppercase;
 }
 
 .wr-global-header {
-	background:#5d81d2;
+	background:#11375B;
 }
 
 .app-logo {
@@ -195,7 +197,7 @@ h2.app-title {
 }
 
 .wr-app-bar {
-	background:#333;
+	background:#526A84;
 	height:53px;    
 }
 
@@ -229,7 +231,7 @@ header {
 }
 
 .auth-img:hover {
-	background:#86a7f4;
+	background:#526A84;
 }
 
 
