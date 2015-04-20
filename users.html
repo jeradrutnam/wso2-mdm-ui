@@ -44,204 +44,210 @@
 
 <div class="container col-lg-12 col-md-12 col-sm-12">
 
-<!-- header -->
-<header>
-    <div class="row wr-global-header">
-        <div class="col-xs-8 col-sm-6 col-lg-8 app-logo">
-            <a href="home.html"><img src="images/logo.png" /><h2 class="app-title">Mobile Device Manager</h2></a>
-        </div>
-        <div class="col-xs-4 col-sm-6 col-lg-4 wr-auth-container">
-            <div class="wr-auth pull-right">
-                <a href="#" data-toggle="dropdown">
-                    <div class="auth-img">
-                        Administrator
-                        <span class="fw-stack-md fw-lg">
-                            <i class="fw fw-user fw-stack-1-5x"></i>
-                        </span>
-                    </div>
-                </a>
-                <div class="dropdown-menu">
-                    <div class="cu-arrow"></div>
-                    <div class="dropdown-menu-content">
-                        <a class="filter-item">Logout</a>
+    <!-- header -->
+    <header>
+        <div class="row wr-global-header">
+            <div class="col-xs-8 col-sm-6 col-lg-8 app-logo">
+                <a href="home.html"><img src="images/logo.png" /><h2 class="app-title">Mobile Device Manager</h2></a>
+            </div>
+            <div class="col-xs-4 col-sm-6 col-lg-4 wr-auth-container">
+                <div class="wr-auth pull-right">
+                    <a href="#" data-toggle="dropdown">
+                        <div class="auth-img">
+                            Administrator
+                            <span class="fw-stack-md fw-lg">
+                                <i class="fw fw-user fw-stack-1-5x"></i>
+                            </span>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="cu-arrow"></div>
+                        <div class="dropdown-menu-content">
+                            <a class="filter-item">Logout</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </header>
+    <!-- /header -->
+
+    <!-- secondary header - app bar -->
+    <div id="nav" class="row wr-app-bar">
+        <div class="col-md-9 wr-action-container">
+            <div class="wr-action-btn-bar">
+                <a href="dashboard.html" class="cu-btn">
+                    <span class="fw-stack">
+                        <i class="fw fw-ring fw-stack-2x"></i>
+                        <i class="fw fw-left-arrow fw-stack-1x"></i>
+                    </span>
+                    Go Back To Dashboard
+                </a>
+                <a href="user-create.html" class="cu-btn">
+                    <span class="fw-stack">
+                        <i class="fw fw-ring fw-stack-2x"></i>
+                        <i class="fw fw-add fw-stack-1x"></i>
+                    </span>
+                    Add User
+                </a>
+            </div>
+        </div>
     </div>
-</header>
-<!-- /header -->
+    <!-- secondary header - app bar -->
 
-<!-- secondary header - app bar -->
-<div id="nav" class="row wr-app-bar">
-	<div class="col-md-9 wr-action-container">
-		<div class="wr-action-btn-bar">
-            <a href="dashboard.html" class="cu-btn">
-                <span class="fw-stack">
-                    <i class="fw fw-ring fw-stack-2x"></i>
-                    <i class="fw fw-left-arrow fw-stack-1x"></i>
-                </span>
-                Go Back To Dashboard
-            </a>
-            <a href="user-create.html" class="cu-btn">
-                <span class="fw-stack">
-                    <i class="fw fw-ring fw-stack-2x"></i>
-                    <i class="fw fw-add fw-stack-1x"></i>
-                </span>
-                Add User
-            </a>
-		</div>
-	</div>
-</div>
-<!-- secondary header - app bar -->
+    <!-- content/body -->
+    <div class="row">
+        <div class="col-md-12">
 
-<!-- content/body -->
-<div class="row">
-	<div class="col-md-12">
+            <!-- content -->
+            <div class="container-fluid col-centered wr-content">
 
-		<!-- content -->
-		<div class="container-fluid col-centered wr-content">
+                <div class="wr-list-group wr-sortable">
 
-            <div class="wr-list-group wr-sortable">
-
-                <span class="list-group-item" id="user1">
-                    <i class="wr-sortable-icon fw fw-sort"></i>
-                    <i class="wr-list-icon fw fw-user"></i>
-                    <div class="wr-list-desc">
-                        <h3 class="wr-list-name">John Doe</h3>
-                        <span class="wr-list-username">johndoe0005</span> | <a href="#" class="wr-list-email">johndoe2015@gmail.com</a>
-                    </div>
-                    <span class="list-group-item-actions">
-                        <a href="policy-create.html" class="cu-btn-inner">
-                            <span class="fw-stack">
-                                <i class="fw fw-ring fw-stack-2x"></i>
-                                <i class="fw fw-invitation fw-stack-1x"></i>
-                            </span>
-                            Invite
-                        </a>
-                        <a href="policy-create.html" class="cu-btn-inner">
-                            <span class="fw-stack">
-                                <i class="fw fw-ring fw-stack-2x"></i>
-                                <i class="fw fw-delete fw-stack-1x"></i>
-                            </span>
-                            Delete
-                        </a>
+                    <span class="list-group-item" id="user1">
+                        <i class="wr-sortable-icon fw fw-sort"></i>
+                        <i class="wr-list-icon fw fw-user"></i>
+                        <div class="wr-list-desc">
+                            <h3 class="wr-list-name">John Doe</h3>
+                            <span class="wr-list-username">johndoe0005</span> | <a href="#" class="wr-list-email">johndoe2015@gmail.com</a>
+                        </div>
+                        <span class="list-group-item-actions">
+                            <a href="policy-create.html" class="cu-btn-inner">
+                                <span class="fw-stack">
+                                    <i class="fw fw-ring fw-stack-2x"></i>
+                                    <i class="fw fw-invitation fw-stack-1x"></i>
+                                </span>
+                                Invite
+                            </a>
+                            <a href="policy-create.html" class="cu-btn-inner">
+                                <span class="fw-stack">
+                                    <i class="fw fw-ring fw-stack-2x"></i>
+                                    <i class="fw fw-delete fw-stack-1x"></i>
+                                </span>
+                                Delete
+                            </a>
+                        </span>
+                        <div class="clearfix"></div>
                     </span>
-                    <div class="clearfix"></div>
-                </span>
 
-                <span class="list-group-item" id="user2">
-                    <i class="wr-sortable-icon fw fw-sort"></i>
-                    <i class="wr-list-icon fw fw-user"></i>
-                    <div class="wr-list-desc">
-                        <h3 class="wr-list-name">Alice Wonder</h3>
-                        <span class="wr-list-username">alicew</span> | <a href="#" class="wr-list-email">alice_w@gmail.com</a>
-                    </div>
-                    <span class="list-group-item-actions">
-                        <a href="policy-create.html" class="cu-btn-inner">
-                            <span class="fw-stack">
-                                <i class="fw fw-ring fw-stack-2x"></i>
-                                <i class="fw fw-invitation fw-stack-1x"></i>
-                            </span>
-                            Invite
-                        </a>
-                        <a href="policy-create.html" class="cu-btn-inner">
-                            <span class="fw-stack">
-                                <i class="fw fw-ring fw-stack-2x"></i>
-                                <i class="fw fw-delete fw-stack-1x"></i>
-                            </span>
-                            Delete
-                        </a>
+                    <span class="list-group-item" id="user2">
+                        <i class="wr-sortable-icon fw fw-sort"></i>
+                        <i class="wr-list-icon fw fw-user"></i>
+                        <div class="wr-list-desc">
+                            <h3 class="wr-list-name">Alice Wonder</h3>
+                            <span class="wr-list-username">alicew</span> | <a href="#" class="wr-list-email">alice_w@gmail.com</a>
+                        </div>
+                        <span class="list-group-item-actions">
+                            <a href="policy-create.html" class="cu-btn-inner">
+                                <span class="fw-stack">
+                                    <i class="fw fw-ring fw-stack-2x"></i>
+                                    <i class="fw fw-invitation fw-stack-1x"></i>
+                                </span>
+                                Invite
+                            </a>
+                            <a href="policy-create.html" class="cu-btn-inner">
+                                <span class="fw-stack">
+                                    <i class="fw fw-ring fw-stack-2x"></i>
+                                    <i class="fw fw-delete fw-stack-1x"></i>
+                                </span>
+                                Delete
+                            </a>
+                        </span>
+                        <div class="clearfix"></div>
                     </span>
-                    <div class="clearfix"></div>
-                </span>
 
-                <span class="list-group-item" id="user3">
-                    <i class="wr-sortable-icon fw fw-sort"></i>
-                    <i class="wr-list-icon fw fw-user"></i>
-                    <div class="wr-list-desc">
-                        <h3 class="wr-list-name">Denver J Mike</h3>
-                        <span class="wr-list-username">denverjmike</span> | <a href="#" class="wr-list-email">denverjmike@gmail.com</a>
-                    </div>
-                    <span class="list-group-item-actions">
-                        <a href="policy-create.html" class="cu-btn-inner">
-                            <span class="fw-stack">
-                                <i class="fw fw-ring fw-stack-2x"></i>
-                                <i class="fw fw-invitation fw-stack-1x"></i>
-                            </span>
-                            Invite
-                        </a>
-                        <a href="policy-create.html" class="cu-btn-inner">
-                            <span class="fw-stack">
-                                <i class="fw fw-ring fw-stack-2x"></i>
-                                <i class="fw fw-delete fw-stack-1x"></i>
-                            </span>
-                            Delete
-                        </a>
+                    <span class="list-group-item" id="user3">
+                        <i class="wr-sortable-icon fw fw-sort"></i>
+                        <i class="wr-list-icon fw fw-user"></i>
+                        <div class="wr-list-desc">
+                            <h3 class="wr-list-name">Denver J Mike</h3>
+                            <span class="wr-list-username">denverjmike</span> | <a href="#" class="wr-list-email">denverjmike@gmail.com</a>
+                        </div>
+                        <span class="list-group-item-actions">
+                            <a href="policy-create.html" class="cu-btn-inner">
+                                <span class="fw-stack">
+                                    <i class="fw fw-ring fw-stack-2x"></i>
+                                    <i class="fw fw-invitation fw-stack-1x"></i>
+                                </span>
+                                Invite
+                            </a>
+                            <a href="policy-create.html" class="cu-btn-inner">
+                                <span class="fw-stack">
+                                    <i class="fw fw-ring fw-stack-2x"></i>
+                                    <i class="fw fw-delete fw-stack-1x"></i>
+                                </span>
+                                Delete
+                            </a>
+                        </span>
+                        <div class="clearfix"></div>
                     </span>
-                    <div class="clearfix"></div>
-                </span>
 
-                <span class="list-group-item" id="user4">
-                    <i class="wr-sortable-icon fw fw-sort"></i>
-                    <i class="wr-list-icon fw fw-user"></i>
-                    <div class="wr-list-desc">
-                        <h3 class="wr-list-name">Mark Spencer</h3>
-                        <span class="wr-list-username">marks7</span> | <a href="#" class="wr-list-email">marks2015@gmail.com</a>
-                    </div>
-                    <span class="list-group-item-actions">
-                        <a href="policy-create.html" class="cu-btn-inner">
-                            <span class="fw-stack">
-                                <i class="fw fw-ring fw-stack-2x"></i>
-                                <i class="fw fw-invitation fw-stack-1x"></i>
-                            </span>
-                            Invite
-                        </a>
-                        <a href="policy-create.html" class="cu-btn-inner">
-                            <span class="fw-stack">
-                                <i class="fw fw-ring fw-stack-2x"></i>
-                                <i class="fw fw-delete fw-stack-1x"></i>
-                            </span>
-                            Delete
-                        </a>
+                    <span class="list-group-item" id="user4">
+                        <i class="wr-sortable-icon fw fw-sort"></i>
+                        <i class="wr-list-icon fw fw-user"></i>
+                        <div class="wr-list-desc">
+                            <h3 class="wr-list-name">Mark Spencer</h3>
+                            <span class="wr-list-username">marks7</span> | <a href="#" class="wr-list-email">marks2015@gmail.com</a>
+                        </div>
+                        <span class="list-group-item-actions">
+                            <a href="policy-create.html" class="cu-btn-inner">
+                                <span class="fw-stack">
+                                    <i class="fw fw-ring fw-stack-2x"></i>
+                                    <i class="fw fw-invitation fw-stack-1x"></i>
+                                </span>
+                                Invite
+                            </a>
+                            <a href="policy-create.html" class="cu-btn-inner">
+                                <span class="fw-stack">
+                                    <i class="fw fw-ring fw-stack-2x"></i>
+                                    <i class="fw fw-delete fw-stack-1x"></i>
+                                </span>
+                                Delete
+                            </a>
+                        </span>
+                        <div class="clearfix"></div>
                     </span>
-                    <div class="clearfix"></div>
-                </span>
 
-                <span class="list-group-item" id="user5">
-                    <i class="wr-sortable-icon fw fw-sort"></i>
-                    <i class="wr-list-icon fw fw-user"></i>
-                    <div class="wr-list-desc">
-                        <h3 class="wr-list-name">Jay Luke</h3>
-                        <span class="wr-list-username">jayluke569</span> | <a href="#" class="wr-list-email">jayluke@gmail.com</a>
-                    </div>
-                    <span class="list-group-item-actions">
-                        <a href="policy-create.html" class="cu-btn-inner">
-                            <span class="fw-stack">
-                                <i class="fw fw-ring fw-stack-2x"></i>
-                                <i class="fw fw-invitation fw-stack-1x"></i>
-                            </span>
-                            Invite
-                        </a>
-                        <a href="policy-create.html" class="cu-btn-inner">
-                            <span class="fw-stack">
-                                <i class="fw fw-ring fw-stack-2x"></i>
-                                <i class="fw fw-delete fw-stack-1x"></i>
-                            </span>
-                            Delete
-                        </a>
+                    <span class="list-group-item" id="user5">
+                        <i class="wr-sortable-icon fw fw-sort"></i>
+                        <i class="wr-list-icon fw fw-user"></i>
+                        <div class="wr-list-desc">
+                            <h3 class="wr-list-name">Jay Luke</h3>
+                            <span class="wr-list-username">jayluke569</span> | <a href="#" class="wr-list-email">jayluke@gmail.com</a>
+                        </div>
+                        <span class="list-group-item-actions">
+                            <a href="policy-create.html" class="cu-btn-inner">
+                                <span class="fw-stack">
+                                    <i class="fw fw-ring fw-stack-2x"></i>
+                                    <i class="fw fw-invitation fw-stack-1x"></i>
+                                </span>
+                                Invite
+                            </a>
+                            <a href="policy-create.html" class="cu-btn-inner">
+                                <span class="fw-stack">
+                                    <i class="fw fw-ring fw-stack-2x"></i>
+                                    <i class="fw fw-delete fw-stack-1x"></i>
+                                </span>
+                                Delete
+                            </a>
+                        </span>
+                        <div class="clearfix"></div>
                     </span>
-                    <div class="clearfix"></div>
-                </span>
+
+                </div>
 
             </div>
+            <!-- /content -->
 
-		</div>
-		<!-- /content -->
+        </div>
+    </div>
+    <!-- /content/body -->
 
-	</div>
-</div>
-<!-- /content/body -->
+    <!-- footer -->
+    <footer class="footer">
+        <p>Mobile Device Manager v.2.0.0 | &copy; <script>document.write(new Date().getFullYear());</script> <a href="http://wso2.com/" target="_blank"><i class="fw fw-wso2"></i> Inc</a>. All Rights Reserved.</p>
+    </footer>
+    <!-- /footer -->
 
 </div>
 

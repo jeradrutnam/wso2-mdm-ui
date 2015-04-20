@@ -44,74 +44,80 @@
 
 <div class="container col-lg-12 col-md-12 col-sm-12">
 
-<!-- header -->
-<header>
-    <div class="row wr-global-header">
-        <div class="col-xs-8 col-sm-6 col-lg-8 app-logo">
-            <a href="home.html"><img src="images/logo.png" /><h2 class="app-title">Mobile Device Manager</h2></a>
-        </div>
-        <div class="col-xs-4 col-sm-6 col-lg-4 wr-auth-container">
-            <div class="wr-auth pull-right">
-                <a href="#" data-toggle="dropdown">
-                    <div class="auth-img">
-                        Administrator
-                        <span class="fw-stack-md fw-lg">
-                            <i class="fw fw-user fw-stack-1-5x"></i>
-                        </span>
-                    </div>
-                </a>
-                <div class="dropdown-menu">
-                    <div class="cu-arrow"></div>
-                    <div class="dropdown-menu-content">
-                        <a class="filter-item">Logout</a>
+    <!-- header -->
+    <header>
+        <div class="row wr-global-header">
+            <div class="col-xs-8 col-sm-6 col-lg-8 app-logo">
+                <a href="home.html"><img src="images/logo.png" /><h2 class="app-title">Mobile Device Manager</h2></a>
+            </div>
+            <div class="col-xs-4 col-sm-6 col-lg-4 wr-auth-container">
+                <div class="wr-auth pull-right">
+                    <a href="#" data-toggle="dropdown">
+                        <div class="auth-img">
+                            Administrator
+                            <span class="fw-stack-md fw-lg">
+                                <i class="fw fw-user fw-stack-1-5x"></i>
+                            </span>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="cu-arrow"></div>
+                        <div class="dropdown-menu-content">
+                            <a class="filter-item">Logout</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </header>
+    <!-- /header -->
+
+    <!-- secondary header - app bar -->
+    <div id="nav" class="row wr-app-bar">
+        <div class="col-md-9 wr-action-container">
+            <div class="wr-action-btn-bar">
+                <a href="dashboard.html" class="cu-btn">
+                    <span class="fw-stack">
+                        <i class="fw fw-ring fw-stack-2x"></i>
+                        <i class="fw fw-left-arrow fw-stack-1x"></i>
+                    </span>
+                    Go Back To Dashboard
+                </a>
+            </div>
+        </div>
     </div>
-</header>
-<!-- /header -->
+    <!-- secondary header - app bar -->
 
-<!-- secondary header - app bar -->
-<div id="nav" class="row wr-app-bar">
-	<div class="col-md-9 wr-action-container">
-		<div class="wr-action-btn-bar">
-            <a href="dashboard.html" class="cu-btn">
-                <span class="fw-stack">
-                    <i class="fw fw-ring fw-stack-2x"></i>
-                    <i class="fw fw-left-arrow fw-stack-1x"></i>
-                </span>
-                Go Back To Dashboard
-            </a>
-		</div>
-	</div>
-</div>
-<!-- secondary header - app bar -->
+    <!-- content/body -->
+    <div class="row">
+        <div class="col-md-12">
 
-<!-- content/body -->
-<div class="row">
-	<div class="col-md-12">
-		
 
-		<!-- content -->
-		<div class="container col-centered wr-content">
+            <!-- content -->
+            <div class="container col-centered wr-content">
 
-            <div class="wr-form">
+                <div class="wr-form">
 
-                <h1 class="wr-title">Policy creation successful</h1>
-                Please click <b>"Finish"</b> to complete the process and go back to the policy list
-                <hr />
-                <button class="wr-btn" onclick="window.location.href='policies.html'">Finish</button>
+                    <h1 class="wr-title">Policy creation successful</h1>
+                    Please click <b>"Finish"</b> to complete the process and go back to the policy list
+                    <hr />
+                    <button class="wr-btn" onclick="window.location.href='policies.html'">Finish</button>
+
+                </div>
 
             </div>
-
-		</div>
-		<!-- /content -->
+            <!-- /content -->
 
 
-	</div>
-</div>
-<!-- /content/body -->
+        </div>
+    </div>
+    <!-- /content/body -->
+
+    <!-- footer -->
+    <footer class="footer">
+        <p>Mobile Device Manager v.2.0.0 | &copy; <script>document.write(new Date().getFullYear());</script> <a href="http://wso2.com/" target="_blank"><i class="fw fw-wso2"></i> Inc</a>. All Rights Reserved.</p>
+    </footer>
+    <!-- /footer -->
 
 </div>
 
@@ -123,13 +129,7 @@
     	<a href="#">User</a>
     	<a href="#">Model</a>   
     </div>
-</div>  
-
-<!-- 
-<footer class="footer">
-        <p>&copy; 2015 WSO2 Inc. All Rights Reserved</p>
-</footer>
--->
+</div>
 
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="js/bootstrap.min.js"></script>

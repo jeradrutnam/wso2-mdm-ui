@@ -107,8 +107,8 @@ function containerUpdate(asset){
 
     prevSelected = ($(menuSubContainer + ' ul.selected li').attr('asset'));
 
-    $(menuSubContainer + ' ul.options li').length == 0 ? $(menuSubContainer + ' ul.options').hide() :
-        + $(menuSubContainer + ' ul.options').show();
+    //$(menuSubContainer + ' ul.options li').length == 0 ? $(menuSubContainer + ' ul.options').hide() :
+    //    + $(menuSubContainer + ' ul.options').show();
 
     addingIdentity();
 }
@@ -118,6 +118,9 @@ function containerUpdate(asset){
  * @param  asset: Selected asset
  */
 function selectAsset(asset){
+
+    console.log(this);
+
     $(tagsContainer +' span').each(function(){
         if($(this).attr('level') == $(asset).attr('level')){
             removeTags(this);
@@ -186,13 +189,13 @@ function addTags(tag){
     var level = $(tag).attr('level'),
         selection = tag,
         content = '<span asset="'+ $(tag).attr('asset') +'" level="'+ $(tag).attr('level') +'" '
-            +'onclick="removeTags(this)">' + $(tag).html() + ' <b>x</b></span>';
+            +'onclick="removeTags(this)">' + $(tag).find('.tag-name').html() + ' <b>x</b></span>';
 
     if(level !== 1) {
         for (var i = 1; i < level; i++) {
             content = '<span asset="'+ $(getParent(selection)).attr('asset') +'" level="'
                 + $(getParent(selection)).attr('level')
-                +'" onclick="removeTags(this)">' + $(getParent(selection)).html() + ' <b>x</b></span>'
+                +'" onclick="removeTags(this)">' + $(getParent(selection)).find('.tag-name').html() + ' <b>x</b></span>'
                 +content;
 
             selection = getParent(selection);

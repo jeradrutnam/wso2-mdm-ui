@@ -20,8 +20,8 @@
  * Setting-up global variables.
  */
 var operations = '.wr-operations',
-    modelPopup = '.wr-modalpopup',
-    modelPopupContent = modelPopup + ' .modalpopup-content',
+    modalPopup = '.wr-modalpopup',
+    modalPopupContent = modalPopup + ' .modalpopup-content',
     deviceCheckbox = '#ast-container .ctrl-wr-asset .itm-select input[type="checkbox"]',
     showOperationsBtn = '#showOperationsBtn',
     maxOperationsLimit = 15;
@@ -51,7 +51,7 @@ function showOperations(){
  * @param selection: Selected operation
  */
 function operationSelect(selection){
-    $(modelPopupContent).html($(operations + ' .operation[data-operation='+selection+']').html());
+    $(modalPopupContent).html($(operations + ' .operation[data-operation='+selection+']').html());
     showPopup();
 }
 
@@ -67,15 +67,15 @@ function runOperation(operation){
  * show popup function.
  */
 function showPopup() {
-    $(modelPopup).show();
+    $(modalPopup).show();
 }
 
 /*
  * hide popup function.
  */
 function hidePopup() {
-    $(modelPopupContent).html('');
-    $(modelPopup).hide();
+    $(modalPopupContent).html('');
+    $(modalPopup).hide();
 }
 
 /*
