@@ -139,15 +139,26 @@
 html {
 	position: relative;
 	min-height: 100%;
+    margin:0;
+    padding:0;
+    height:100%;
 }
 
 body {
 	font-family:'Open Sans';
-	margin-bottom: 60px;	
 	background:#fff;
     font-weight: 100;
     color: #444444;
     font-size: 14px;
+    margin:0;
+    padding:0;
+    height:100%;
+}
+
+.container {
+    position: relative;
+    padding-bottom: 50px;
+    min-height: 100%;
 }
 
 .wr-content {
@@ -241,11 +252,14 @@ header {
 	background-color: #fff;
 	padding-top:5px;
 	color:#444;
-	font-weight: 100;
+	font-weight: 500;
 	padding-left:20px;
 	font-size:12px;
-	letter-spacing: 1px
-	
+	letter-spacing: 1px;
+    position:absolute;
+    bottom: 0;
+    margin-right: -5px;
+    margin-left: -5px;
 }
 
 /* misc */

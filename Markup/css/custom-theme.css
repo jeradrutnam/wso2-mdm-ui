@@ -3,6 +3,10 @@ body {
     -ms-overflow-x: hidden;
 }
 
+a {
+    color: #526A84;
+}
+
 /* asset type switcher */
 .wr-asset-type-switcher .popover {
 	position: absolute;
@@ -381,8 +385,8 @@ a.ctrl-filter-category:hover {
 /* buttons */
 .btn-primary {
 	color: #fff;
-	background-color: #6b94f1;
-	border-color: #6b94f1;
+	background-color: #526A84;
+	border-color: #526A84;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
@@ -479,7 +483,7 @@ select.select2 {
     margin-bottom: 0;
     margin-top: 0;
     color: #ffffff;
-    background: #6b94f1;
+    background: #526A84;
     font-size: 11px;
     display: inline-block;
     cursor: pointer;
@@ -496,4 +500,7 @@ select.select2 {
 
 .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover {
     color: #ffffff;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #526A84;
 }
