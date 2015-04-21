@@ -42,6 +42,24 @@
     <div class="modalpopup-bg"></div>
 </div>
 
+<div class="wr-notification-bar">
+    <div class="wr-notification-desc new">
+        <div class="wr-notification-operation">Device Lock Operation Successful!</div>
+        <div class="wr-notification-time"><i class="fw fw-clock"></i> 14 seconds ago</div>
+        <hr />
+    </div>
+    <div class="wr-notification-desc new">
+        <div class="wr-notification-operation">Device Lock Operation Successful!</div>
+        <div class="wr-notification-time"><i class="fw fw-clock"></i> 14 seconds ago</div>
+        <hr />
+    </div>
+    <div class="wr-notification-desc">
+        <div class="wr-notification-operation">Device Lock Operation Successful!</div>
+        <div class="wr-notification-time"><i class="fw fw-clock"></i> 14 seconds ago</div>
+        <hr />
+    </div>
+</div>
+
 <div class="container col-lg-12 col-md-12 col-sm-12">
 
     <!-- header -->
@@ -74,7 +92,7 @@
 
     <!-- secondary header - app bar -->
     <div id="nav" class="row wr-app-bar">
-        <div class="col-md-9 wr-action-container">
+        <div class="wr-action-container">
             <div class="wr-action-btn-bar">
                 <a href="#" class="cu-btn">
                     <span class="fw-stack">
@@ -89,6 +107,12 @@
                         <i class="fw fw-left-arrow fw-stack-1x"></i>
                     </span>
                     Go Back To Dashboard
+                </a>
+                <a href="javascript:openNotificationbar()" class="cu-btn wr-notification-toggle-btn">
+                    <span class="fw-stack-md">
+                        <i class="fw fw-bell fw-stack-1-5x"></i>
+                    </span>
+                    <span class="wr-notification-bubble">35</span>
                 </a>
             </div>
         </div>
@@ -189,7 +213,7 @@
         <div class="col-md-12">
 
             <!-- content -->
-            <div class="container-fluid col-centered wr-content">
+            <div>
 
                 <a href="javascript:showOperations()" class="cu-btn-inner show-operations-btn" id="showOperationsBtn">
                     Operations
@@ -557,6 +581,7 @@
 <script src="js/assetmenu.js"></script>
 <script src="js/operationsmenu.js"></script>
 <script src="js/deviceview.js"></script>
+<script src="js/notificationbar.js"></script>
 
 <script type="text/javascript">
 

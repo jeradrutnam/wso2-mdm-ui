@@ -106,86 +106,81 @@
 
     <div class="row">
 
-        <div class="col-md-12 wr-content">
+        <!-- content -->
+        <div class="col-md-12">
 
+            <!-- operations container -->
+            <div class="wr-operations">
 
-            <!-- content -->
-            <div class="col-md-12">
-
-                <!-- operations container -->
-                <div class="wr-operations">
-
-                    <a href="javascript:operationSelect('devicelock')"><i class="fw fw-lock"></i><span>Device Lock</span></a>
-                    <div class="operation" data-operation="devicelock">
-                        <div class="content">Are you sure you want to lock the selected devices ?</div>
-                        <div class="buttons">
-                            <a href="javascript:runOperation('lock')" class="btn-operations">Lock</a>
-                            <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
-                        </div>
+                <a href="javascript:operationSelect('devicelock')"><i class="fw fw-lock"></i><span>Device Lock</span></a>
+                <div class="operation" data-operation="devicelock">
+                    <div class="content">Are you sure you want to lock the selected devices ?</div>
+                    <div class="buttons">
+                        <a href="javascript:runOperation('lock')" class="btn-operations">Lock</a>
+                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
                     </div>
-
-                    <a href="javascript:operationSelect('ring')"><i class="fw fw-incoming-call"></i><span>Ring</span></a>
-                    <div class="operation" data-operation="ring">
-                        <div class="content">Please click ok to start ringing</div>
-                        <div class="buttons">
-                            <a href="javascript:runOperation('ring')" class="btn-operations">Ring</a>
-                            <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
-                        </div>
-                    </div>
-
-                    <a href="javascript:operationSelect('message')"><i class="fw fw-message"></i><span>Message</span></a>
-                    <div class="operation" data-operation="message">
-                        <div class="content">
-                            <div>Type message</div>
-                            <div><textarea></textarea></div>
-                        </div>
-                        <div class="buttons">
-                            <a href="javascript:runOperation('msg-send')" class="btn-operations">Send</a>
-                            <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
-                        </div>
-                    </div>
-
-                    <a href="javascript:operationSelect('locate')"><i class="fw fw-map-location"></i><span>Locate</span></a>
-                    <div class="operation" data-operation="locate">
-                        <div class="content">Locate</div>
-                        <div class="buttons">
-                            <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
-                        </div>
-                    </div>
-
-                    <a href="javascript:operationSelect('wipe')"><i class="fw fw-clean"></i><span>Wipe</span></a>
-                    <div class="operation" data-operation="wipe">
-                        <div class="content">Wipe</div>
-                        <div class="buttons">
-                            <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
-                        </div>
-                    </div>
-
-                    <a href="javascript:operationSelect('camera')"><i class="fw fw-camera"></i><span>Camera</span></a>
-                    <div class="operation" data-operation="camera">
-                        <div class="content">Camera</div>
-                        <div class="buttons">
-                            <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
-                        </div>
-                    </div>
-
-                    <a href="javascript:operationSelect('wifi')"><i class="fw fw-wifi"></i><span>Wi-Fi</span></a>
-                    <div class="operation" data-operation="wifi">
-                        <div class="content">Wi-Fi</div>
-                        <div class="buttons">
-                            <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
-                        </div>
-                    </div>
-
-                    <br class="c-both" />
                 </div>
-                <!-- /operations container -->
 
+                <a href="javascript:operationSelect('ring')"><i class="fw fw-incoming-call"></i><span>Ring</span></a>
+                <div class="operation" data-operation="ring">
+                    <div class="content">Please click ok to start ringing</div>
+                    <div class="buttons">
+                        <a href="javascript:runOperation('ring')" class="btn-operations">Ring</a>
+                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
+                    </div>
+                </div>
+
+                <a href="javascript:operationSelect('message')"><i class="fw fw-message"></i><span>Message</span></a>
+                <div class="operation" data-operation="message">
+                    <div class="content">
+                        <div>Type message</div>
+                        <div><textarea></textarea></div>
+                    </div>
+                    <div class="buttons">
+                        <a href="javascript:runOperation('msg-send')" class="btn-operations">Send</a>
+                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
+                    </div>
+                </div>
+
+                <a href="javascript:operationSelect('locate')"><i class="fw fw-map-location"></i><span>Locate</span></a>
+                <div class="operation" data-operation="locate">
+                    <div class="content">Locate</div>
+                    <div class="buttons">
+                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
+                    </div>
+                </div>
+
+                <a href="javascript:operationSelect('wipe')"><i class="fw fw-clean"></i><span>Wipe</span></a>
+                <div class="operation" data-operation="wipe">
+                    <div class="content">Wipe</div>
+                    <div class="buttons">
+                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
+                    </div>
+                </div>
+
+                <a href="javascript:operationSelect('camera')"><i class="fw fw-camera"></i><span>Camera</span></a>
+                <div class="operation" data-operation="camera">
+                    <div class="content">Camera</div>
+                    <div class="buttons">
+                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
+                    </div>
+                </div>
+
+                <a href="javascript:operationSelect('wifi')"><i class="fw fw-wifi"></i><span>Wi-Fi</span></a>
+                <div class="operation" data-operation="wifi">
+                    <div class="content">Wi-Fi</div>
+                    <div class="buttons">
+                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
+                    </div>
+                </div>
+
+                <br class="c-both" />
             </div>
-            <!-- /content -->
-
+            <!-- /operations container -->
 
         </div>
+        <!-- /content -->
+
     </div>
 
 
