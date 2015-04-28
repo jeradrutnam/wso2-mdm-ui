@@ -245,6 +245,10 @@ header {
 	background:#526A84;
 }
 
+.wr-auth.open .auth-img {
+    background: #526A84;
+}
+
 
 /* sticky footer styles */
 .footer {
