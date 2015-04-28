@@ -94,12 +94,13 @@
     <div id="nav" class="row wr-app-bar">
         <div class="wr-action-container">
             <div class="wr-action-btn-bar">
-                <!--<a href="#" class="cu-btn">-->
-                    <!--<span class="fw-stack">-->
-                        <!--<i class="fw fw-menu fw-stack-2x"></i>-->
-                    <!--</span>-->
-                <!--</a>-->
-                <a href="javascript:openNotificationbar()" class="cu-btn wr-notification-toggle-btn">
+                <a href="javascript:openCollapsedNav()" class="cu-btn wr-hidden-nav-toggle-btn">
+                    <span class="fw-stack">
+                        <i class="fw fw-tiles fw-stack-1-5x"></i>
+                    </span>
+                </a>
+
+                <a href="javascript:toggleNotificationbar()" class="cu-btn wr-notification-toggle-btn">
                     <span class="fw-stack-md">
                         <i class="fw fw-bell fw-stack-1-5x"></i>
                     </span>
@@ -110,9 +111,17 @@
     </div>
     <!-- secondary header - app bar -->
 
-    <!-- content/body -->
+    <!-- common navigation -->
+    <div id="hiddenNav" class="wr-hidden-nav">
+        <ul>
+            <li><a href="#"><i class="fw fw-user"></i>User Management</a></li>
+            <li><a href="#"><i class="fw fw-settings"></i>Profile Management</a></li>
+            <li><a href="#"><i class="fw fw-policy"></i>Policy Management</a></li>
+        </ul>
+    </div>
+    <!-- /common navigation -->
 
-    <!-- content -->
+    <!-- content/body -->
     <div class="wr-content">
 
         <div class="row wr-stats-board">
@@ -222,8 +231,6 @@
         </div>
 
     </div>
-    <!-- /content -->
-
     <!-- /content/body -->
 
     <!-- footer -->
@@ -275,7 +282,16 @@ $( document ).ready(function() {
 	        top: $('header').height()
 	      }
 	});	 
-}); 
+});
+
+function openCollapsedNav(){
+    $('.wr-hidden-nav-toggle-btn').addClass('active');
+    $('#hiddenNav').slideToggle('slideDown', function(){
+        if($(this).css('display') == 'none'){
+            $('.wr-hidden-nav-toggle-btn').removeClass('active');
+        }
+    });
+}
 
 </script>
 

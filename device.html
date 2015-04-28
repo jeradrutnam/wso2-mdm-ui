@@ -54,7 +54,7 @@
                 <div class="wr-auth pull-right">
                     <a href="#" data-toggle="dropdown">
                         <div class="auth-img">
-                            Dhanuka
+                            User
                             <span class="fw-stack-md fw-lg">
                                 <i class="fw fw-user fw-stack-1-5x"></i>
                             </span>
@@ -76,7 +76,11 @@
     <div id="nav" class="row wr-app-bar">
         <div class="wr-action-container">
             <div class="wr-action-btn-bar">
-                <a href="javascript:history.go(-1)" class="cu-btn">
+                <a href="javascript:openCollapsedNav()" class="cu-btn wr-hidden-nav-toggle-btn">
+                    <span class="fw-stack">
+                        <i class="fw fw-tiles fw-stack-1-5x"></i>
+                    </span>
+                </a><a href="javascript:history.go(-1)" class="cu-btn">
                     <span class="fw-stack">
                         <i class="fw fw-ring fw-stack-2x"></i>
                         <i class="fw fw-left-arrow fw-stack-1x"></i>
@@ -84,7 +88,7 @@
                     Go Back
                 </a>
 
-                <a href="javascript:openNotificationbar()" class="cu-btn wr-notification-toggle-btn">
+                <a href="javascript:toggleNotificationbar()" class="cu-btn wr-notification-toggle-btn">
                     <span class="fw-stack-md">
                         <i class="fw fw-bell fw-stack-1-5x"></i>
                     </span>
@@ -95,9 +99,17 @@
     </div>
     <!-- secondary header - app bar -->
 
+    <!-- common navigation -->
+    <div id="hiddenNav" class="wr-hidden-nav">
+        <ul>
+            <li><a href="#"><i class="fw fw-user"></i>User Management</a></li>
+            <li><a href="#"><i class="fw fw-settings"></i>Profile Management</a></li>
+            <li><a href="#"><i class="fw fw-policy"></i>Policy Management</a></li>
+        </ul>
+    </div>
+    <!-- /common navigation -->
 
     <!-- content/body -->
-
     <div class="row wr-device-board">
         <div class="col-lg-12 wr-secondary-bar">
         <label>Dulitha's iPad <span class="lbl-device">(Apple iPad Air 2)</span></label>
@@ -363,7 +375,6 @@
 
         </div>
     </div>
-
     <!-- /content/body -->
 
     <!-- footer -->
@@ -387,9 +398,7 @@
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.resize.js"></script>
-<script src="js/assetmenu.js"></script>
 <script src="js/operationsmenu.js"></script>
-<script src="js/deviceview.js"></script>
 <script src="js/notificationbar.js"></script>
 
 <script type="text/javascript">
@@ -407,19 +416,22 @@ $( document ).ready(function() {
         }
     });
 
-    $(".ctrl-filter-type-switcher").popover({
-        html : true, 
-        content: function() {
-          return $('#content-filter-types').html();
-        }
-    });    
-
 	$('#nav').affix({
 	      offset: {
 	        top: $('header').height()
 	      }
 	});
-}); 
+});
+
+function openCollapsedNav(){
+    $('.wr-hidden-nav-toggle-btn').addClass('active');
+    $('#hiddenNav').slideToggle('slideDown', function(){
+        if($(this).css('display') == 'none'){
+            $('.wr-hidden-nav-toggle-btn').removeClass('active');
+        }
+    });
+}
+
 
 </script>
 

@@ -74,7 +74,7 @@
 
     <!-- secondary header - app bar -->
     <div id="nav" class="row wr-app-bar">
-        <div class="col-md-9 wr-action-container">
+        <div class="wr-action-container">
             <div class="wr-action-btn-bar">
                 <a href="dashboard.html" class="cu-btn">
                     <span class="fw-stack">
@@ -259,19 +259,11 @@
     	<a href="#">User</a>
     	<a href="#">Model</a>   
     </div>
-</div>  
+</div>
 
-<!-- 
-<footer class="footer">
-        <p>&copy; 2015 WSO2 Inc. All Rights Reserved</p>
-</footer>
--->
-
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="js/jquery.js"></script>
 <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/assetmenu.js"></script>
-<script src="js/operationsmenu.js"></script>
 
 <script type="text/javascript">
 
@@ -279,14 +271,14 @@ $( document ).ready(function() {
 
     $('[data-toggle="tooltip"]').tooltip();   
 
-    $("[data-toggle=popover]").popover();
+    $('[data-toggle="popover"]').popover();
 
     $(".ctrl-filter-type-switcher").popover({
         html : true, 
         content: function() {
           return $('#content-filter-types').html();
         }
-    });    
+    });
 
 	$('#nav').affix({
 	      offset: {

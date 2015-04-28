@@ -146,12 +146,12 @@
     display: inline-block;
     width: 2em;
     height: 2em;
-    line-height: 1.8em;
+    line-height: 1.9em;
     vertical-align: middle;
     text-align: center;
 }
 .fw-stack-md {
-    width: 1em;
+    width: 1.2em;
 }
 .fw-stack-1x,
 .fw-stack-2x,
@@ -174,4 +174,8 @@
 }
 .fw-inverse {
     color: #ffffff;
+}
+
+.fw-number {
+    line-height: 1.8em;
 }
