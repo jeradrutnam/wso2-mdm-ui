@@ -383,17 +383,111 @@
 
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-12">
+    <div class="wr-device-list row">
+
+        <div class="wr-hidden-operations">
+            <div class="row no-gutter">
+                <div class="wr-hidden-operations-nav col-lg-4">
+                    <a href="#" class="selected">
+                        <span class="wr-hidden-operations-icon fw-stack">
+                            <i class="fw fw-padlock fw-stack-2x"></i>
+                        </span>
+                        Security
+                    </a>
+                    <a href="#">
+                        <span class="wr-hidden-operations-icon fw-stack">
+                            <i class="fw fw-wifi fw-stack-2x"></i>
+                        </span>
+                        Connection
+                    </a>
+                    <a href="#">
+                        <span class="wr-hidden-operations-icon fw-stack">
+                            <i class="fw fw-camera fw-stack-2x"></i>
+                        </span>
+                        Camera
+                    </a>
+                    <a href="#">
+                        <span class="wr-hidden-operations-icon fw-stack">
+                            <i class="fw fw-settings fw-stack-2x"></i>
+                        </span>
+                        General
+                    </a>
+                </div>
+                <div class="wr-hidden-operations-content col-lg-8">
+
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h2 class="sub-title panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <span class="fw-stack">
+                                        <i class="fw fw-ring fw-stack-2x"></i>
+                                        <i class="fw fw-arrow fw-down-arrow fw-stack-1x"></i>
+                                    </span>
+                                    Device Security
+                                </a>
+                            </h2>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                Content
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h2 class="sub-title panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <span class="fw-stack">
+                                        <i class="fw fw-ring fw-stack-2x"></i>
+                                        <i class="fw fw-arrow fw-down-arrow fw-stack-1x"></i>
+                                    </span>
+                                    Restrictions
+                                </a>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                Content
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h2 class="sub-title panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <span class="fw-stack">
+                                        <i class="fw fw-ring fw-stack-2x"></i>
+                                        <i class="fw fw-arrow fw-down-arrow fw-stack-1x"></i>
+                                    </span>
+                                    Applications Security
+                                </a>
+                            </h2>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                Content
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-12 wr-page-content">
 
             <!-- content -->
             <div>
 
-                <a href="javascript:showOperations()" class="cu-btn-inner show-operations-btn" id="showOperationsBtn">
-                    Operations
+                <a href="javascript:toggleMoreOperations()" class="cu-btn-inner show-operations-btn" id="showOperationsBtn">
                     <span class="fw-stack">
-                        <i class="fw fw-tiles fw-stack-1-5x"></i>
+                        <i class="fw fw-right-arrow-2 fw-stack-1-5x"></i>
                     </span>
+                    <span class="btn-text">Operations</span>
                 </a>
 
                 <!-- operations container -->

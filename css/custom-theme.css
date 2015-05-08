@@ -462,6 +462,16 @@ b, strong {
 
 .list-group-item:first-child, .list-group-item:last-child { border-radius: 0; }
 
+.row.no-gutter {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.row.no-gutter [class*='col-']:not(:first-child), .row.no-gutter [class*='col-']:not(:last-child) {
+    padding-right:0;
+    padding-left:0;
+}
+
 select.select2 {
     height:0 !important;
     overflow: hidden;
