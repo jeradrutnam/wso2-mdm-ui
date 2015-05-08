@@ -24,6 +24,9 @@ var operations = '.wr-operations',
     modalPopupContent = modalPopup + ' .modalpopup-content',
     deviceCheckbox = '#ast-container .ctrl-wr-asset .itm-select input[type="checkbox"]',
     showOperationsBtn = '#showOperationsBtn',
+    navHeight = $('#nav').height(),
+    headerHeight = $('header').height(),
+    offset = (headerHeight + navHeight),
     maxOperationsLimit = 15;
 
 /*
@@ -31,20 +34,30 @@ var operations = '.wr-operations',
  */
 $(document).ready(function(){
     /* collapse operations to a toggle menu, if exceeds max operations limit */
-   if($(operations + "> a").length > maxOperationsLimit){
+    if($(operations + "> a").length > maxOperationsLimit){
        $(showOperationsBtn).show();
-   }
+    }
     else{
        $(operations).show();
-   }
+    }
+
+    toggleMoreOperationsHeight();
 });
 
 /*
- * On Show Operations click operation show toggling function.
+ * On window resize functions.
  */
-function showOperations(){
-    $(operations).toggle('slide');
-}
+$(window).resize(function(){
+    toggleMoreOperationsHeight();
+});
+
+/*
+ * On main div.container resize functions.
+ * @required  jquery.resize.js
+ */
+$('.container').resize(function(){
+    toggleMoreOperationsHeight();
+});
 
 /*
  * On operation click function.
@@ -93,4 +106,20 @@ function getSelectedDeviceIds(){
         });
     });
     return deviceIdentifierList;
+}
+
+/*
+ * Function to open hidden device operations list
+ */
+function toggleMoreOperations(){
+    $('.wr-hidden-operations, .wr-page-content').toggleClass('toggled');
+    $(showOperationsBtn).toggleClass('selected');
+    //$('.footer').toggleClass('wr-hidden-operations-toggled');
+}
+
+/*
+ * Function to fit hidden device operation window height with the screen
+ */
+function toggleMoreOperationsHeight(){
+    $('.wr-hidden-operations').css('min-height', $('html').height() - (offset+140));
 }
