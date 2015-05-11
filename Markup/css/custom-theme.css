@@ -512,7 +512,7 @@ select.select2 {
     display: inline-block;
     cursor: pointer;
     padding: 3px 6px;
-    border-radius: 2px;
+    border-radius: 0;
     border: none;
 }
 
