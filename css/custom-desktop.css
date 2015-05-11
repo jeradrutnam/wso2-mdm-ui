@@ -1735,12 +1735,16 @@ a.wr-side-panel-toggle-btn.selected {
 }
 
 .cu-btn.wr-hidden-nav-toggle-btn:hover {
-    /*background: #809AB3;*/
-}
+     background: #D56613;
+ }
 
 .cu-btn.wr-hidden-nav-toggle-btn, .cu-btn.wr-hidden-nav-toggle-btn.active:hover {
+    background: #F47415;
+}
+.cu-btn.wr-hidden-nav-toggle-btn.active, .cu-btn.wr-hidden-nav-toggle-btn.active:hover {
     background: #132D45;
 }
+
 
 .wr-device-list {
     position: relative;
@@ -1827,9 +1831,9 @@ a.wr-side-panel-toggle-btn.selected {
 
 .wr-hidden-operations-content .panel-title a {
     padding: 5px;
-    background: #526A84;
+    background: #e4e4e4;
     border-bottom: 1px solid #fff;
-    color: #fff;
+    color: #555;
     display: block;
 }
 
@@ -1935,6 +1939,10 @@ a.show-operations-btn .btn-text:before {
     border-color: #FFF transparent transparent transparent !important;
     margin-left: -15px !important;
     margin-top: 12px !important;
+}
+
+.select2-dropdown.select-resource {
+    z-index: 1000;
 }
 
 .disabled-area {
@@ -2066,6 +2074,14 @@ a.show-operations-btn .btn-text:before {
     padding:5px 2px;
     vertical-align: text-top;
 }
+
+.wr-tags {
+
+}
+
+
+
+
 
 .panel-collapse {
     position: relative;
