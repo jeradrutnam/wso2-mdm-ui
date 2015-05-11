@@ -21,6 +21,7 @@
  */
 var operations = '.wr-operations',
     modalPopup = '.wr-modalpopup',
+    modalPopupContainer = modalPopup + ' .modalpopup-container',
     modalPopupContent = modalPopup + ' .modalpopup-content',
     deviceCheckbox = '#ast-container .ctrl-wr-asset .itm-select input[type="checkbox"]',
     showOperationsBtn = '#showOperationsBtn',
@@ -45,10 +46,18 @@ $(document).ready(function(){
 });
 
 /*
+ * On window loaded functions.
+ */
+$(window).load(function(){
+    setPopupMaxHeight();
+});
+
+/*
  * On window resize functions.
  */
 $(window).resize(function(){
     toggleMoreOperationsHeight();
+    setPopupMaxHeight();
 });
 
 /*
@@ -81,6 +90,7 @@ function runOperation(operation){
  */
 function showPopup() {
     $(modalPopup).show();
+    setPopupMaxHeight();
 }
 
 /*
@@ -89,6 +99,14 @@ function showPopup() {
 function hidePopup() {
     $(modalPopupContent).html('');
     $(modalPopup).hide();
+}
+
+/*
+ * set popup maximum height function.
+ */
+function setPopupMaxHeight() {
+    $(modalPopupContent).css('max-height', ($('body').height() - ($('body').height()/100 * 30)));
+    $(modalPopupContainer).css('margin-top', (-($(modalPopupContainer).height()/2)));
 }
 
 /*

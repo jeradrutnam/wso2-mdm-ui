@@ -880,30 +880,66 @@ a.btn-operations {
     display: none;
 }
 
-.wr-modalpopup .modalpopup-content {
+.wr-modalpopup .modalpopup-container {
     display: block;
     min-height: 100px;
     width: 100%;
     position: fixed;
-    background: #ffffff;
-    top: 200px;
-    z-index: 100001;
+    background: #11375B;
+    color: #fff;
+    z-index: 1000001;
     align-content: center;
-    text-align: center;
-    padding: 30px;
+    top: 50%;
+}
+
+.modalpopup-content {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 60px;
+}
+
+.modalpopup-content h3 {
+    font-weight: 300;
+}
+
+.modalpopup-content h3 .fw-stack {
+    margin-right: 15px;
+}
+
+.wr-modalpopup .modalpopup-close-btn {
+    color: #fff;
+    z-index: 1000002;
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    padding: 5px 8px;
+    font-size: 18px;
+}
+
+.wr-modalpopup .modalpopup-close-btn:hover {
+
 }
 
 .wr-modalpopup .modalpopup-content .buttons {
-    margin-top: 20px;
+    margin-top: 30px;
+}
+
+.wr-modalpopup .modalpopup-content .buttons .btn-operations {
+    background: #fff;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: 500;
 }
 
 .wr-modalpopup .modalpopup-bg {
-    position:absolute;
-    z-index: 100000;
+    position: fixed;
+    z-index: 1000000;
     width: 100%;
     height: 100%;
     background: #000000;
-    opacity: 0.7;
+    opacity: 0.9;
     display: block;
 }
 
@@ -1923,25 +1959,25 @@ a.show-operations-btn .btn-text:before {
     font-size: 30px;
 }
 
-.select2-selection {
+.select-resource.select2-selection {
     height: 60px !important;
     border-color: #E7EAED !important;
     background-color: #444 !important;
 }
 
-.select2-selection__rendered {
+.select-resource .select2-selection__rendered {
     color: #fff !important;
     padding-right: 28px !important;
 }
 
-.select2-selection__arrow b {
+.select-resource .select2-selection__arrow b {
     border-width: 8px 7px 0 7px !important;
     border-color: #FFF transparent transparent transparent !important;
     margin-left: -15px !important;
     margin-top: 12px !important;
 }
 
-.select2-dropdown.select-resource {
+.select-resource.select2-dropdown {
     z-index: 1000;
 }
 
