@@ -146,7 +146,9 @@ function toggleMoreOperationsHeight(){
 /*
  * Advance operations sub categories show/hide toggle function
  */
-function showAdvanceOperation(operation){
+function showAdvanceOperation(operation, button){
+    $(button).addClass('selected');
+    $(button).siblings().removeClass('selected');
     $(hiddenOperation + '[data-operation="' + operation + '"]').show();
     $(hiddenOperation + '[data-operation="' + operation + '"]').siblings().hide();
 }
