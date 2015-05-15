@@ -83,7 +83,7 @@
                     </span>
                     Go Back To Dashboard
                 </a>
-                <a href="policy-create.html" class="cu-btn">
+                <a href="policy-create-wizard.html" class="cu-btn">
                     <span class="fw-stack">
                         <i class="fw fw-ring fw-stack-2x"></i>
                         <i class="fw fw-add fw-stack-1x"></i>
@@ -102,10 +102,15 @@
             <!-- content -->
             <div class="wr-content">
 
-                <div class="wr-list-group">
+                <div class="wr-list-group wr-sortable">
 
-                    <span class="list-group-item">
-                        <div class="wr-list-desc">Management Team Policy</div>
+                    <span class="list-group-item" id="policy1">
+                        <i class="wr-sortable-icon fw fw-sort"></i>
+                        <i class="wr-list-icon fw fw-android"></i>
+                        <div class="wr-list-desc">
+                            <h3 class="wr-list-name">Management Team Policy</h3>
+                            <span class="wr-list-username">Android</span>
+                        </div>
                         <span class="list-group-item-actions">
                             <a href="policy-create.html" class="cu-btn-inner">
                                 <span class="fw-stack">
@@ -132,8 +137,13 @@
                         <div class="clearfix"></div>
                     </span>
 
-                    <span class="list-group-item">
-                        <div class="wr-list-desc">Company Device Use Policy</div>
+                    <span class="list-group-item" id="policy2">
+                        <i class="wr-sortable-icon fw fw-sort"></i>
+                        <i class="wr-list-icon fw fw-android"></i>
+                        <div class="wr-list-desc">
+                            <h3 class="wr-list-name">Company Device Use Policy</h3>
+                            <span class="wr-list-username">Android</span>
+                        </div>
                         <span class="list-group-item-actions">
                             <a href="policy-create.html" class="cu-btn-inner">
                                 <span class="fw-stack">
@@ -160,8 +170,13 @@
                         <div class="clearfix"></div>
                     </span>
 
-                    <span class="list-group-item">
-                        <div class="wr-list-desc">Wifi Policy</div>
+                    <span class="list-group-item" id="policy3">
+                        <i class="wr-sortable-icon fw fw-sort"></i>
+                        <i class="wr-list-icon fw fw-android"></i>
+                        <div class="wr-list-desc">
+                            <h3 class="wr-list-name">Wifi Policy</h3>
+                            <span class="wr-list-username">Android</span>
+                        </div>
                         <span class="list-group-item-actions">
                             <a href="policy-create.html" class="cu-btn-inner">
                                 <span class="fw-stack">
@@ -188,8 +203,13 @@
                         <div class="clearfix"></div>
                     </span>
 
-                    <span class="list-group-item">
-                        <div class="wr-list-desc">Guest Policy</div>
+                    <span class="list-group-item" id="policy4">
+                        <i class="wr-sortable-icon fw fw-sort"></i>
+                        <i class="wr-list-icon fw fw-android"></i>
+                        <div class="wr-list-desc">
+                            <h3 class="wr-list-name">Guest Policy</h3>
+                            <span class="wr-list-username">Android</span>
+                        </div>
                         <span class="list-group-item-actions">
                             <a href="policy-create.html" class="cu-btn-inner">
                                 <span class="fw-stack">
@@ -243,7 +263,8 @@
     </div>
 </div>
 
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/assetmenu.js"></script>
 <script src="js/operationsmenu.js"></script>
@@ -267,7 +288,19 @@ $( document ).ready(function() {
 	      offset: {
 	        top: $('header').height()
 	      }
-	});	 
+	});
+
+    /* sorting function */
+    $(function() {
+        var sortableElem = '.wr-sortable';
+        $(sortableElem).sortable({
+            beforeStop: function(event, ui){
+                var sortedIDs = $(this).sortable('toArray');
+                console.log(sortedIDs);
+            }
+        });
+        $(sortableElem).disableSelection();
+    });
 }); 
 
 </script>
