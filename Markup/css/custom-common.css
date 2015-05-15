@@ -281,3 +281,26 @@ br.c-both {
 }
 
 
+.wr-input-control .cus-col-25 {
+	float:left;
+	width:25%;
+}
+
+.wr-input-control .cus-col-50 {
+	float:left;
+	width:60%;
+	padding-left:10px;
+}
+
+.wr-input-control .cus-col-50 input {
+	width:65%;
+}
+
+.wr-input-control .cus-col-50 span {
+	padding-left:20px;
+}
+
+
+
+
+
