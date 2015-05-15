@@ -1,0 +1,235 @@
+<!--
+* Copyright (c) 2015, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+*
+* WSO2 Inc. licenses this file to you under the Apache License,
+* Version 2.0 (the "License"); you may not use this file except
+* in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied. See the License for the
+* specific language governing permissions and limitations
+* under the License.
+-->
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Device Manager</title>
+
+    <link rel="icon" href="favicon.png" type="image/x-icon" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/select2.min.css" rel="stylesheet">
+    <link href="css/custom-common.css" rel="stylesheet">    
+    <link href="css/custom-desktop.css" rel="stylesheet">
+    <link href="css/custom-theme.css" rel="stylesheet">
+
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+<div class="wr-modelpopup">
+    <div class="modelpopup-content"><!-- dynamic content --></div>
+    <div class="modelpopup-bg"></div>
+</div>
+
+<div class="container col-lg-12 col-md-12 col-sm-12">
+
+    <!-- header -->
+    <header>
+        <div class="row wr-global-header">
+            <div class="col-xs-8 col-sm-6 col-lg-8 app-logo">
+                <a href="home.html"><img src="images/logo.png" /><h2 class="app-title">Mobile Device Manager</h2></a>
+            </div>
+            <div class="col-xs-4 col-sm-6 col-lg-4 wr-auth-container">
+                <div class="wr-auth pull-right">
+                    <a href="#" data-toggle="dropdown">
+                        <div class="auth-img">
+                            Administrator
+                            <span class="fw-stack-md fw-lg">
+                                <i class="fw fw-user fw-stack-1-5x"></i>
+                            </span>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="cu-arrow"></div>
+                        <div class="dropdown-menu-content">
+                            <a class="filter-item">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- /header -->
+
+    <!-- secondary header - app bar -->
+    <div id="nav" class="row wr-app-bar">
+        <div class="col-md-9 wr-action-container">
+            <div class="wr-action-btn-bar">
+                <a href="javascript:history.go(-1)" class="cu-btn">
+                    <span class="fw-stack">
+                        <i class="fw fw-ring fw-stack-2x"></i>
+                        <i class="fw fw-cancel fw-stack-1x"></i>
+                    </span>
+                    Cancel
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- secondary header - app bar -->
+
+    <!-- content/body -->
+    <div class="row">
+        <div class="col-md-12">
+
+
+            <!-- content -->
+            <div class="container col-centered wr-content">
+
+                <div class="wr-form">
+
+                    <h1 class="wr-title">Create Policy</h1>
+                    <hr />
+
+                    <div class="row wr-wizard">
+                        <div class="col-md-3 col-xs-3">
+                            <div class="itm-wiz"><div class="wiz-no">1</div><div class="wiz-lbl hidden-xs"><span>Select Platform</span></div></div>
+                            <br class="c-both" />
+                        </div>
+                        <div class="col-md-3 col-xs-3">
+                            <div class="itm-wiz"><div class="wiz-no">2</div><div class="wiz-lbl hidden-xs"><span>Configure Profile</span></div></div>
+                            <br class="c-both" />
+                        </div>
+                        <div class="col-md-3 col-xs-3">
+                            <div class="itm-wiz itm-wiz-current"><div class="wiz-no">3</div><div class="wiz-lbl hidden-xs"><span>Assign to a group</span></div></div>
+                            <br class="c-both" />
+                        </div>
+                        <div class="col-md-3 col-xs-3">
+                            <div class="itm-wiz"><div class="wiz-no">4</div><div class="wiz-lbl hidden-xs"><span>Publish</span></div></div>
+                            <br class="c-both" />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+
+                            <div>
+                                <label class="wr-input-label" title="">
+                                    Set Device Ownership Type
+                                    <span class="wr-help-tip glyphicon glyphicon-question-sign"></span>
+                                </label>
+                                <div class="wr-input-control">
+                                    <div class="cus-col-50">
+                                        <select class="form-control">
+                                            <option>Any</option>
+                                        </select>
+                                    </div>
+                                    <br class="c-both" />
+                                </div>
+
+                                <label class="wr-input-label" title="">
+                                    Set User Roles
+                                    <span class="wr-help-tip glyphicon glyphicon-question-sign"></span>
+                                </label>
+                                <div class="wr-input-control">
+                                    <div class="cus-col-50">
+                                        <select class="form-control">
+                                            <option>Any</option>
+                                        </select>
+                                    </div>
+                                    <br class="c-both" />
+                                </div>
+
+                                <hr>
+
+                                <label class="wr-input-label" title="">
+                                    Action upon Non-compliance
+                                    <span class="wr-help-tip glyphicon glyphicon-question-sign"></span>
+                                </label>
+                                <div class="wr-input-control">
+                                    <div class="cus-col-50">
+                                        <select class="form-control">
+                                            <option>Enforce</option>
+                                        </select>
+                                    </div>
+                                    <br class="c-both" />
+                                </div>
+                            </div>
+
+                            <div class="wr-input-control wr-btn-grp">
+                                <a href="policy-create-wizard-02.html" class="wr-btn" >Back to Profile</a>
+                                <a href="policy-create-wizard-04.html" class="wr-btn" >Save & Continue</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- /content -->
+
+
+        </div>
+    </div>
+    <!-- /content/body -->
+
+    <!-- footer -->
+    <footer class="footer">
+        <p>Mobile Device Manager v.2.0.0 | &copy; <script>document.write(new Date().getFullYear());</script> <a href="http://wso2.com/" target="_blank"><i class="fw fw-wso2"></i> Inc</a>. All Rights Reserved.</p>
+    </footer>
+    <!-- /footer -->
+
+</div>
+
+<div id="content-filter-types" style="display: none">
+    <div class="sort-title">Sort By</div>
+    <div class="sort-options">
+    	<a href="#">Device Name<span class="ico-sort-asc"></span></a>
+    	<a href="#">OS</a>
+    	<a href="#">User</a>
+    	<a href="#">Model</a>   
+    </div>
+</div>
+
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/operationsmenu.js"></script>
+
+<script type="text/javascript">
+
+$( document ).ready(function() {
+
+    $('[data-toggle="tooltip"]').tooltip();   
+
+    $("[data-toggle=popover]").popover();
+
+    $(".ctrl-filter-type-switcher").popover({
+        html : true, 
+        content: function() {
+          return $('#content-filter-types').html();
+        }
+    });    
+
+	$('#nav').affix({
+	      offset: {
+	        top: $('header').height()
+	      }
+	});	 
+}); 
+
+</script>
+
+</body>
+</html>
