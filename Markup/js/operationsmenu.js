@@ -28,7 +28,8 @@ var operations = '.wr-operations',
     navHeight = $('#nav').height(),
     headerHeight = $('header').height(),
     offset = (headerHeight + navHeight),
-    maxOperationsLimit = 15;
+    maxOperationsLimit = 15,
+    hiddenOperation = '.wr-hidden-operations-content > div';
 
 /*
  * DOM ready functions.
@@ -140,4 +141,12 @@ function toggleMoreOperations(){
  */
 function toggleMoreOperationsHeight(){
     $('.wr-hidden-operations').css('min-height', $('html').height() - (offset+140));
+}
+
+/*
+ * Advance operations sub categories show/hide toggle function
+ */
+function showAdvanceOperation(operation){
+    $(hiddenOperation + '[data-operation="' + operation + '"]').show();
+    $(hiddenOperation + '[data-operation="' + operation + '"]').siblings().hide();
 }
