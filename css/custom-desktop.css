@@ -1802,6 +1802,10 @@ a.wr-side-panel-toggle-btn.selected {
     background: #e4e4e4;
 }
 
+.wr-hidden-operation {
+    display: none;
+}
+
 .wr-hidden-operations .row:first-child {
     height: 100%;
 }
@@ -2111,14 +2115,6 @@ a.show-operations-btn .btn-text:before {
     vertical-align: text-top;
 }
 
-.wr-tags {
-
-}
-
-
-
-
-
 .panel-collapse {
     position: relative;
 }
@@ -2160,5 +2156,3 @@ a.cu-btn-inner.inverse {
 a.cu-btn-inner.inverse:hover {
     background: #526A84;
 }
-
-
