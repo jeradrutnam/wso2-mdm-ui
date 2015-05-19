@@ -100,7 +100,7 @@
                 <div class="wr-form">
 
                     <h1 class="wr-title">Create Policy</h1>
-                    <hr />
+                    <br>
 
                     <div class="row wr-wizard">
                         <div class="col-md-3 col-xs-3">
@@ -161,13 +161,16 @@
                                             <div class="panel panel-default">
                                                 <div class="panel-heading" role="tab" id="headingOne">
                                                     <h2 class="sub-title panel-title">
-                                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        <span class="fw-stack">
-                                            <i class="fw fw-ring fw-stack-2x"></i>
-                                            <i class="fw fw-arrow fw-down-arrow fw-stack-1x"></i>
-                                        </span>
-                                                            Device Security
-                                                        </a>
+                                                        <span class="fw-stack">
+                                                            <i class="fw fw-ring fw-stack-2x"></i>
+                                                            <i class="fw fw-arrow fw-down-arrow fw-stack-1x"></i>
+                                                        </span>
+                                                        Device Security
+                                                        <label class="wr-input-control switch" data-toggle="collapse" data-target="#collapseOne">
+                                                            <span class="text">Enabled</span>
+                                                            <input type="checkbox" checked>
+                                                            <span class="helper"></span>
+                                                        </label>
                                                     </h2>
                                                 </div>
                                                 <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
