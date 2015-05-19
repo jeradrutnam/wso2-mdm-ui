@@ -537,6 +537,12 @@ a.cu-btn-inner:hover {
 	background:#e4e4e4;
 }
 
+.sort-index {
+    margin: 20px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
 .sort-title, .sort-options {
 	padding:0px 15px;
 }
@@ -1876,12 +1882,35 @@ a.wr-side-panel-toggle-btn.selected {
     font-size: 16px;
 }
 
-.wr-hidden-operations-content .panel-title a {
+.wr-hidden-operations-content .panel-title {
     padding: 5px;
     background: #e4e4e4;
     border-bottom: 1px solid #fff;
     color: #555;
+}
+
+.wr-hidden-operations-content .panel-title .fw-stack.collapsed .fw-down-arrow:before {
+    content: "\e634";
+}
+
+.wr-hidden-operations-content .panel-title .wr-input-control.switch {
+    margin-top: 8px;
+    margin-right: 0;
+}
+
+.wr-hidden-operations-content .panel-title .wr-input-control.switch input[type="checkbox"]:not(:checked) + .helper:after {
+    background: #fff;
+}
+
+.wr-hidden-operations-content .panel-title label {
+    float: right;
+}
+
+.wr-hidden-operations-content .panel-title:after {
+    clear: both;
+    content: " ";
     display: block;
+    height: 0;
 }
 
 .wr-hidden-operations-content .panel-body {
@@ -2016,14 +2045,13 @@ a.show-operations-btn .btn-text:before {
     list-style: none;
     display: inline-block;
     text-align: center;
-    margin: 0 6px 9px 0;
     line-height: 17px;
 }
 
 .tile-buttons li a {
     color: #fff;
     text-decoration: none;
-    width: 120px;
+    width: 100%;
     height: 120px;
     padding: 20px;
     background: #132D45;
@@ -2166,4 +2194,8 @@ a.cu-btn-inner.inverse:hover {
 
 .wiz-lbl {
     line-height: 50px;
+}
+
+.policy-list .wr-list-desc {
+
 }

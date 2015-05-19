@@ -152,3 +152,12 @@ function showAdvanceOperation(operation, button){
     $(hiddenOperation + '[data-operation="' + operation + '"]').show();
     $(hiddenOperation + '[data-operation="' + operation + '"]').siblings().hide();
 }
+
+$(hiddenOperation + ' .wr-input-control.switch').click(function(){
+    if($(this).hasClass('collapsed')){
+        $(this).siblings('.fw-stack').addClass('collapsed');
+    }
+    else{
+        $(this).siblings('.fw-stack').removeClass('collapsed');
+    }
+});
