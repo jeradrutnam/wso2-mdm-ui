@@ -76,14 +76,20 @@
     <div id="nav" class="row wr-app-bar">
         <div class="col-md-9 wr-action-container">
             <div class="wr-action-btn-bar">
-                <a href="dashboard.html" class="cu-btn">
+                <a href="javascript:openCollapsedNav()" class="cu-btn wr-hidden-nav-toggle-btn">
+                    <span class="fw-stack">
+                        <i class="fw fw-tiles fw-stack-1-5x"></i>
+                    </span>
+                </a><a class="cu-btn page-title" href='policies.html'>
+                    <span class="fw-stack"></span>
+                    Policies
+                </a><a href="dashboard.html" class="cu-btn">
                     <span class="fw-stack">
                         <i class="fw fw-ring fw-stack-2x"></i>
                         <i class="fw fw-left-arrow fw-stack-1x"></i>
                     </span>
                     Go Back To Dashboard
-                </a>
-                <a href="policy-create-wizard.html" class="cu-btn">
+                </a><a href="policy-create-wizard.html" class="cu-btn">
                     <span class="fw-stack">
                         <i class="fw fw-ring fw-stack-2x"></i>
                         <i class="fw fw-add fw-stack-1x"></i>
@@ -95,6 +101,16 @@
     </div>
     <!-- secondary header - app bar -->
 
+    <!-- common navigation -->
+    <div id="hiddenNav" class="wr-hidden-nav">
+        <ul>
+            <li><a href="#"><i class="fw fw-user"></i>User Management</a></li>
+            <li><a href="#"><i class="fw fw-settings"></i>Profile Management</a></li>
+            <li><a href="#"><i class="fw fw-policy"></i>Policy Management</a></li>
+        </ul>
+    </div>
+    <!-- /common navigation -->
+
     <!-- content/body -->
     <div class="row">
         <div class="col-md-12">
@@ -102,139 +118,188 @@
             <!-- content -->
             <div class="wr-content">
 
-                <div class="wr-list-group wr-sortable">
+                <h1 class="page-sub-title">Policy List</h1>
 
-                    <span class="list-group-item" id="policy1">
-                        <i class="wr-sortable-icon fw fw-sort"></i>
-                        <i class="wr-list-icon fw fw-android"></i>
-                        <div class="wr-list-desc">
-                            <h3 class="wr-list-name">Management Team Policy</h3>
-                            <span class="wr-list-username">Android</span>
-                        </div>
-                        <span class="list-group-item-actions">
-                            <a href="policy-create.html" class="cu-btn-inner">
-                                <span class="fw-stack">
-                                    <i class="fw fw-ring fw-stack-2x"></i>
-                                    <i class="fw fw-view fw-stack-1x"></i>
-                                </span>
-                                View
-                            </a>
-                            <a href="policy-create.html" class="cu-btn-inner">
-                                <span class="fw-stack">
-                                    <i class="fw fw-ring fw-stack-2x"></i>
-                                    <i class="fw fw-settings fw-stack-1x"></i>
-                                </span>
-                                Re-Configure
-                            </a>
-                            <a href="policy-create.html" class="cu-btn-inner">
-                                <span class="fw-stack">
-                                    <i class="fw fw-ring fw-stack-2x"></i>
-                                    <i class="fw fw-delete fw-stack-1x"></i>
-                                </span>
-                                Delete
-                            </a>
-                        </span>
-                        <div class="clearfix"></div>
-                    </span>
+                <div class="wr-list-group policy-list">
 
-                    <span class="list-group-item" id="policy2">
-                        <i class="wr-sortable-icon fw fw-sort"></i>
-                        <i class="wr-list-icon fw fw-android"></i>
-                        <div class="wr-list-desc">
-                            <h3 class="wr-list-name">Company Device Use Policy</h3>
-                            <span class="wr-list-username">Android</span>
-                        </div>
-                        <span class="list-group-item-actions">
-                            <a href="policy-create.html" class="cu-btn-inner">
-                                <span class="fw-stack">
-                                    <i class="fw fw-ring fw-stack-2x"></i>
-                                    <i class="fw fw-view fw-stack-1x"></i>
-                                </span>
-                                View
-                            </a>
-                            <a href="policy-create.html" class="cu-btn-inner">
-                                <span class="fw-stack">
-                                    <i class="fw fw-ring fw-stack-2x"></i>
-                                    <i class="fw fw-settings fw-stack-1x"></i>
-                                </span>
-                                Re-Configure
-                            </a>
-                            <a href="policy-create.html" class="cu-btn-inner">
-                                <span class="fw-stack">
-                                    <i class="fw fw-ring fw-stack-2x"></i>
-                                    <i class="fw fw-delete fw-stack-1x"></i>
-                                </span>
-                                Delete
-                            </a>
-                        </span>
-                        <div class="clearfix"></div>
-                    </span>
-
-                    <span class="list-group-item" id="policy3">
-                        <i class="wr-sortable-icon fw fw-sort"></i>
-                        <i class="wr-list-icon fw fw-android"></i>
-                        <div class="wr-list-desc">
-                            <h3 class="wr-list-name">Wifi Policy</h3>
-                            <span class="wr-list-username">Android</span>
-                        </div>
-                        <span class="list-group-item-actions">
-                            <a href="policy-create.html" class="cu-btn-inner">
-                                <span class="fw-stack">
-                                    <i class="fw fw-ring fw-stack-2x"></i>
-                                    <i class="fw fw-view fw-stack-1x"></i>
-                                </span>
-                                View
-                            </a>
-                            <a href="policy-create.html" class="cu-btn-inner">
-                                <span class="fw-stack">
-                                    <i class="fw fw-ring fw-stack-2x"></i>
-                                    <i class="fw fw-settings fw-stack-1x"></i>
-                                </span>
-                                Re-Configure
-                            </a>
-                            <a href="policy-create.html" class="cu-btn-inner">
-                                <span class="fw-stack">
-                                    <i class="fw fw-ring fw-stack-2x"></i>
-                                    <i class="fw fw-delete fw-stack-1x"></i>
-                                </span>
-                                Delete
-                            </a>
-                        </span>
-                        <div class="clearfix"></div>
-                    </span>
-
-                    <span class="list-group-item" id="policy4">
-                        <i class="wr-sortable-icon fw fw-sort"></i>
-                        <i class="wr-list-icon fw fw-android"></i>
-                        <div class="wr-list-desc">
-                            <h3 class="wr-list-name">Guest Policy</h3>
-                            <span class="wr-list-username">Android</span>
-                        </div>
-                        <span class="list-group-item-actions">
-                            <a href="policy-create.html" class="cu-btn-inner">
-                                <span class="fw-stack">
-                                    <i class="fw fw-ring fw-stack-2x"></i>
-                                    <i class="fw fw-view fw-stack-1x"></i>
-                                </span>
-                                View
-                            </a>
-                            <a href="policy-create.html" class="cu-btn-inner">
-                                <span class="fw-stack">
-                                    <i class="fw fw-ring fw-stack-2x"></i>
-                                    <i class="fw fw-settings fw-stack-1x"></i>
-                                </span>
-                                Re-Configure
-                            </a>
-                            <a href="policy-create.html" class="cu-btn-inner">
-                                <span class="fw-stack">
-                                    <i class="fw fw-ring fw-stack-2x"></i>
-                                    <i class="fw fw-delete fw-stack-1x"></i>
-                                </span>
-                                Delete
-                            </a>
-                        </span>
-                        <div class="clearfix"></div>
-                    </span>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Priority</th>
+                                <th>Ownership Type</th>
+                                <th>Assigned Role(s)</th>
+                                <th>Compliance Type</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody class="wr-sortable">
+                            <tr id="policy1">
+                                <td>
+                                    <i class="wr-sortable-icon fw fw-sort"></i>
+                                    <i class="wr-list-icon fw fw-android"></i>
+                                    <div class="wr-list-desc">
+                                        <h3 class="wr-list-name">Management Team Policy</h3>
+                                        <span class="wr-list-username">Android</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="sort-index"></span>
+                                </td>
+                                <td>ANY</td>
+                                <td>ANY</td>
+                                <td>Enforce</td>
+                                <td>
+                                    <span class="list-group-item-actions">
+                                        <a href="policy-create.html" class="cu-btn-inner">
+                                                <span class="fw-stack">
+                                                    <i class="fw fw-ring fw-stack-2x"></i>
+                                                    <i class="fw fw-view fw-stack-1x"></i>
+                                                </span>
+                                            View
+                                        </a>
+                                        <a href="policy-create.html" class="cu-btn-inner">
+                                                <span class="fw-stack">
+                                                    <i class="fw fw-ring fw-stack-2x"></i>
+                                                    <i class="fw fw-settings fw-stack-1x"></i>
+                                                </span>
+                                            Re-Configure
+                                        </a>
+                                        <a href="policy-create.html" class="cu-btn-inner">
+                                                <span class="fw-stack">
+                                                    <i class="fw fw-ring fw-stack-2x"></i>
+                                                    <i class="fw fw-delete fw-stack-1x"></i>
+                                                </span>
+                                            Delete
+                                        </a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr id="policy2">
+                                <td>
+                                    <i class="wr-sortable-icon fw fw-sort"></i>
+                                    <i class="wr-list-icon fw fw-apple"></i>
+                                    <div class="wr-list-desc">
+                                        <h3 class="wr-list-name">Company Device Use Policy</h3>
+                                        <span class="wr-list-username">iOS</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="sort-index"></span>
+                                </td>
+                                <td>ANY</td>
+                                <td>ANY</td>
+                                <td>Enforce</td>
+                                <td>
+                                    <span class="list-group-item-actions">
+                                        <a href="policy-create.html" class="cu-btn-inner">
+                                                <span class="fw-stack">
+                                                    <i class="fw fw-ring fw-stack-2x"></i>
+                                                    <i class="fw fw-view fw-stack-1x"></i>
+                                                </span>
+                                            View
+                                        </a>
+                                        <a href="policy-create.html" class="cu-btn-inner">
+                                                <span class="fw-stack">
+                                                    <i class="fw fw-ring fw-stack-2x"></i>
+                                                    <i class="fw fw-settings fw-stack-1x"></i>
+                                                </span>
+                                            Re-Configure
+                                        </a>
+                                        <a href="policy-create.html" class="cu-btn-inner">
+                                                <span class="fw-stack">
+                                                    <i class="fw fw-ring fw-stack-2x"></i>
+                                                    <i class="fw fw-delete fw-stack-1x"></i>
+                                                </span>
+                                            Delete
+                                        </a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr id="policy3">
+                                <td>
+                                    <i class="wr-sortable-icon fw fw-sort"></i>
+                                    <i class="wr-list-icon fw fw-apple"></i>
+                                    <div class="wr-list-desc">
+                                        <h3 class="wr-list-name">Wifi Policy</h3>
+                                        <span class="wr-list-username">iOS</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="sort-index"></span>
+                                </td>
+                                <td>ANY</td>
+                                <td>ANY</td>
+                                <td>Enforce</td>
+                                <td>
+                                    <span class="list-group-item-actions">
+                                        <a href="policy-create.html" class="cu-btn-inner">
+                                                <span class="fw-stack">
+                                                    <i class="fw fw-ring fw-stack-2x"></i>
+                                                    <i class="fw fw-view fw-stack-1x"></i>
+                                                </span>
+                                            View
+                                        </a>
+                                        <a href="policy-create.html" class="cu-btn-inner">
+                                                <span class="fw-stack">
+                                                    <i class="fw fw-ring fw-stack-2x"></i>
+                                                    <i class="fw fw-settings fw-stack-1x"></i>
+                                                </span>
+                                            Re-Configure
+                                        </a>
+                                        <a href="policy-create.html" class="cu-btn-inner">
+                                                <span class="fw-stack">
+                                                    <i class="fw fw-ring fw-stack-2x"></i>
+                                                    <i class="fw fw-delete fw-stack-1x"></i>
+                                                </span>
+                                            Delete
+                                        </a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr id="policy4">
+                                <td>
+                                    <i class="wr-sortable-icon fw fw-sort"></i>
+                                    <i class="wr-list-icon fw fw-windows"></i>
+                                    <div class="wr-list-desc">
+                                        <h3 class="wr-list-name">Guest Policy</h3>
+                                        <span class="wr-list-username">Windows</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="sort-index"></span>
+                                </td>
+                                <td>ANY</td>
+                                <td>ANY</td>
+                                <td>Enforce</td>
+                                <td>
+                                    <span class="list-group-item-actions">
+                                        <a href="policy-create.html" class="cu-btn-inner">
+                                                <span class="fw-stack">
+                                                    <i class="fw fw-ring fw-stack-2x"></i>
+                                                    <i class="fw fw-view fw-stack-1x"></i>
+                                                </span>
+                                            View
+                                        </a>
+                                        <a href="policy-create.html" class="cu-btn-inner">
+                                                <span class="fw-stack">
+                                                    <i class="fw fw-ring fw-stack-2x"></i>
+                                                    <i class="fw fw-settings fw-stack-1x"></i>
+                                                </span>
+                                            Re-Configure
+                                        </a>
+                                        <a href="policy-create.html" class="cu-btn-inner">
+                                                <span class="fw-stack">
+                                                    <i class="fw fw-ring fw-stack-2x"></i>
+                                                    <i class="fw fw-delete fw-stack-1x"></i>
+                                                </span>
+                                            Delete
+                                        </a>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
 
                 </div>
 
@@ -290,18 +355,47 @@ $( document ).ready(function() {
 	      }
 	});
 
+    // Return a helper with preserved width of cells
+    var fixHelper = function(e, ui) {
+        ui.children().each(function() {
+            $(this).width($(this).width());
+        });
+        return ui;
+    };
+
+    $('tbody.wr-sortable').sortable({
+        helper: fixHelper
+    }).disableSelection();
+
+    function addSortableIndexNumbers(){
+        $('tbody.wr-sortable tr').not('.ui-sortable-placeholder').each(function(i){
+            $('.sort-index', this).html(i+1);
+        });
+    }
+
     /* sorting function */
     $(function() {
+        addSortableIndexNumbers();
         var sortableElem = '.wr-sortable';
         $(sortableElem).sortable({
             beforeStop: function(event, ui){
                 var sortedIDs = $(this).sortable('toArray');
                 console.log(sortedIDs);
+                addSortableIndexNumbers();
             }
         });
         $(sortableElem).disableSelection();
     });
-}); 
+});
+
+function openCollapsedNav(){
+    $('.wr-hidden-nav-toggle-btn').addClass('active');
+    $('#hiddenNav').slideToggle('slideDown', function(){
+        if($(this).css('display') == 'none'){
+            $('.wr-hidden-nav-toggle-btn').removeClass('active');
+        }
+    });
+}
 
 </script>
 

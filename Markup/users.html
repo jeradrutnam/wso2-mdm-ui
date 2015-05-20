@@ -76,14 +76,20 @@
     <div id="nav" class="row wr-app-bar">
         <div class="wr-action-container">
             <div class="wr-action-btn-bar">
-                <a href="dashboard.html" class="cu-btn">
+                <a href="javascript:openCollapsedNav()" class="cu-btn wr-hidden-nav-toggle-btn">
+                        <span class="fw-stack">
+                            <i class="fw fw-tiles fw-stack-1-5x"></i>
+                        </span>
+                    </a><a class="cu-btn page-title" href='users.html'>
+                    <span class="fw-stack"></span>
+                    Users
+                </a><a href="dashboard.html" class="cu-btn">
                     <span class="fw-stack">
                         <i class="fw fw-ring fw-stack-2x"></i>
                         <i class="fw fw-left-arrow fw-stack-1x"></i>
                     </span>
                     Go Back To Dashboard
-                </a>
-                <a href="user-create.html" class="cu-btn">
+                </a><a href="user-create.html" class="cu-btn">
                     <span class="fw-stack">
                         <i class="fw fw-ring fw-stack-2x"></i>
                         <i class="fw fw-add fw-stack-1x"></i>
@@ -95,12 +101,24 @@
     </div>
     <!-- secondary header - app bar -->
 
+    <!-- common navigation -->
+    <div id="hiddenNav" class="wr-hidden-nav">
+        <ul>
+            <li><a href="#"><i class="fw fw-user"></i>User Management</a></li>
+            <li><a href="#"><i class="fw fw-settings"></i>Profile Management</a></li>
+            <li><a href="#"><i class="fw fw-policy"></i>Policy Management</a></li>
+        </ul>
+    </div>
+    <!-- /common navigation -->
+
     <!-- content/body -->
     <div class="row">
         <div class="col-md-12">
 
             <!-- content -->
             <div class="wr-content">
+
+                <h1 class="page-sub-title">User List</h1>
 
                 <div class="wr-list-group wr-sortable">
 
@@ -297,7 +315,16 @@ $( document ).ready(function() {
         });
         $(sortableElem).disableSelection();
     });
-}); 
+});
+
+function openCollapsedNav(){
+    $('.wr-hidden-nav-toggle-btn').addClass('active');
+    $('#hiddenNav').slideToggle('slideDown', function(){
+        if($(this).css('display') == 'none'){
+            $('.wr-hidden-nav-toggle-btn').removeClass('active');
+        }
+    });
+}
 
 </script>
 

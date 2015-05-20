@@ -97,6 +97,22 @@ a.ast-type-item:hover {
 	padding-top:0;
 }
 
+.wr-action-btn-bar .page-title {
+    background-color: #14212E;
+    margin: 0;
+}
+
+.wr-action-btn-bar .page-title .fw-stack {
+    width: 0;
+}
+
+.page-sub-title {
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 24px;
+    margin: 0 0 30px 0;
+}
+
 /* device board */
 .wr-device-board {
 	background:#fafafa;
@@ -1700,11 +1716,11 @@ a.wr-side-panel-toggle-btn.selected {
     color: #526A84;
 }
 
-.wr-sortable .list-group-item {
+.wr-sortable .list-group-item, tbody.wr-sortable td {
     cursor: move;
 }
 
-.wr-sortable .list-group-item .fw.wr-sortable-icon {
+.wr-sortable .list-group-item .fw.wr-sortable-icon, tbody.wr-sortable td .fw.wr-sortable-icon {
     opacity: 0.5;
     margin-top: 14px;
     margin-right: 10px;
@@ -1712,7 +1728,7 @@ a.wr-side-panel-toggle-btn.selected {
     font-size: 14px;
 }
 
-.wr-sortable .list-group-item .wr-list-icon {
+.wr-sortable .list-group-item .wr-list-icon, tbody.wr-sortable td .fw.wr-list-icon {
     float: left;
     padding: 5px;
     background: #555;
@@ -1889,6 +1905,10 @@ a.wr-side-panel-toggle-btn.selected {
     color: #555;
 }
 
+.wr-hidden-operations-content .panel-title a {
+    padding: 0;
+}
+
 .wr-hidden-operations-content .panel-title .fw-stack.collapsed .fw-down-arrow:before {
     content: "\e634";
 }
@@ -1902,8 +1922,27 @@ a.wr-side-panel-toggle-btn.selected {
     background: #fff;
 }
 
+.wr-hidden-operations-content .panel-title .wr-input-control.switch input[type="checkbox"] + .helper + .text {
+    display: inline-block;
+    float: left;
+    margin-right: 5px;
+    margin-top: -1px;
+}
+
+.wr-hidden-operations-content .panel-title .wr-input-control.switch input[type="checkbox"] + .helper + .text:after {
+    content: "Disabled";
+}
+
+.wr-hidden-operations-content .panel-title .wr-input-control.switch input[type="checkbox"]:checked + .helper + .text:after {
+    content: "Enabled";
+}
+
 .wr-hidden-operations-content .panel-title label {
     float: right;
+}
+
+.wr-hidden-operations-content .panel-title .fw-stack {
+    width: 5px;
 }
 
 .wr-hidden-operations-content .panel-title:after {
@@ -2194,8 +2233,4 @@ a.cu-btn-inner.inverse:hover {
 
 .wiz-lbl {
     line-height: 50px;
-}
-
-.policy-list .wr-list-desc {
-
 }
