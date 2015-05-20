@@ -554,9 +554,21 @@ a.cu-btn-inner:hover {
 }
 
 .sort-index {
-    margin: 20px;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 400;
+    background: #526A84;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    display: inline-block;
+}
+
+.wr-desc-list-configs {
+    height: 50px;
+    padding: 15px;
 }
 
 .sort-title, .sort-options {
@@ -1674,12 +1686,17 @@ a.wr-side-panel-toggle-btn.selected {
 
 /* list group styles */
 .wr-list-group .list-group-item {
-    padding: 10px 15px;
+    padding: 0;
     position: relative;
+    border: none;
+    background: #f1f1f1;
+    margin-bottom: 4px;
 }
 
 .wr-list-group .list-group-item-actions {
     float: right;
+    margin: 0 10px;
+    padding: 8px 0;
 }
 
 @media (max-width:500px) {
@@ -1695,7 +1712,8 @@ a.wr-side-panel-toggle-btn.selected {
 }
 
 .wr-list-group .wr-list-desc {
-    float: left;
+    display: inline-block;
+    min-height: 50px;
 }
 
 .wr-list-group h3.wr-list-name {
@@ -1720,21 +1738,21 @@ a.wr-side-panel-toggle-btn.selected {
     cursor: move;
 }
 
-.wr-sortable .list-group-item .fw.wr-sortable-icon, tbody.wr-sortable td .fw.wr-sortable-icon {
+.wr-sortable .list-group-item .wr-sortable-icon, tbody.wr-sortable td .wr-sortable-icon {
     opacity: 0.5;
-    margin-top: 14px;
-    margin-right: 10px;
-    float: left;
+    display: inline-block;
     font-size: 14px;
+    margin: 0 10px;
 }
 
 .wr-sortable .list-group-item .wr-list-icon, tbody.wr-sortable td .fw.wr-list-icon {
-    float: left;
-    padding: 5px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
     background: #555;
     color: #fff;
     font-size: 32px;
-    margin-right: 15px;
+    text-align: center;
 }
 
 .panel-title a .fw-stack {
