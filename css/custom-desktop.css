@@ -1769,9 +1769,12 @@ a.wr-side-panel-toggle-btn.selected {
 .wr-list-group .wr-desc-list-configs {
     height: 50px;
     padding: 15px;
+    text-align: center;
+}
+
+.wr-list-group .wr-desc-list-configs.highlight {
     background: #14212E;
     color: #fff;
-    text-align: center;
 }
 
 .wr-list-group .wr-desc-list-configs b {
