@@ -138,17 +138,45 @@
                                     <br class="c-both" />
                                 </div>
 
-                                <label class="wr-input-label" title="">
-                                    Set User Roles
-                                    <span class="wr-help-tip glyphicon glyphicon-question-sign"></span>
-                                </label>
                                 <div class="wr-input-control">
-                                    <div class="cus-col-50">
-                                        <select class="form-control">
-                                            <option>Any</option>
-                                        </select>
+                                    <label class="wr-input-control radio light" rel="assetfilter">
+                                        <input id="userRadio" type="radio" name="user-select" value="userSelectField" class="user-select-radio" />
+                                        <span class="helper">User</span>
+                                    </label>
+                                    <label class="wr-input-control radio light">
+                                        <input id="userRoleRadio" type="radio" name="user-select" value="userRoleSelectField" class="user-select-radio" />
+                                        <span class="helper">User Role</span>
+                                    </label>
+                                </div>
+
+                                <div id="userSelectField" class="user-select">
+                                    <label class="wr-input-label" title="">
+                                        Set User
+                                        <span class="wr-help-tip glyphicon glyphicon-question-sign"></span>
+                                    </label>
+                                    <div class="wr-input-control">
+                                        <div class="cus-col-50">
+                                            <select class="form-control">
+                                                <option>Any</option>
+                                            </select>
+                                        </div>
+                                        <br class="c-both" />
                                     </div>
-                                    <br class="c-both" />
+                                </div>
+
+                                <div id="userRoleSelectField" class="user-select" style="display:none">
+                                    <label class="wr-input-label" title="">
+                                        Set User Roles
+                                        <span class="wr-help-tip glyphicon glyphicon-question-sign"></span>
+                                    </label>
+                                    <div class="wr-input-control">
+                                        <div class="cus-col-50">
+                                            <select class="form-control">
+                                                <option>Any</option>
+                                            </select>
+                                        </div>
+                                        <br class="c-both" />
+                                    </div>
                                 </div>
 
                                 <hr>
@@ -168,8 +196,20 @@
                             </div>
 
                             <div class="wr-input-control wr-btn-grp">
-                                <a href="policy-create-wizard-02.html" class="wr-btn" >Back to Profile</a>
-                                <a href="policy-create-wizard-04.html" class="wr-btn" >Save & Continue</a>
+                                <a href="policy-create-wizard-02.html" class="wr-btn">
+                                    <span class="fw-stack">
+                                        <i class="fw fw-ring fw-stack-2x"></i>
+                                        <i class="fw fw-left-arrow fw-stack-1x"></i>
+                                    </span>
+                                    Back
+                                </a>
+                                <a href="policy-create-wizard-04.html" class="wr-btn">
+                                    Continue
+                                    <span class="fw-stack">
+                                        <i class="fw fw-ring fw-stack-2x"></i>
+                                        <i class="fw fw-right-arrow fw-stack-1x"></i>
+                                    </span>
+                                </a>
                             </div>
 
                         </div>
@@ -226,7 +266,13 @@ $( document ).ready(function() {
 	      offset: {
 	        top: $('header').height()
 	      }
-	});	 
+	});
+
+    $( "input[type='radio'].user-select-radio" ).change(function() {
+        $('.user-select').hide();
+        $('#'+$(this).val()).show();
+    });
+
 }); 
 
 </script>
