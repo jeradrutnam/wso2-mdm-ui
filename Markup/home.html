@@ -318,17 +318,22 @@
                             <div class="arrow"></div>
                             <div class="popover-content">
                                 <div id="advance-filter-options">
-                                    <div class="title">Search user method</div>
+                                    <div class="title">Advance filtering</div>
                                     <label class="wr-input-control radio light">
-                                        <input type="radio" name="search-method" value="users" />
-                                        <span class="helper">User</span>
+                                        <input type="radio" name="search-method" value="devices" checked />
+                                        <span class="helper">Devices</span>
                                     </label>
                                     <label class="wr-input-control radio light">
-                                        <input type="radio" name="search-method" value="user roles" />
-                                        <span class="helper">User Role</span>
+                                        <input type="radio" name="search-method" value="users" />
+                                        <span class="helper">Users</span>
+                                    </label>
+                                    <label class="wr-input-control radio light">
+                                        <input type="radio" name="search-method" value="roles" />
+                                        <span class="helper">Roles</span>
                                     </label>
                                 </div>
                                 <div id="device-filter-options">
+                                    <div class="title">Platform</div>
                                     <div id="asset-selected"></div>
                                     <div id="asset-select">
                                         <ul>
@@ -374,7 +379,7 @@
                     </div>
                     <div class="wr-search-tags"></div>
                     <a href="#" class="btn-search"><i class="fw fw-search"></i></a>
-                    <div class="input" id="search" data-value="" data-placeholder="Search devices ..." contenteditable="true"></div>
+                    <div class="input" id="search" data-value="" data-placeholder="Filter by devices ..." contenteditable="true"></div>
                     <div class="clearfix"></div>
                 </div>
                 <!-- /asset filter -->

@@ -70,12 +70,7 @@ $(menuButton).click(function(e){
  * On asset filter options window advance filter radio button change function
  */
 $('#advance-filter-options input[type=radio]').change(function() {
-    if(this.value !== 'devices'){
-        $(searchField).attr('data-placeholder', 'Search '+ this.value + ' ...');
-    }
-    else {
-        $(deviceOptions).show();
-    }
+    $(searchField).attr('data-placeholder', 'Filter by '+ this.value + ' ...');
 });
 
 /*
