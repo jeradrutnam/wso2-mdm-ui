@@ -110,7 +110,11 @@ a.ast-type-item:hover {
     font-weight: 300;
     text-transform: uppercase;
     font-size: 24px;
-    margin: 0 0 30px 0;
+    margin: 0;
+}
+
+.page-sub-title-desc {
+    font-weight: 300;
 }
 
 /* device board */
@@ -200,6 +204,10 @@ a.ast-type-item:hover {
 	margin-right: 5px;
     border: none;
     text-decoration: none;
+}
+
+.wr-btn:disabled, a.wr-btn:disabled {
+   opacity: 0.5;
 }
 
 .wr-btn:hover {
@@ -553,26 +561,8 @@ a.cu-btn-inner:hover {
 	background:#e4e4e4;
 }
 
-.sort-index {
-    font-size: 18px;
-    font-weight: 400;
-    background: #526A84;
-    color: #fff;
-    width: 50px;
-    height: 50px;
-    margin: 0;
-    line-height: 50px;
-    text-align: center;
-    display: inline-block;
-}
-
-.wr-desc-list-configs {
-    height: 50px;
-    padding: 15px;
-}
-
 .sort-title, .sort-options {
-	padding:0px 15px;
+	padding:0 15px;
 }
 
 .sort-title {
@@ -1685,6 +1675,10 @@ a.wr-side-panel-toggle-btn.selected {
 }
 
 /* list group styles */
+.wr-list-group {
+    margin-top: 30px;
+}
+
 .wr-list-group .list-group-item {
     padding: 0;
     position: relative;
@@ -1712,7 +1706,8 @@ a.wr-side-panel-toggle-btn.selected {
 }
 
 .wr-list-group .wr-list-desc {
-    display: inline-block;
+    float: left;
+    padding: 4px 8px;
     min-height: 50px;
 }
 
@@ -1738,21 +1733,47 @@ a.wr-side-panel-toggle-btn.selected {
     cursor: move;
 }
 
-.wr-sortable .list-group-item .wr-sortable-icon, tbody.wr-sortable td .wr-sortable-icon {
+.wr-list-group .list-group-item .wr-sortable-icon, tbody.wr-sortable td .wr-sortable-icon {
     opacity: 0.5;
-    display: inline-block;
+    float: left;
     font-size: 14px;
-    margin: 0 10px;
+    margin: 15px;
 }
 
-.wr-sortable .list-group-item .wr-list-icon, tbody.wr-sortable td .fw.wr-list-icon {
-    display: inline-block;
+.wr-list-group .list-group-item .wr-list-icon, tbody.wr-sortable td .fw.wr-list-icon {
+    float: left;
     width: 50px;
     height: 50px;
-    background: #555;
+    line-height: 42px;
+    background: #526A84;
     color: #fff;
-    font-size: 32px;
+    font-size: 28px;
     text-align: center;
+}
+
+.wr-list-group .wr-sort-index {
+    font-size: 18px;
+    font-weight: 400;
+    background: #14212E;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    float: left;
+}
+
+.wr-list-group .wr-desc-list-configs {
+    height: 50px;
+    padding: 15px;
+    background: #14212E;
+    color: #fff;
+    text-align: center;
+}
+
+.wr-list-group .wr-desc-list-configs b {
+    color: #526A84;
 }
 
 .panel-title a .fw-stack {
