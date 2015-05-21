@@ -71,15 +71,11 @@ $(menuButton).click(function(e){
  */
 $('#advance-filter-options input[type=radio]').change(function() {
     if(this.value !== 'devices'){
-        $(deviceOptions).hide();
-        resetNav();
-        $(tagsContainer).html('');
+        $(searchField).attr('data-placeholder', 'Search '+ this.value + ' ...');
     }
     else {
         $(deviceOptions).show();
     }
-
-    $(searchField).attr('data-placeholder', 'Search '+ this.value + ' ...');
 });
 
 /*
