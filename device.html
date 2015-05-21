@@ -80,6 +80,9 @@
                     <span class="fw-stack">
                         <i class="fw fw-tiles fw-stack-1-5x"></i>
                     </span>
+                </a><a class="cu-btn page-title" href='home.html'>
+                    <span class="fw-stack"></span>
+                    Devices
                 </a><a href="javascript:history.go(-1)" class="cu-btn">
                     <span class="fw-stack">
                         <i class="fw fw-ring fw-stack-2x"></i>
@@ -116,263 +119,498 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="wr-device-list row">
 
-        <!-- content -->
-        <div class="col-md-12">
-
-            <!-- operations container -->
-            <div class="wr-operations">
-
-                <a href="javascript:operationSelect('devicelock')"><i class="fw fw-lock"></i><span>Device Lock</span></a>
-                <div class="operation" data-operation="devicelock">
-                    <div class="content">Are you sure you want to lock the selected devices ?</div>
-                    <div class="buttons">
-                        <a href="javascript:runOperation('lock')" class="btn-operations">Lock</a>
-                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
-                    </div>
+        <div class="wr-hidden-operations wr-advance-operations">
+            <div class="row no-gutter">
+                <div class="wr-hidden-operations-nav col-lg-4">
+                    <a href="javascript:void(0)" onclick="showAdvanceOperation('security', this)" class="selected">
+                            <span class="wr-hidden-operations-icon fw-stack">
+                                <i class="fw fw-padlock fw-stack-2x"></i>
+                            </span>
+                        Security
+                    </a>
+                    <a href="javascript:void(0)" onclick="showAdvanceOperation('wifi', this)">
+                            <span class="wr-hidden-operations-icon fw-stack">
+                                <i class="fw fw-wifi fw-stack-2x"></i>
+                            </span>
+                        Wi-fi
+                    </a>
+                    <a href="javascript:void(0)" onclick="showAdvanceOperation('mail', this)">
+                            <span class="wr-hidden-operations-icon fw-stack">
+                                <i class="fw fw-message fw-stack-2x"></i>
+                            </span>
+                        Mail
+                    </a>
+                    <a href="javascript:void(0)" onclick="showAdvanceOperation('general', this)">
+                            <span class="wr-hidden-operations-icon fw-stack">
+                                <i class="fw fw-settings fw-stack-2x"></i>
+                            </span>
+                        General
+                    </a>
                 </div>
+                <div class="wr-hidden-operations-content col-lg-8">
 
-                <a href="javascript:operationSelect('ring')"><i class="fw fw-incoming-call"></i><span>Ring</span></a>
-                <div class="operation" data-operation="ring">
-                    <div class="content">Please click ok to start ringing</div>
-                    <div class="buttons">
-                        <a href="javascript:runOperation('ring')" class="btn-operations">Ring</a>
-                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
+                    <!-- security -->
+                    <div class="wr-hidden-operation" data-operation="security" style="display: block">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingOne1">
+                                <h2 class="sub-title panel-title">
+                                    <a data-toggle="collapse" href="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
+                                            <span class="fw-stack">
+                                                <i class="fw fw-ring fw-stack-2x"></i>
+                                                <i class="fw fw-arrow fw-down-arrow fw-stack-1x"></i>
+                                            </span>
+                                        Device Security
+                                    </a>
+                                </h2>
+                            </div>
+                            <div id="collapseOne1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne1">
+                                <div class="panel-body">
+                                    Content
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <!-- /security -->
+
+                    <!-- wi-fi -->
+                    <div class="wr-hidden-operation panel-body" data-operation="wifi">
+                        <label class="wr-input-label" title="Identification of the wireless network to connect to">Service Set Identifier<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
+                        <!--span>Identification of the wireless network to connect to</span-->
+                        <div class="wr-input-control">
+                            <input type="text" value="" placeholder="input text"/>
+                        </div>
+
+                        <div class="wr-input-control">
+                            <label class="wr-input-control checkbox">
+                                <input type="checkbox" checked />
+                                <span class="helper" title="Enable if target network is not open or broadcasting">Hidden Network<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></span>
+                            </label>
+                            <!--span>Enable if target network is not open or broadcasting</span-->
+                        </div>
+
+                        <div class="wr-input-control">
+                            <label class="wr-input-control checkbox">
+                                <input type="checkbox" checked />
+                                <span class="helper" title="Automatically join this wireless network">Auto Join<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></span>
+                            </label>
+                            <!--span>Automatically join this wireless network</span-->
+                        </div>
+
+                        <label class="wr-input-label" title="Configures proxies to be used with this network">Proxy Setup<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
+                        <!--span>Configures proxies to be used with this network</span-->
+                        <div class="wr-input-control">
+                            <select class="form-control">
+                                <option>None</option>
+                            </select>
+                        </div>
+
+                        <label class="wr-input-label" title="Wireless network encryption to use when connecting">Security Type<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
+                        <!--span>Wireless network encryption to use when connecting</span-->
+                        <div class="wr-input-control">
+                            <select class="form-control">
+                                <option>WPA/WPA2 Personal</option>
+                            </select>
+                        </div>
+
+                        <label class="wr-input-label" title="Password for the wireless network">Password<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
+                        <!--span>Password for the wireless network</span-->
+                        <div class="wr-input-control">
+                            <input type="password" value="" placeholder="input text"/>
+                        </div>
+
+                        <label class="wr-input-label" title="Configures network to appear as legacy or Passport">Network Type<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
+                        <!--span>Configures network to appear as legacy or Passport</span-->
+                        <div class="wr-input-control">
+                            <select class="form-control">
+                                <option>Standard</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- /wi-fi -->
+
+                    <!-- mail -->
+                    <div class="wr-hidden-operation panel-body" data-operation="mail">
+                        <label class="wr-input-label" title="The display name of the account">Account Description<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
+                        <!--span>Identification of the wireless network to connect to</span-->
+                        <div class="wr-input-control">
+                            <input type="text" value="" placeholder="input text"/>
+                        </div>
+
+                        <label class="wr-input-label" title="The protocol for accessing the email account">Account Type<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
+                        <!--span>Configures proxies to be used with this network</span-->
+                        <div class="wr-input-control">
+                            <div class="cus-col-25">
+                                <select class="form-control">
+                                    <option>IMAP</option>
+                                </select>
+                            </div>
+                            <div class="cus-col-50">
+                                <span>Path Prefix</span> <input type="text" value="" placeholder="input text" />
+                            </div>
+                            <br class="c-both" />
+                        </div>
+
+                        <label class="wr-input-label" title="The display name of the user">User Display Name<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
+                        <!--span>Identification of the wireless network to connect to</span-->
+                        <div class="wr-input-control">
+                            <input type="text" value="" placeholder="input text"/>
+                        </div>
+
+                        <label class="wr-input-label" title="The address of the account">Email Address<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
+                        <!--span>Identification of the wireless network to connect to</span-->
+                        <div class="wr-input-control">
+                            <input type="text" value="" placeholder="input text"/>
+                        </div>
+
+                        <div class="wr-input-control">
+                            <label class="wr-input-control checkbox">
+                                <input type="checkbox" checked />
+                                <span class="helper" title="Messages can be moved from this account to another">Allow user to move messages from this account<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></span>
+                            </label>
+                            <!--span>Enable if target network is not open or broadcasting</span-->
+                        </div>
+
+                        <div class="wr-input-control">
+                            <label class="wr-input-control checkbox">
+                                <input type="checkbox" checked />
+                                <span class="helper" title="Include this account in recent address syncing">Allow Recent Address syncing<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></span>
+                            </label>
+                            <!--span>Enable if target network is not open or broadcasting</span-->
+                        </div>
+
+                        <div class="wr-input-control">
+                            <label class="wr-input-control checkbox">
+                                <input type="checkbox" checked />
+                                <span class="helper" title="Send outgoing mail from this account only from Mail app">Use Only in Mail<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></span>
+                            </label>
+                            <!--span>Send outgoing mail from this account only from Mail app</span-->
+                        </div>
+
+                        <div class="wr-input-control">
+                            <label class="wr-input-control checkbox">
+                                <input type="checkbox" checked />
+                                <span class="helper" title="Support S/MIME for this account">Enable S/MIME<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></span>
+                            </label>
+                            <!--span>Support S/MIME for this account</span-->
+                        </div>
+
+                        <label class="wr-input-label" title="The protocol for accessing the email account">Mail Server and Port<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
+                        <!--span>The protocol for accessing the email account</span-->
+                        <div class="wr-input-control">
+                            <div class="cus-col-70">
+                                <input type="text" value="" placeholder="input text"/>
+                            </div>
+                            <div class="cus-col-25">
+                                <span> : </span><input type="text" value="993" placeholder="input text" />
+                            </div>
+                            <br class="c-both" />
+                        </div>
+
+                        <label class="wr-input-label" title="The username used to connect to the server for incoming mail">Username<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
+                        <!--span>The Username used to connect to the server for incoming mail</span-->
+                        <div class="wr-input-control">
+                            <input type="text" value="" placeholder="input text"/>
+                        </div>
+
+                        <label class="wr-input-label" title="The autyentication method for the incoming mail server">Authentication Type<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
+                        <!--span>Wireless network encryption to use when connecting</span-->
+                        <div class="wr-input-control">
+                            <select class="form-control">
+                                <option>Password</option>
+                            </select>
+                        </div>
+
+                        <label class="wr-input-label" title="The password for the incoming mail server">Password<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
+                        <!--span>The Username used to connect to the server for incoming mail</span-->
+                        <div class="wr-input-control">
+                            <input type="text" value="" placeholder="input text"/>
+                        </div>
+
+                        <div class="wr-input-control">
+                            <label class="wr-input-control checkbox">
+                                <input type="checkbox" checked />
+                                <span class="helper" title="Retrieve incoming mail through secure socket layer">Use SSL<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></span>
+                            </label>
+                            <!--span>Enable if target network is not open or broadcasting</span-->
+                        </div>
+                    </div>
+                    <!-- /mail -->
+
+                    <!-- general -->
+                    <div class="wr-hidden-operation panel-body" data-operation="general">
+                        General
+                    </div>
+                    <!-- /general -->
+
                 </div>
-
-                <a href="javascript:operationSelect('message')"><i class="fw fw-message"></i><span>Message</span></a>
-                <div class="operation" data-operation="message">
-                    <div class="content">
-                        <div>Type message</div>
-                        <div><textarea></textarea></div>
-                    </div>
-                    <div class="buttons">
-                        <a href="javascript:runOperation('msg-send')" class="btn-operations">Send</a>
-                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
-                    </div>
-                </div>
-
-                <a href="javascript:operationSelect('locate')"><i class="fw fw-map-location"></i><span>Locate</span></a>
-                <div class="operation" data-operation="locate">
-                    <div class="content">Locate</div>
-                    <div class="buttons">
-                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
-                    </div>
-                </div>
-
-                <a href="javascript:operationSelect('wipe')"><i class="fw fw-clean"></i><span>Wipe</span></a>
-                <div class="operation" data-operation="wipe">
-                    <div class="content">Wipe</div>
-                    <div class="buttons">
-                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
-                    </div>
-                </div>
-
-                <a href="javascript:operationSelect('camera')"><i class="fw fw-camera"></i><span>Camera</span></a>
-                <div class="operation" data-operation="camera">
-                    <div class="content">Camera</div>
-                    <div class="buttons">
-                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
-                    </div>
-                </div>
-
-                <a href="javascript:operationSelect('wifi')"><i class="fw fw-wifi"></i><span>Wi-Fi</span></a>
-                <div class="operation" data-operation="wifi">
-                    <div class="content">Wi-Fi</div>
-                    <div class="buttons">
-                        <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
-                    </div>
-                </div>
-
-                <br class="c-both" />
             </div>
-            <!-- /operations container -->
-
         </div>
-        <!-- /content -->
 
-    </div>
-
-
-    <div class="row">
-        <div class="col-md-12 wr-stats-board">
+        <div class="col-md-12 wr-page-content">
 
             <!-- content -->
+            <div>
 
-            <div class="col-lg-2 ast-desc-image">
-                <div class="row">
-                    <div class="col-lg-12 col-sm-4">
-                        <img src="images/device_icons/android-mobile.png" />
+                <a href="javascript:toggleMoreOperations()" class="cu-btn-inner show-operations-btn" id="showOperationsBtn">
+                        <span class="fw-stack">
+                            <i class="fw fw-right-arrow-2 fw-stack-1-5x"></i>
+                        </span>
+                    <span class="btn-text">Operations</span>
+                </a>
+
+                <!-- operations container -->
+                <div class="wr-operations">
+
+                    <a href="javascript:operationSelect('devicelock')"><i class="fw fw-lock"></i><span>Device Lock</span></a>
+                    <div class="operation" data-operation="devicelock">
+                        <div class="content">Are you sure you want to lock the selected devices ?</div>
+                        <div class="buttons">
+                            <a href="javascript:runOperation('lock')" class="btn-operations">Lock</a>
+                            <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
+                        </div>
                     </div>
-                    <div class="col-lg-12 col-sm-4 ast-desc">
-                        <div class="ast-device-desc"><b>Device:</b> Samsung Galaxy S4</div>
-                        <div class="ast-device-desc"><b>Model:</b>  GT-i9505</div>
-                        <div class="ast-device-desc"><b>IMEI:</b>  351776060691383</div>
+
+                    <a href="javascript:operationSelect('ring')"><i class="fw fw-incoming-call"></i><span>Ring</span></a>
+                    <div class="operation" data-operation="ring">
+                        <div class="content">Please click ok to start ringing</div>
+                        <div class="buttons">
+                            <a href="javascript:runOperation('ring')" class="btn-operations">Ring</a>
+                            <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
+                        </div>
                     </div>
+
+                    <a href="javascript:operationSelect('message')"><i class="fw fw-message"></i><span>Message</span></a>
+                    <div class="operation" data-operation="message">
+                        <div class="content">
+                            <div>Type message</div>
+                            <div><textarea></textarea></div>
+                        </div>
+                        <div class="buttons">
+                            <a href="javascript:runOperation('msg-send')" class="btn-operations">Send</a>
+                            <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
+                        </div>
+                    </div>
+
+                    <a href="javascript:operationSelect('locate')"><i class="fw fw-map-location"></i><span>Locate</span></a>
+                    <div class="operation" data-operation="locate">
+                        <div class="content">Locate</div>
+                        <div class="buttons">
+                            <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
+                        </div>
+                    </div>
+
+                    <a href="javascript:operationSelect('wipe')"><i class="fw fw-clean"></i><span>Wipe</span></a>
+                    <div class="operation" data-operation="wipe">
+                        <div class="content">Wipe</div>
+                        <div class="buttons">
+                            <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
+                        </div>
+                    </div>
+
+                    <a href="javascript:operationSelect('camera')"><i class="fw fw-camera"></i><span>Camera</span></a>
+                    <div class="operation" data-operation="camera">
+                        <div class="content">Camera</div>
+                        <div class="buttons">
+                            <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
+                        </div>
+                    </div>
+
+                    <a href="javascript:operationSelect('wifi')"><i class="fw fw-wifi"></i><span>Wi-Fi</span></a>
+                    <div class="operation" data-operation="wifi">
+                        <div class="content">Wi-Fi</div>
+                        <div class="buttons">
+                            <a href="javascript:hidePopup()" class="btn-operations">Cancel</a>
+                        </div>
+                    </div>
+
+                    <br class="c-both" />
                 </div>
+                <!-- /operations container -->
+
             </div>
 
-            <div class="col-lg-10 tiles">
+            <div class="row">
 
-                <!-- device summary -->
-                <div class="row">
+                <div class="col-md-12 col-md-12 wr-stats-board">
 
-                    <div class="col-lg-6 col-md-6">
-                        <div class="col-lg-4">
-                            <div class="wr-stats-board-tile">
-                                <div class="tile-name">BATTERY</div>
-                                <div>
-                                    <div class="tile-icon"><i class="fw fw-battery"></i></div>
-                                    <div class="tile-stats">10%</div>
-                                </div>
+                    <!-- content -->
+
+                    <div class="col-lg-2 ast-desc-image">
+                        <div class="row">
+                            <div class="col-lg-12 col-sm-4">
+                                <img src="images/device_icons/android-mobile.png" />
                             </div>
-                        </div>
-
-                        <div class="col-lg-4">
-                            <div class="wr-stats-board-tile">
-                                <div class="tile-name">LOCAL STORAGE</div>
-                                <div>
-                                    <div class="tile-icon"><i class="fw fw-hdd"></i></div>
-                                    <div class="tile-stats">80%<span class="tile-stats-free">6 GB Free</span></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4">
-                            <div class="wr-stats-board-tile">
-                                <div class="tile-name">EXTERNAL STORAGE</div>
-                                <div>
-                                    <div class="tile-icon"><i class="fw fw-usb-drive"></i></div>
-                                    <div class="tile-stats">20%<span class="tile-stats-free">14 GB Free</span></div>
-                                </div>
+                            <div class="col-lg-12 col-sm-4 ast-desc">
+                                <div class="ast-device-desc"><b>Device:</b> Samsung Galaxy S4</div>
+                                <div class="ast-device-desc"><b>Model:</b>  GT-i9505</div>
+                                <div class="ast-device-desc"><b>IMEI:</b>  351776060691383</div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-6 col-md-6">
-                        <div class="col-lg-8">
-                            <div class="wr-stats-board-tile lg">
-                                <div class="col-sm-4 col-md-4 col-lg-4">
-                                    <div class="tile-name">USAGE /DATA<span class="tile-sup-lbl">Last 30 days</span></div>
-                                </div>
-                                <div class="col-sm-8 col-md-8 col-lg-8">
-                                    <div class="tile-stats">
-                                        <div class="col-sm-6 col-md-6 col-lg-6">
-                                            <div><span class="tile-stats-sm">721 Mb </span><span class="tile-stats-type">Cellular</span></div>
-                                            <div><span class="tile-stats-sm">3.2 Gb </span><span class="tile-stats-type">Wi-Fi</span></div>
+                    <div class="col-lg-10 tiles">
+
+                        <!-- device summary -->
+                        <div class="row">
+
+                            <div class="col-lg-6 col-md-6">
+                                <div class="col-lg-4">
+                                    <div class="wr-stats-board-tile">
+                                        <div class="tile-name">BATTERY</div>
+                                        <div>
+                                            <div class="tile-icon"><i class="fw fw-battery"></i></div>
+                                            <div class="tile-stats">10%</div>
                                         </div>
-                                        <div class="col-sm-6 col-md-6 col-lg-6">
-                                            <div class="tile-graph"><img src="images/graph.png" /></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <div class="wr-stats-board-tile">
+                                        <div class="tile-name">LOCAL STORAGE</div>
+                                        <div>
+                                            <div class="tile-icon"><i class="fw fw-hdd"></i></div>
+                                            <div class="tile-stats">80%<span class="tile-stats-free">6 GB Free</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <div class="wr-stats-board-tile">
+                                        <div class="tile-name">EXTERNAL STORAGE</div>
+                                        <div>
+                                            <div class="tile-icon"><i class="fw fw-usb-drive"></i></div>
+                                            <div class="tile-stats">20%<span class="tile-stats-free">14 GB Free</span></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="col-lg-4">
-                            <div class="wr-stats-board-tile">
-                                <div class="tile-name">USAGE /VOICE</div>
-                                <div>
-                                    <div class="tile-icon"><i class="fw fw-dial-up"></i></div>
-                                    <div class="tile-stats">80%<span class="tile-stats-free">6 GB Free</span></div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="col-lg-8">
+                                    <div class="wr-stats-board-tile lg">
+                                        <div class="col-sm-4 col-md-4 col-lg-4">
+                                            <div class="tile-name">USAGE /DATA<span class="tile-sup-lbl">Last 30 days</span></div>
+                                        </div>
+                                        <div class="col-sm-8 col-md-8 col-lg-8">
+                                            <div class="tile-stats">
+                                                <div class="col-sm-6 col-md-6 col-lg-6">
+                                                    <div><span class="tile-stats-sm">721 Mb </span><span class="tile-stats-type">Cellular</span></div>
+                                                    <div><span class="tile-stats-sm">3.2 Gb </span><span class="tile-stats-type">Wi-Fi</span></div>
+                                                </div>
+                                                <div class="col-sm-6 col-md-6 col-lg-6">
+                                                    <div class="tile-graph"><img src="images/graph.png" /></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <div class="wr-stats-board-tile">
+                                        <div class="tile-name">USAGE /VOICE</div>
+                                        <div>
+                                            <div class="tile-icon"><i class="fw fw-dial-up"></i></div>
+                                            <div class="tile-stats">80%<span class="tile-stats-free">6 GB Free</span></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
 
-                </div>
-                <!-- /device summary -->
+                        </div>
+                        <!-- /device summary -->
 
-                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
-                    <!-- device location -->
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="headingOne">
-                            <h2 class="sub-title panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    <span class="fw-stack">
-                                        <i class="fw fw-ring fw-stack-2x"></i>
-                                        <i class="fw fw-arrow fw-down-arrow fw-stack-1x"></i>
-                                    </span>
-                                    Device Location
-                                </a>
-                            </h2>
-                        </div>
-                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="panel-body">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d31685.790279428384!2d79.85860875927737!3d6.923585351516181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2slk!4v1426479547647" width="100%" height="450" frameborder="0" style="border:0"></iframe>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /device location -->
-
-                    <!-- policies -->
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="headingTwo">
-                            <h2 class="sub-title panel-title">
-                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    <span class="fw-stack">
-                                        <i class="fw fw-ring fw-stack-2x"></i>
-                                        <i class="fw fw-arrow fw-down-arrow fw-stack-1x"></i>
-                                    </span>
-                                    Policies
-                                </a>
-                            </h2>
-                        </div>
-                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                            <div class="panel-body">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /policies -->
-
-                    <!-- installed applications -->
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="headingThree">
-                            <h2 class="sub-title panel-title">
-                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    <span class="fw-stack">
-                                        <i class="fw fw-ring fw-stack-2x"></i>
-                                        <i class="fw fw-arrow fw-down-arrow fw-stack-1x"></i>
-                                    </span>
-                                    Installed Applications
-                                </a>
-                            </h2>
-                        </div>
-                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                            <div class="panel-body">
-                                <div class="wr-app-listing">
-                                    <div><img src="images/app9.png" /></div>
-                                    <div><img src="images/app10.png" /></div>
-                                    <div><img src="images/app11.png" /></div>
-                                    <div><img src="images/app12.png" /></div>
-                                    <div><img src="images/app13.png" /></div>
-                                    <div><img src="images/app14.png" /></div>
-                                    <div><img src="images/app15.png" /></div>
-                                    <div><img src="images/app16.png" /></div>
-                                    <div><img src="images/app17.png" /></div>
-                                    <div><img src="images/app18.png" /></div>
-                                    <div><img src="images/app19.png" /></div>
-                                    <div><img src="images/app20.png" /></div>
-                                    <div><img src="images/app21.png" /></div>
-                                    <div><img src="images/app22.png" /></div>
-                                    <div><img src="images/app23.png" /></div>
-                                    <div><img src="images/app21.png" /></div>
-                                    <div><img src="images/app10.png" /></div>
+                            <!-- device location -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <h2 class="sub-title panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            <span class="fw-stack">
+                                                <i class="fw fw-ring fw-stack-2x"></i>
+                                                <i class="fw fw-arrow fw-down-arrow fw-stack-1x"></i>
+                                            </span>
+                                            Device Location
+                                        </a>
+                                    </h2>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="panel-body">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d31685.790279428384!2d79.85860875927737!3d6.923585351516181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2slk!4v1426479547647" width="100%" height="450" frameborder="0" style="border:0"></iframe>
+                                    </div>
                                 </div>
                             </div>
+                            <!-- /device location -->
+
+                            <!-- policies -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingTwo">
+                                    <h2 class="sub-title panel-title">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            <span class="fw-stack">
+                                                <i class="fw fw-ring fw-stack-2x"></i>
+                                                <i class="fw fw-arrow fw-down-arrow fw-stack-1x"></i>
+                                            </span>
+                                            Policies
+                                        </a>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                    <div class="panel-body">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /policies -->
+
+                            <!-- installed applications -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingThree">
+                                    <h2 class="sub-title panel-title">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            <span class="fw-stack">
+                                                <i class="fw fw-ring fw-stack-2x"></i>
+                                                <i class="fw fw-arrow fw-down-arrow fw-stack-1x"></i>
+                                            </span>
+                                            Installed Applications
+                                        </a>
+                                    </h2>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                    <div class="panel-body">
+                                        <div class="wr-app-listing">
+                                            <div><img src="images/app9.png" /></div>
+                                            <div><img src="images/app10.png" /></div>
+                                            <div><img src="images/app11.png" /></div>
+                                            <div><img src="images/app12.png" /></div>
+                                            <div><img src="images/app13.png" /></div>
+                                            <div><img src="images/app14.png" /></div>
+                                            <div><img src="images/app15.png" /></div>
+                                            <div><img src="images/app16.png" /></div>
+                                            <div><img src="images/app17.png" /></div>
+                                            <div><img src="images/app18.png" /></div>
+                                            <div><img src="images/app19.png" /></div>
+                                            <div><img src="images/app20.png" /></div>
+                                            <div><img src="images/app21.png" /></div>
+                                            <div><img src="images/app22.png" /></div>
+                                            <div><img src="images/app23.png" /></div>
+                                            <div><img src="images/app21.png" /></div>
+                                            <div><img src="images/app10.png" /></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /installed applications -->
+
                         </div>
+
                     </div>
-                    <!-- /installed applications -->
+
+                    <!-- /content -->
 
                 </div>
-
             </div>
-
-            <!-- /content -->
-
         </div>
     </div>
     <!-- /content/body -->

@@ -318,6 +318,8 @@ a.ast-type-item:hover {
     width: auto;
     max-width: 100%;
     max-height: 300px;
+    border: 1px solid #e4e4e4;
+    margin-bottom: 20px;
 }
 
 .ast-desc span:before {
@@ -1929,8 +1931,13 @@ a.wr-side-panel-toggle-btn.selected {
     background: #e4e4e4;
 }
 
-.wr-hidden-operations-content .panel {
+.wr-hidden-operations-content .panel-body {
     margin-bottom: 0;
+    padding: 15px;
+}
+
+.wr-advance-operations.wizard-content .panel-title .fw-stack {
+    width: 5px;
 }
 
 .wr-hidden-operations-content .sub-title {
@@ -1980,19 +1987,11 @@ a.wr-side-panel-toggle-btn.selected {
     float: right;
 }
 
-.wr-hidden-operations-content .panel-title .fw-stack {
-    width: 5px;
-}
-
 .wr-hidden-operations-content .panel-title:after {
     clear: both;
     content: " ";
     display: block;
     height: 0;
-}
-
-.wr-hidden-operations-content .panel-body {
-    padding: 5px;
 }
 
 .wr-page-content {
