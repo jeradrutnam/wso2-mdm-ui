@@ -229,7 +229,7 @@ a.ast-type-item:hover {
 }
 
 .ast-device-desc {
-    margin: 6px 0;
+    margin: 0 0 10px;
 }
 
 .ctrl-wr-asset {
@@ -1356,6 +1356,7 @@ a.wr-side-panel-toggle-btn.selected {
 
 .wr-stats-board-tile.lg .tile-graph {
     width:100px;
+    max-width: 100%;
     float:right;
     text-align: right;
     margin: 0 auto;
@@ -1363,6 +1364,7 @@ a.wr-side-panel-toggle-btn.selected {
 
 .wr-stats-board-tile.lg .tile-graph img {
     width:80px;
+    max-width: 100%;
 }
 
 .tile-bg {
