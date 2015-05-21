@@ -810,8 +810,8 @@ span.ico-sort-desc {
 
 @media (max-width:1100px) {
     .wr-search-tags:not(:empty) {
-        float: none;
-        padding-left:60px;
+        /*float: none;*/
+        /*padding-left:60px;*/
         max-width: 100%;
     }
     .wr-search {
