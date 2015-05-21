@@ -302,9 +302,9 @@ br.c-both {
 	width:65%;
 }
 
-.wr-input-control .cus-col-50 span, .wr-input-control .cus-col-25 span {
-	padding-left:20px;
-}
+/*.wr-input-control .cus-col-50 span, .wr-input-control .cus-col-25 span {*/
+	/*padding-left:20px;*/
+/*}*/
 
 /* wizard */
 .wr-wizard {
