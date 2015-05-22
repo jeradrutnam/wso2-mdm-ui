@@ -334,7 +334,7 @@
                 </div>
 
                 <div class="wr-input-control wr-btn-grp">
-                    <button class="wr-btn" disabled>Update</button>
+                    <button class="wr-btn" id="sortUpdateBtn" disabled>Update</button>
                 </div>
 
             </div>
@@ -389,25 +389,34 @@ $( document ).ready(function() {
 	      }
 	});
 
+    /* sorting function */
+    var sortUpdateBtn = '#sortUpdateBtn',
+        sortedIDs;
+
     function addSortableIndexNumbers(){
         $('.wr-sortable .list-group-item').not('.ui-sortable-placeholder').each(function(i){
             $('.wr-sort-index', this).html(i+1);
         });
     }
 
-    /* sorting function */
     $(function() {
         addSortableIndexNumbers();
         var sortableElem = '.wr-sortable';
         $(sortableElem).sortable({
             beforeStop: function(event, ui){
-                var sortedIDs = $(this).sortable('toArray');
-                console.log(sortedIDs);
+                sortedIDs = $(this).sortable('toArray');
                 addSortableIndexNumbers();
+                $(sortUpdateBtn).prop('disabled', false);
             }
         });
         $(sortableElem).disableSelection();
     });
+
+    $(sortUpdateBtn).click(function(){
+        console.log(sortedIDs);
+        $(sortUpdateBtn).prop('disabled', true);
+    });
+
 });
 
 function openCollapsedNav(){
