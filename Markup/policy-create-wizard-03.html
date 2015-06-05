@@ -156,8 +156,13 @@
                                     </label>
                                     <div class="wr-input-control">
                                         <div class="cus-col-50">
-                                            <select class="form-control">
-                                                <option>Any</option>
+                                            <select id="userSelect" class="form-control select2" multiple>
+                                                <option value="all" id="userSelectOption0">Any</option>
+                                                <option value="user1" id="userSelectOption1">User 1</option>
+                                                <option value="user2" id="userSelectOption2">User 2</option>
+                                                <option value="user3" id="userSelectOption3">User 3</option>
+                                                <option value="user4" id="userSelectOption4">User 4</option>
+                                                <option value="user5" id="userSelectOption5">User 5</option>
                                             </select>
                                         </div>
                                         <br class="c-both" />
@@ -237,6 +242,7 @@
 
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/select2.full.min.js"></script>
 <script src="js/operationsmenu.js"></script>
 
 <script type="text/javascript">
@@ -265,7 +271,27 @@ $( document ).ready(function() {
         $('#'+$(this).val()).show();
     });
 
-}); 
+    $('select.select2').select2({
+        placeholder: 'Select..'
+    });
+
+    $('select.select2[multiple=multiple]').select2({
+        placeholder: 'Select..',
+        tags: true
+    });
+
+    $('#userSelect').select2({
+        allowClear: true,
+        tags: true
+    }).on("select2:select", function(e){
+        if(e.params.data.id == 'all'){
+            $(this).val("all").trigger("change");
+        }
+        else {
+            $("option[value=all]", this).prop("selected", false).parent().trigger("change");
+        }
+    });
+});
 
 </script>
 
