@@ -1801,7 +1801,6 @@ a.wr-side-panel-toggle-btn.selected {
     /*}*/
 /*}*/
 
-
 .wr-list-group .wr-desc-list-configs.highlight {
     background: #14212E;
     color: #fff;
@@ -1929,6 +1928,26 @@ a.wr-side-panel-toggle-btn.selected {
     padding: 10px;
     text-decoration: none;
     font-size: 16px;
+}
+
+.wr-advance-operations .wr-hidden-operations-nav a.has-error,
+.wr-advance-operations .wr-hidden-operations-nav a.has-error:hover,
+.wr-advance-operations .wr-hidden-operations-nav a.has-error.selected {
+    background: #B23E37;
+    color: #fff;
+}
+
+.wr-advance-operations .wr-hidden-operations-nav a.has-success,
+.wr-advance-operations .wr-hidden-operations-nav a.has-success:hover,
+.wr-advance-operations .wr-hidden-operations-nav a.has-success.active {
+    /*background: #4F853C;*/
+    /*color: #fff;*/
+}
+
+.wr-advance-operations .wr-hidden-operations-nav a .status-icon {
+    float: right;
+    font-size: 20px;
+    margin-top: 5px;
 }
 
 .wr-advance-operations .wr-hidden-operations-nav a:hover {
@@ -2308,4 +2327,14 @@ a.cu-btn-inner.inverse:hover {
 
 .wiz-lbl {
     line-height: 50px;
+}
+
+.alert {
+    border-radius: 0;
+    border-left: 2px solid;
+}
+
+.alert .icon {
+    font-size: 16px;
+    margin-right: 10px;
 }

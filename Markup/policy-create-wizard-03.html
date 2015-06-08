@@ -124,6 +124,19 @@
                     <div class="row">
                         <div class="col-lg-12">
 
+                            <div class="alert alert-success" role="alert">
+                                <i class="icon fw fw-ok"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut semper ut leo eu interdum.
+                            </div>
+                            <div class="alert alert-info" role="alert">
+                                <i class="icon fw fw-warning fw-rotate-180"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut semper ut leo eu interdum.
+                            </div>
+                            <div class="alert alert-warning" role="alert">
+                                <i class="icon fw fw-warning"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut semper ut leo eu interdum.
+                            </div>
+                            <div class="alert alert-danger" role="alert">
+                                <i class="icon fw fw-error"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut semper ut leo eu interdum.
+                            </div>
+
                             <div>
                                 <label class="wr-input-label" title="">
                                     Set Device Ownership Type
@@ -284,7 +297,7 @@ $( document ).ready(function() {
         allowClear: true,
         tags: true
     }).on("select2:select", function(e){
-        if(e.params.data.id == 'all'){
+        if(e.params.data.element.value == 'all'){
             $(this).val("all").trigger("change");
         }
         else {
