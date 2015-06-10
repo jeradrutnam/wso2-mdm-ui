@@ -99,26 +99,26 @@
 
                 <div class="wr-form">
 
-                    <h1 class="wr-title">Create Policy</h1>
-                    <br>
+                    <div class="page-header">
+                        <h1>Create Policy</h1>
+                    </div>
 
-                    <div class="row wr-wizard">
-                        <div class="col-md-3 col-xs-3">
-                            <div class="itm-wiz"><div class="wiz-no">1</div><div class="wiz-lbl hidden-xs"><span>Select Platform</span></div></div>
-                            <br class="c-both" />
-                        </div>
-                        <div class="col-md-3 col-xs-3">
-                            <div class="itm-wiz"><div class="wiz-no">2</div><div class="wiz-lbl hidden-xs"><span>Configure Profile</span></div></div>
-                            <br class="c-both" />
-                        </div>
-                        <div class="col-md-3 col-xs-3">
-                            <div class="itm-wiz"><div class="wiz-no">3</div><div class="wiz-lbl hidden-xs"><span>Assign to a group</span></div></div>
-                            <br class="c-both" />
-                        </div>
-                        <div class="col-md-3 col-xs-3">
-                            <div class="itm-wiz itm-wiz-current"><div class="wiz-no">4</div><div class="wiz-lbl hidden-xs"><span>Publish</span></div></div>
-                            <br class="c-both" />
-                        </div>
+                    <div class="wizard">
+                        <ul class="wizard-head">
+                            <li class="wizard-back">
+                                <a href="policy-create-wizard-03.html">
+                                    <span class="icon fw-stack">
+                                        <i class="fw fw-left-arrow fw-stack-1x"></i>
+                                        <i class="fw fw-ring fw-stack-2x"></i>
+                                    </span>
+                                    Back
+                                </a>
+                            </li>
+                            <li><a href="policy-create-wizard.html">Select Platform</a></li>
+                            <li><i class="icon fw fw-right-arrow"></i><a href="policy-create-wizard-02.html">Configure Profile</a></li>
+                            <li><i class="icon fw fw-right-arrow"></i><a href="policy-create-wizard-03.html">Assign to a group</a></li>
+                            <li class="active"><i class="icon fw fw-right-arrow"></i><a href="policy-create-wizard-04.html">Publish</a></li>
+                        </ul>
                     </div>
 
                     <div class="row">
@@ -148,13 +148,8 @@
                                 </div>
                             </div>
 
-                            <div class="wr-input-control wr-btn-grp">
-                                <a href="policy-create-wizard-03.html" class="wr-btn">
-                                    Back
-                                </a>
-                                <a href="policy-created.html" class="wr-btn">
-                                    Publish
-                                </a>
+                            <div class="btn-group">
+                                <a href="policy-created.html" class="btn btn-primary">Publish</a>
                             </div>
 
                         </div>

@@ -2338,3 +2338,180 @@ a.cu-btn-inner.inverse:hover {
     font-size: 16px;
     margin-right: 10px;
 }
+
+/*
+ * wizard
+ */
+.wizard-head {
+    margin: 50px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.wizard-head > li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    font-size: 22px;
+    color: #e4e4e4;
+    cursor: pointer;
+}
+
+.wizard-head > li a {
+    color: #e4e4e4;
+    text-decoration: none;
+}
+
+.wizard-head > li a:hover {
+    color: #526A84;
+}
+
+.wizard-head > li.active, .wizard-head > li.active a {
+    color: #444;
+}
+
+.wizard-head > li .icon {
+    padding-bottom: 3px;
+    margin: 0 10px 0;
+}
+
+.wizard-head .wizard-back {
+    margin-right: 30px;
+    padding-right: 15px;
+    border-right: 2px solid #e4e4e4;
+}
+
+.wizard-head .wizard-back a {
+    color: #444;
+}
+
+.wizard-head .wizard-back .icon {
+    font-size: 18px;
+    margin: 0;
+}
+
+/*
+ * multi-view
+ */
+
+.multi-view {
+    margin: 40px 0;
+}
+
+.multi-view .nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.multi-view .nav > ul > li {
+    list-style: none;
+    margin: 0 0 10px;
+    padding: 0;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.multi-view .nav > ul li {
+    position: relative;
+}
+
+.multi-view .nav > ul li li {
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.multi-view .nav > ul li ul {
+    margin: 0 0 25px;
+}
+
+.multi-view .nav > ul > li a {
+    padding: 5px 15px;
+    margin-bottom: 1px;
+    text-decoration: none;
+    display: block;
+    color: #11375b;
+}
+
+.multi-view .nav > ul li li a {
+    padding: 0 8px 0 55px;
+}
+
+.multi-view .nav > ul li a:hover, .multi-view .nav > ul li a.active {
+    background: #11375b;
+    color: #fff;
+}
+
+.multi-view .nav > ul li .icon {
+    font-size: 25px;
+    padding-bottom: 5px;
+    margin-right: 5px;
+}
+
+.multi-view .nav > ul li .status-icon {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    font-size: 16px;
+}
+
+.multi-view .nav > ul li li .status-icon {
+    top: -2px;
+}
+
+.multi-view .nav > ul > li.has-success .status-icon {
+    color: #349300;
+}
+
+.multi-view .nav > ul > li.has-error a, .multi-view .nav > ul > li.has-error .status-icon {
+    color: #e70000;
+}
+
+.multi-view .content {
+    border-left: 2px solid #11375b;
+}
+
+.multi-view .content ul, .multi-view .content ul li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.multi-view .content ul li {
+    display: none;
+    padding: 0 20px;
+}
+
+.multi-view .content .panel-body {
+     padding: 30px 0;
+}
+
+.multi-view .content .panel-heading {
+    padding: 6px 0;
+}
+
+.multi-view .content .panel-heading .panel-title {
+    font-size: 22px;
+}
+
+.multi-view .content .panel-heading .panel-title .wr-input-control.switch {
+    float: right;
+    margin-top: 10px;
+    margin-right: -5px;
+}
+
+.multi-view .content .panel-heading .panel-title .wr-input-control.switch input[type="checkbox"] + .helper + .text {
+    display: inline-block;
+    float: left;
+    font-size: 18px;
+    margin-right: 5px;
+    margin-top: -3px;
+}
+
+.multi-view .content .panel-heading .panel-title .wr-input-control.switch input[type="checkbox"] + .helper + .text:after {
+    content: "Disabled";
+}
+
+.multi-view .content .panel-heading .panel-title .wr-input-control.switch input[type="checkbox"]:checked + .helper + .text:after {
+    content: "Enabled";
+}
