@@ -9,6 +9,14 @@ a {
 
 textarea { width: 100%; }
 
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: 300;
+}
+
+h1, .h1 {
+    font-size: 32px;
+}
+
 .well {
     border-radius: 0;
     -webkit-box-shadow: none;
@@ -393,23 +401,27 @@ a.ctrl-filter-category:hover {
 }
 
 /* buttons */
+.btn-group {
+    margin: 30px 0;
+}
+
 .btn-primary {
+	color: #fff;
+	background-color: #11375b;
+	border-color: #11375b;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
 	color: #fff;
 	background-color: #526A84;
 	border-color: #526A84;
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
-	color: #fff;
-	background-color: #444;
-	border-color: #444;
-}
-
 .btn {
 	display: inline-block;
-	padding: 6px 12px;
+	padding: 8px 20px;
 	margin-bottom: 0;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: normal;
 	line-height: 1.42857143;
 	text-align: center;
