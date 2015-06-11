@@ -56,8 +56,17 @@ var multiViewFunction = (function(){
         function multiViewPanelSwitch(activeNavItem){
             $(activeNavItem).closest(multiView).find(navItem).removeClass('active');
             $(activeNavItem).addClass('active');
+
             $(activeNavItem).closest(multiView).find(contentItem).hide();
-            $(activeNavItem).closest(multiView).find(contentItem+'[data-multi-view='+$(activeNavItem).attr('href')+']').show();
+
+            if($(activeNavItem).closest('li').find('ul').length > 0){
+                $(activeNavItem).closest('li').find('ul li a').each(function(){
+                    $(this).closest(multiView).find(contentItem+'[data-multi-view='+$(this).attr('href')+']').show();
+                });
+            }
+            else{
+                $(activeNavItem).closest(multiView).find(contentItem+'[data-multi-view='+$(activeNavItem).attr('href')+']').show();
+            }
         }
 
         /**
