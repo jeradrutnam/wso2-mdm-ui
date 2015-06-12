@@ -32,10 +32,6 @@ var addFormFunction = (function(){
 
             var addFormContainer = $('[data-add-form-container='+$(this).attr('href')+']');
 
-            if($(addFormContainer).find(helpText).length > 0){
-                $(addFormContainer).find(helpText).hide();
-            }
-
             var clonedForm = $(addFormContainer)
                 .clone()
                 .find('[data-add-form='+$(this).attr('href')+']')
@@ -49,10 +45,12 @@ var addFormFunction = (function(){
                 e.preventDefault();
                 $(this).closest('[data-add-form-element=clone]').remove();
                 setId(addFormContainer);
+                showHideHelpText(addFormContainer);
             });
 
             $(addFormContainer).append(clonedForm);
             setId(addFormContainer);
+            showHideHelpText(addFormContainer);
         });
 
         /**
@@ -66,6 +64,19 @@ var addFormFunction = (function(){
                     $(this).find('legend .count').html(i);
                 }
             });
+        }
+
+        /**
+         * set count id to cloned elements
+         * @param {object} addFormContainer
+         */
+        function showHideHelpText(addFormContainer){
+            if($(addFormContainer).find('[data-add-form-clone]').length > 0) {
+                $(addFormContainer).find(helpText).hide();
+            }
+            else{
+                $(addFormContainer).find(helpText).show();
+            }
         }
 
     };
