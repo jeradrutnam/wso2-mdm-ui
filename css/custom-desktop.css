@@ -2376,8 +2376,15 @@ a.cu-btn-inner.inverse:hover {
     margin: 0 10px 0;
 }
 
+.wizard-head .wizard-home-icon {
+    font-size: 30px;
+    color: #11375b;
+    margin-top:-6px;
+    margin-right: 20px;
+}
+
 .wizard-head .wizard-back {
-    margin-right: 30px;
+    margin-right: 20px;
     padding-right: 15px;
     border-right: 2px solid #e4e4e4;
 }
@@ -2486,6 +2493,22 @@ a.cu-btn-inner.inverse:hover {
      padding: 30px 0;
 }
 
+.multi-view .content .panel-body .well fieldset legend a {
+    padding: 5px 5px 1px 10px;
+    float: right;
+    font-size: 14px;
+}
+
+.multi-view .content .panel-body .well fieldset legend a:hover .icon.fw-stack .fw-ring {
+    display: none;
+}
+
+.multi-view .content .panel-body .well fieldset legend {
+    border-bottom: none;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
 .multi-view .content .panel-heading {
     padding: 6px 0 12px;
     margin-bottom: 10px;
@@ -2526,17 +2549,5 @@ a.cu-btn-inner.inverse:hover {
 
 .multi-view .content .panel-heading .panel-title .wr-input-control.switch input[type="checkbox"]:checked + .helper + .text:after {
     content: "Enabled";
-}
-
-.well fieldset legend a {
-    padding: 5px 5px 1px 10px;
-    float: right;
-    font-size: 14px;
-}
-
-.well fieldset legend {
-    border-bottom: none;
-    font-size: 16px;
-    text-transform: uppercase;
 }
 
