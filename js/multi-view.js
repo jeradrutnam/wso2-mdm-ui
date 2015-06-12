@@ -20,9 +20,9 @@ var multiViewFunction = (function(){
     var returnObj = {};
     returnObj.init = function(){
 
-        var multiView = '.multi-view',
+        var multiViewContainer = '.multi-view',
+            navButton = '[data-click-event=multi-view]',
             nav = '.nav',
-            navItem = nav+' ul li a',
             content = '.content',
             contentItem = content+' ul li';
 
@@ -37,7 +37,7 @@ var multiViewFunction = (function(){
         /**
          * multi view nav item click function
          */
-        $(multiView+" "+navItem).click(function(e){
+        $(navButton).click(function(e){
             e.preventDefault();
             multiViewPanelSwitch(this);
         });
@@ -46,26 +46,26 @@ var multiViewFunction = (function(){
          * multi view min-height set
          */
         function multiViewMinHeight(){
-            $(multiView+" "+content).css('min-height', $(multiView).height());
+            $(multiViewContainer+" "+content).css('min-height', $(multiViewContainer).height());
         }
 
         /**
          * multi view panel show/hide function
-         * @param {object} activeNavItem;
+         * @param {object} activeNavItem
          */
         function multiViewPanelSwitch(activeNavItem){
-            $(activeNavItem).closest(multiView).find(navItem).removeClass('active');
+            $(activeNavItem).closest(multiViewContainer).find(navButton).removeClass('active');
             $(activeNavItem).addClass('active');
 
-            $(activeNavItem).closest(multiView).find(contentItem).hide();
+            $(activeNavItem).closest(multiViewContainer).find(contentItem).hide();
 
             if($(activeNavItem).closest('li').find('ul').length > 0){
                 $(activeNavItem).closest('li').find('ul li a').each(function(){
-                    $(this).closest(multiView).find(contentItem+'[data-multi-view='+$(this).attr('href')+']').show();
+                    $(this).closest(multiViewContainer).find(contentItem+'[data-multi-view='+$(this).attr('href')+']').show();
                 });
             }
             else{
-                $(activeNavItem).closest(multiView).find(contentItem+'[data-multi-view='+$(activeNavItem).attr('href')+']').show();
+                $(activeNavItem).closest(multiViewContainer).find(contentItem+'[data-multi-view='+$(activeNavItem).attr('href')+']').show();
             }
         }
 
@@ -73,7 +73,7 @@ var multiViewFunction = (function(){
          * multi view "min-height" set
          */
         function multiViewDefaultActiveState(){
-            $(multiView+" "+navItem).each(function(){
+            $(navButton).each(function(){
                 if($(this).hasClass('active')){
                     multiViewPanelSwitch(this);
                     return false;
