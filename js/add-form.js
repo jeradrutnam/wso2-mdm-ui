@@ -51,6 +51,13 @@ var addFormFunction = (function(){
             $(addFormContainer).append(clonedForm);
             setId(addFormContainer);
             showHideHelpText(addFormContainer);
+
+            /**
+             * focus + scroll to newly added form
+             */
+            $('body').animate({
+                scrollTop: $(addFormContainer).find('[data-add-form-clone]').last().offset().top
+            }, 400);
         });
 
         /**
@@ -59,9 +66,9 @@ var addFormFunction = (function(){
          */
         function setId(addFormContainer){
             $(addFormContainer).find('[data-add-form-clone]').each(function(i){
-                $(this).attr('id', $(this).attr('data-add-form-clone').slice(1)+'-'+i);
+                $(this).attr('id', $(this).attr('data-add-form-clone').slice(1)+'-'+(i+1));
                 if($(this).find('legend .count').length > 0) {
-                    $(this).find('legend .count').html(i);
+                    $(this).find('legend .count').html(i+1);
                 }
             });
         }
