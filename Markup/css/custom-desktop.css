@@ -2414,7 +2414,7 @@ a.cu-btn-inner.inverse:hover {
 
 .multi-view .nav > ul > li {
     list-style: none;
-    margin: 0 0 10px;
+    margin: 0;
     padding: 0;
     font-size: 20px;
     line-height: 30px;
@@ -2435,7 +2435,7 @@ a.cu-btn-inner.inverse:hover {
 }
 
 .multi-view .nav > ul > li a {
-    padding: 5px 15px;
+    padding: 10px 15px;
     text-decoration: none;
     display: block;
     color: #11375b;
@@ -2458,14 +2458,14 @@ a.cu-btn-inner.inverse:hover {
 
 .multi-view .nav > ul li .status-icon {
     position: absolute;
-    top: 5px;
+    top: 10px;
     right: 20px;
     font-size: 16px;
 }
 
 .multi-view .nav > ul li .slide-icon {
     position: absolute;
-    top: 10px;
+    top: 16px;
     right: 18px;
     font-size: 20px;
 }
