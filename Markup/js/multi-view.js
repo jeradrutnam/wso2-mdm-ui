@@ -39,7 +39,25 @@ var multiViewFunction = (function(){
          */
         $(navButton).click(function(e){
             e.preventDefault();
-            multiViewPanelSwitch(this);
+            if($(this).attr('data-multi-view-behavior') == 'collapse'){
+                $(this).siblings('ul').slideToggle(function(){
+                    if($(this).css('display') == 'none'){
+                        $(this).siblings('a')
+                            .find('.slide-icon')
+                            .removeClass('fw-up-arrow')
+                            .addClass('fw-down-arrow');
+                    }
+                    else {
+                        $(this).siblings('a')
+                            .find('.slide-icon')
+                            .removeClass('fw-down-arrow')
+                            .addClass('fw-up-arrow');
+                    }
+                });
+            }
+            else {
+                multiViewPanelSwitch(this);
+            }
         });
 
         /**
@@ -61,11 +79,15 @@ var multiViewFunction = (function(){
 
             if($(activeNavItem).closest('li').find('ul').length > 0){
                 $(activeNavItem).closest('li').find('ul li a').each(function(){
-                    $(this).closest(multiViewContainer).find(contentItem+'[data-multi-view='+$(this).attr('href')+']').show();
+                    $(this).closest(multiViewContainer)
+                        .find(contentItem+'[data-multi-view='+$(this).attr('href')+']')
+                        .show();
                 });
             }
             else{
-                $(activeNavItem).closest(multiViewContainer).find(contentItem+'[data-multi-view='+$(activeNavItem).attr('href')+']').show();
+                $(activeNavItem).closest(multiViewContainer)
+                    .find(contentItem+'[data-multi-view='+$(activeNavItem).attr('href')+']')
+                    .show();
             }
         }
 

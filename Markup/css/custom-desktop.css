@@ -2462,16 +2462,44 @@ a.cu-btn-inner.inverse:hover {
     font-size: 16px;
 }
 
+.multi-view .nav > ul li .slide-icon {
+    position: absolute;
+    top: 10px;
+    right: 18px;
+    font-size: 20px;
+}
+
 .multi-view .nav > ul li li .status-icon {
     top: -2px;
 }
 
-.multi-view .nav > ul > li.has-success .status-icon {
+.multi-view .nav > ul li a[data-multi-view-behavior=collapse] {
+    border-right: 5px solid;
+}
+
+.multi-view .nav > ul li.has-success a[data-multi-view-behavior=collapse] {
+    border-right-color: #349300;
+}
+
+.multi-view .nav > ul li.has-error a[data-multi-view-behavior=collapse] {
+    border-right-color: #e70000;
+}
+
+.multi-view .nav > ul li.has-success .status-icon {
     color: #349300;
 }
 
-.multi-view .nav > ul > li.has-error a, .multi-view .nav > ul > li.has-error .status-icon {
+.multi-view .nav > ul li.has-error a, .multi-view .nav > ul li.has-error .status-icon {
     color: #e70000;
+}
+
+.multi-view .nav > ul li.has-error a:hover, .multi-view .nav > ul li.has-error a.active {
+    background: #e70000;
+    color: #fff;
+}
+
+.multi-view .nav > ul li.has-error a:hover + .status-icon, .multi-view .nav > ul li.has-error a.active + .status-icon {
+    color: #fff;
 }
 
 .multi-view .content {
