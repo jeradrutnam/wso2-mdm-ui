@@ -2380,7 +2380,7 @@ a.cu-btn-inner.inverse:hover {
     font-size: 30px;
     color: #11375b;
     margin-top:-6px;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 .wizard-head .wizard-back {
@@ -2409,6 +2409,7 @@ a.cu-btn-inner.inverse:hover {
 .multi-view .nav ul {
     list-style: none;
     padding: 0;
+    background: #f2f2f2;
 }
 
 .multi-view .nav > ul > li {
@@ -2417,6 +2418,7 @@ a.cu-btn-inner.inverse:hover {
     padding: 0;
     font-size: 20px;
     line-height: 30px;
+    border-bottom: 1px solid #fff;
 }
 
 .multi-view .nav > ul li {
@@ -2434,14 +2436,13 @@ a.cu-btn-inner.inverse:hover {
 
 .multi-view .nav > ul > li a {
     padding: 5px 15px;
-    margin-bottom: 1px;
     text-decoration: none;
     display: block;
     color: #11375b;
 }
 
 .multi-view .nav > ul li li a {
-    padding: 0 8px 0 55px;
+    padding: 0 8px 0 70px;
 }
 
 .multi-view .nav > ul li a:hover, .multi-view .nav > ul li a.active {
@@ -2452,7 +2453,7 @@ a.cu-btn-inner.inverse:hover {
 .multi-view .nav > ul li .icon {
     font-size: 25px;
     padding-bottom: 5px;
-    margin-right: 5px;
+    margin-right: 12px;
 }
 
 .multi-view .nav > ul li .status-icon {
@@ -2481,6 +2482,11 @@ a.cu-btn-inner.inverse:hover {
     border-right-color: #349300;
 }
 
+.multi-view .nav > ul li a[data-multi-view-behavior=collapse]:hover {
+    background: transparent;
+    color: #11375B;
+}
+
 .multi-view .nav > ul li.has-error a[data-multi-view-behavior=collapse] {
     border-right-color: #e70000;
 }
@@ -2491,15 +2497,6 @@ a.cu-btn-inner.inverse:hover {
 
 .multi-view .nav > ul li.has-error a, .multi-view .nav > ul li.has-error .status-icon {
     color: #e70000;
-}
-
-.multi-view .nav > ul li.has-error a:hover, .multi-view .nav > ul li.has-error a.active {
-    background: #e70000;
-    color: #fff;
-}
-
-.multi-view .nav > ul li.has-error a:hover + .status-icon, .multi-view .nav > ul li.has-error a.active + .status-icon {
-    color: #fff;
 }
 
 .multi-view .content {
