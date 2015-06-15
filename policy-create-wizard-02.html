@@ -105,7 +105,6 @@
 
                     <div class="wizard">
                         <ul class="wizard-head">
-                            <li class="wizard-home-icon"><i class="fw fw-android"></i></li>
                             <li class="wizard-back">
                                 <a href="policy-create-wizard.html">
                                     <span class="icon fw-stack">
@@ -115,7 +114,8 @@
                                     Back
                                 </a>
                             </li>
-                            <li><a href="policy-create-wizard.html">Select Platform</a></li>
+                            <li class="wizard-home-icon"><i class="fw fw-android"></i></li>
+                            <li><a href="policy-create-wizard.html">Platform</a></li>
                             <li class="active"><i class="icon fw fw-right-arrow"></i><a href="policy-create-wizard-02.html">Configure Profile</a></li>
                             <li><i class="icon fw fw-right-arrow"></i><a href="policy-create-wizard-03.html">Assign to a group</a></li>
                             <li><i class="icon fw fw-right-arrow"></i><a href="policy-create-wizard-04.html">Publish</a></li>
@@ -128,11 +128,11 @@
                                 <div class="nav">
                                     <ul>
                                         <li class="has-success">
-                                            <a href="#security" data-click-event="multi-view" data-multi-view-behavior="collapse" class="active">
+                                            <a href="#security" data-click-event="multi-view" data-multi-view-behavior="collapse">
                                                 <i class="icon fw fw-padlock"></i>Security<i class="slide-icon fw fw-up-arrow"></i>
                                             </a>
                                             <ul>
-                                                <li><a href="#device-security" data-click-event="multi-view">Device Security</a></li>
+                                                <li><a href="#device-security" data-click-event="multi-view" class="active">Device Security</a></li>
                                                 <li class="has-success">
                                                     <a href="#application-security" data-click-event="multi-view">Application Security</a>
                                                     <span class="status-icon" data-click-event="multi-view"><i class="fw fw-ok"></i></span>
@@ -142,6 +142,9 @@
                                         <li class="has-error">
                                             <a href="#wifi" data-click-event="multi-view"><i class="icon fw fw-wifi"></i>Wifi</a>
                                             <span class="status-icon"><i class="fw fw-error"></i></span>
+                                        </li>
+                                        <li>
+                                            <a href="#applications" data-click-event="multi-view"><i class="icon fw fw-applications"></i>Applications</a>
                                         </li>
                                         <li>
                                             <a href="#mail" data-click-event="multi-view"><i class="icon fw fw-message"></i>Mail</a>
@@ -288,6 +291,16 @@
                                                         </fieldset>
                                                     </div>
                                                 </div>
+                                            </div>
+                                        </li>
+                                        <li data-multi-view="#applications">
+                                            <div class="panel-heading">
+                                                <h2 class="panel-title">
+                                                    Applications
+                                                </h2>
+                                            </div>
+                                            <div class="panel-body">
+
                                             </div>
                                         </li>
                                         <li data-multi-view="#mail">
@@ -441,6 +454,7 @@
 
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.resize.js"></script>
 <script src="js/multi-view.js"></script>
 <script src="js/add-form.js"></script>
 

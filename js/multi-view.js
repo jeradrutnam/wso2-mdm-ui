@@ -35,6 +35,14 @@ var multiViewFunction = (function(){
         });
 
         /**
+         * on multi view resize multi view nav min-height set
+         * @require jquery.resize.js
+         */
+        $(multiViewContainer).resize(function(){
+            multiViewMinHeight();
+        });
+
+        /**
          * multi view nav item click function
          */
         $(navButton).click(function(e){
@@ -46,12 +54,16 @@ var multiViewFunction = (function(){
                             .find('.slide-icon')
                             .removeClass('fw-up-arrow')
                             .addClass('fw-down-arrow');
+
+                        multiViewMinHeight();
                     }
                     else {
                         $(this).siblings('a')
                             .find('.slide-icon')
                             .removeClass('fw-down-arrow')
                             .addClass('fw-up-arrow');
+
+                        multiViewMinHeight();
                     }
                 });
             }
@@ -64,7 +76,7 @@ var multiViewFunction = (function(){
          * multi view min-height set
          */
         function multiViewMinHeight(){
-            $(multiViewContainer+" "+content).css('min-height', $(multiViewContainer).height());
+            $(multiViewContainer+" "+content).css('min-height', $(multiViewContainer+" "+nav).height());
         }
 
         /**
