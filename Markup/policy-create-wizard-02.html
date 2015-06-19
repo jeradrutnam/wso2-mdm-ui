@@ -123,127 +123,56 @@
                     </div>
 
                     <div class="multi-view">
-                        <div class="row no-gutter">
-                            <div class="col-lg-4">
-                                <div class="nav">
-                                    <ul>
-                                        <li class="has-success">
-                                            <a href="#security" data-click-event="multi-view" data-multi-view-behavior="collapse">
-                                                <i class="icon fw fw-padlock"></i>Security<i class="slide-icon fw fw-up-arrow"></i>
-                                            </a>
-                                            <ul>
-                                                <li><a href="#device-security" data-click-event="multi-view" class="active">Device Security</a></li>
-                                                <li class="has-success">
-                                                    <a href="#application-security" data-click-event="multi-view">Application Security</a>
-                                                    <span class="status-icon" data-click-event="multi-view"><i class="fw fw-ok"></i></span>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="has-error">
-                                            <a href="#wifi" data-click-event="multi-view"><i class="icon fw fw-wifi"></i>Wifi</a>
-                                            <span class="status-icon"><i class="fw fw-error"></i></span>
-                                        </li>
-                                        <li>
-                                            <a href="#applications" data-click-event="multi-view"><i class="icon fw fw-applications"></i>Applications</a>
-                                        </li>
-                                        <li>
-                                            <a href="#mail" data-click-event="multi-view"><i class="icon fw fw-message"></i>Mail</a>
-                                        </li>
-                                        <li>
-                                            <a href="#general" data-click-event="multi-view"><i class="icon fw fw-settings"></i>General</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="content">
-                                    <ul>
-                                        <li data-multi-view="#device-security">
-                                            <div class="panel">
-                                                <div class="panel-heading" role="tab" id="headingOne">
-                                                    <h2 class="panel-title">
-                                                        Device Security
-                                                        <label class="wr-input-control switch" data-toggle="collapse" data-target="#collapseOne">
-                                                            <input type="checkbox" checked>
-                                                            <span class="helper"></span>
-                                                            <span class="text"><!-- css content loads here --></span>
-                                                        </label>
-                                                    </h2>
-                                                </div>
-                                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                                    <div class="panel-body">
-                                                        <label class="wr-input-label" title="Identification of the wireless network to connect to">Service Set Identifier<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
-                                                        <div class="wr-input-control">
-                                                            <input type="text" value="" placeholder="input text"/>
-                                                        </div>
-
-                                                        <div class="wr-input-control">
-                                                            <label class="wr-input-control checkbox">
-                                                                <input type="checkbox" checked />
-                                                                <span class="helper" title="Enable if target network is not open or broadcasting">Hidden Network<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></span>
+                        <table class="table">
+                            <tr class="row no-gutter">
+                                <td class="nav col-lg-4">
+                                    <div>
+                                        <ul>
+                                            <li class="has-success">
+                                                <a href="#security" data-click-event="multi-view" data-multi-view-behavior="collapse">
+                                                    <i class="icon fw fw-padlock"></i>Security<i class="slide-icon fw fw-up-arrow"></i>
+                                                </a>
+                                                <ul>
+                                                    <li><a href="#device-security" data-click-event="multi-view" class="active">Device Security</a></li>
+                                                    <li class="has-success">
+                                                        <a href="#application-security" data-click-event="multi-view">Application Security</a>
+                                                        <span class="status-icon" data-click-event="multi-view"><i class="fw fw-ok"></i></span>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="has-error">
+                                                <a href="#wifi" data-click-event="multi-view"><i class="icon fw fw-wifi"></i>Wifi</a>
+                                                <span class="status-icon"><i class="fw fw-warning"></i></span>
+                                            </li>
+                                            <li>
+                                                <a href="#applications" data-click-event="multi-view"><i class="icon fw fw-applications"></i>Applications</a>
+                                            </li>
+                                            <li>
+                                                <a href="#mail" data-click-event="multi-view"><i class="icon fw fw-message"></i>Mail</a>
+                                            </li>
+                                            <li>
+                                                <a href="#general" data-click-event="multi-view"><i class="icon fw fw-settings"></i>General</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td class="content col-lg-8">
+                                    <div>
+                                        <ul>
+                                            <li data-multi-view="#device-security">
+                                                <div class="panel">
+                                                    <div class="panel-heading" role="tab" id="headingOne">
+                                                        <h2 class="panel-title">
+                                                            Device Security
+                                                            <label class="wr-input-control switch" data-toggle="collapse" data-target="#collapseOne">
+                                                                <input type="checkbox" checked>
+                                                                <span class="helper"></span>
+                                                                <span class="text"><!-- css content loads here --></span>
                                                             </label>
-                                                        </div>
-
-                                                        <div class="wr-input-control">
-                                                            <label class="wr-input-control checkbox">
-                                                                <input type="checkbox" checked />
-                                                                <span class="helper" title="Automatically join this wireless network">Auto Join<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></span>
-                                                            </label>
-                                                        </div>
-
-                                                        <label class="wr-input-label" title="Configures proxies to be used with this network">Proxy Setup<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
-                                                        <div class="wr-input-control">
-                                                            <select class="form-control">
-                                                                <option>None</option>
-                                                            </select>
-                                                        </div>
+                                                        </h2>
                                                     </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li data-multi-view="#application-security">
-                                            <div class="panel-heading">
-                                                <h2 class="panel-title">
-                                                    Application Security Configurations
-                                                </h2>
-                                            </div>
-                                            <div class="panel-body">
-                                                <div data-help-text="add-form">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut dignissim dolor, in sagittis velit. Aliquam convallis, nisl eget aliquam tempus, nisi eros pharetra ligula, ornare gravida elit arcu sit amet nibh. Donec eu erat sem. Vivamus sed tempus odio. In lacus arcu, elementum sit amet erat vitae, rutrum rutrum urna.
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li data-multi-view="#wifi">
-                                            <div class="panel-heading">
-                                                <h2 class="panel-title">
-                                                    Wifi Configurations
-                                                    <a href="#wifi-config-form" data-click-event="add-form">
-                                                        Add
-                                                        <span class="icon fw-stack">
-                                                            <i class="fw fw-add fw-stack-1x"></i>
-                                                            <i class="fw fw-ring fw-stack-2x"></i>
-                                                        </span>
-                                                    </a>
-                                                </h2>
-                                            </div>
-                                            <div class="panel-body" data-add-form-container="#wifi-config-form">
-                                                <div data-help-text="add-form">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut dignissim dolor, in sagittis velit. Aliquam convallis, nisl eget aliquam tempus, nisi eros pharetra ligula, ornare gravida elit arcu sit amet nibh. Donec eu erat sem. Vivamus sed tempus odio. In lacus arcu, elementum sit amet erat vitae, rutrum rutrum urna.
-                                                </div>
-                                                <div class="hidden" data-add-form="#wifi-config-form">
-                                                    <div class="well" data-add-form-element="clone">
-
-                                                        <fieldset>
-                                                            <legend>
-                                                                Configuration <span class="count"></span> :
-                                                                <a href="#wifi-config-form" data-click-event="remove-form">
-                                                                    <span class="icon fw-stack">
-                                                                        <i class="fw fw-cancel fw-stack-1x"></i>
-                                                                        <i class="fw fw-ring fw-stack-2x"></i>
-                                                                    </span>
-                                                                </a>
-                                                            </legend>
-
+                                                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                                        <div class="panel-body">
                                                             <label class="wr-input-label" title="Identification of the wireless network to connect to">Service Set Identifier<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
                                                             <div class="wr-input-control">
                                                                 <input type="text" value="" placeholder="input text"/>
@@ -269,155 +198,228 @@
                                                                     <option>None</option>
                                                                 </select>
                                                             </div>
-
-                                                            <label class="wr-input-label" title="Wireless network encryption to use when connecting">Security Type<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
-                                                            <div class="wr-input-control">
-                                                                <select class="form-control">
-                                                                    <option>WPA/WPA2 Personal</option>
-                                                                </select>
-                                                            </div>
-
-                                                            <label class="wr-input-label" title="Password for the wireless network">Password<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
-                                                            <div class="wr-input-control">
-                                                                <input type="password" value="" placeholder="input text"/>
-                                                            </div>
-
-                                                            <label class="wr-input-label" title="Configures network to appear as legacy or Passport">Network Type<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
-                                                            <div class="wr-input-control">
-                                                                <select class="form-control">
-                                                                    <option>Standard</option>
-                                                                </select>
-                                                            </div>
-                                                        </fieldset>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                        <li data-multi-view="#applications">
-                                            <div class="panel-heading">
-                                                <h2 class="panel-title">
-                                                    Applications
-                                                </h2>
-                                            </div>
-                                            <div class="panel-body">
-
-                                            </div>
-                                        </li>
-                                        <li data-multi-view="#mail">
-                                            <div class="panel-heading">
-                                                <h2 class="panel-title">
-                                                    Mail Configurations
-                                                </h2>
-                                            </div>
-                                            <div class="panel-body">
-                                                <label class="wr-input-label" title="The display name of the account">Account Description<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
-                                                <div class="wr-input-control">
-                                                    <input type="text" value="" placeholder="input text"/>
+                                            </li>
+                                            <li data-multi-view="#application-security">
+                                                <div class="panel-heading">
+                                                    <h2 class="panel-title">
+                                                        Application Security Configurations
+                                                    </h2>
                                                 </div>
-
-                                                <label class="wr-input-label" title="The protocol for accessing the email account">Account Type<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
-                                                <div class="wr-input-control">
-                                                    <div class="cus-col-25">
-                                                        <select class="form-control">
-                                                            <option>IMAP</option>
-                                                        </select>
+                                                <div class="panel-body">
+                                                    <div data-help-text="add-form">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut dignissim dolor, in sagittis velit. Aliquam convallis, nisl eget aliquam tempus, nisi eros pharetra ligula, ornare gravida elit arcu sit amet nibh. Donec eu erat sem. Vivamus sed tempus odio. In lacus arcu, elementum sit amet erat vitae, rutrum rutrum urna.
                                                     </div>
-                                                    <div class="cus-col-50">
-                                                        <span>Path Prefix</span> <input type="text" value="" placeholder="input text" />
+                                                </div>
+                                            </li>
+                                            <li data-multi-view="#wifi">
+                                                <div class="panel-heading">
+                                                    <h2 class="panel-title">
+                                                        Wifi Configurations
+                                                        <a href="#wifi-config-form" data-click-event="add-form">
+                                                            Add
+                                                        <span class="icon fw-stack">
+                                                            <i class="fw fw-add fw-stack-1x"></i>
+                                                            <i class="fw fw-ring fw-stack-2x"></i>
+                                                        </span>
+                                                        </a>
+                                                    </h2>
+                                                </div>
+                                                <div class="panel-body" data-add-form-container="#wifi-config-form">
+                                                    <div data-help-text="add-form">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut dignissim dolor, in sagittis velit. Aliquam convallis, nisl eget aliquam tempus, nisi eros pharetra ligula, ornare gravida elit arcu sit amet nibh. Donec eu erat sem. Vivamus sed tempus odio. In lacus arcu, elementum sit amet erat vitae, rutrum rutrum urna.
                                                     </div>
-                                                    <br class="c-both" />
-                                                </div>
+                                                    <div class="hidden" data-add-form="#wifi-config-form">
+                                                        <div class="well" data-add-form-element="clone">
 
-                                                <label class="wr-input-label" title="The display name of the user">User Display Name<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
-                                                <div class="wr-input-control">
-                                                    <input type="text" value="" placeholder="input text"/>
-                                                </div>
+                                                            <fieldset>
+                                                                <legend>
+                                                                    Configuration <span class="count"></span> :
+                                                                    <a href="#wifi-config-form" data-click-event="remove-form">
+                                                                    <span class="icon fw-stack">
+                                                                        <i class="fw fw-cancel fw-stack-1x"></i>
+                                                                        <i class="fw fw-ring fw-stack-2x"></i>
+                                                                    </span>
+                                                                    </a>
+                                                                </legend>
 
-                                                <label class="wr-input-label" title="The address of the account">Email Address<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
-                                                <div class="wr-input-control">
-                                                    <input type="text" value="" placeholder="input text"/>
-                                                </div>
+                                                                <label class="wr-input-label" title="Identification of the wireless network to connect to">Service Set Identifier<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
+                                                                <div class="wr-input-control">
+                                                                    <input type="text" value="" placeholder="input text"/>
+                                                                </div>
 
-                                                <div class="wr-input-control">
-                                                    <label class="wr-input-control checkbox">
-                                                        <input type="checkbox" checked />
-                                                        <span class="helper" title="Messages can be moved from this account to another">Allow user to move messages from this account<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></span>
-                                                    </label>
-                                                </div>
+                                                                <div class="wr-input-control">
+                                                                    <label class="wr-input-control checkbox">
+                                                                        <input type="checkbox" checked />
+                                                                        <span class="helper" title="Enable if target network is not open or broadcasting">Hidden Network<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></span>
+                                                                    </label>
+                                                                </div>
 
-                                                <div class="wr-input-control">
-                                                    <label class="wr-input-control checkbox">
-                                                        <input type="checkbox" checked />
-                                                        <span class="helper" title="Include this account in recent address syncing">Allow Recent Address syncing<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></span>
-                                                    </label>
-                                                </div>
+                                                                <div class="wr-input-control">
+                                                                    <label class="wr-input-control checkbox">
+                                                                        <input type="checkbox" checked />
+                                                                        <span class="helper" title="Automatically join this wireless network">Auto Join<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></span>
+                                                                    </label>
+                                                                </div>
 
-                                                <div class="wr-input-control">
-                                                    <label class="wr-input-control checkbox">
-                                                        <input type="checkbox" checked />
-                                                        <span class="helper" title="Send outgoing mail from this account only from Mail app">Use Only in Mail<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></span>
-                                                    </label>
-                                                </div>
+                                                                <label class="wr-input-label" title="Configures proxies to be used with this network">Proxy Setup<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
+                                                                <div class="wr-input-control">
+                                                                    <select class="form-control">
+                                                                        <option>None</option>
+                                                                    </select>
+                                                                </div>
 
-                                                <div class="wr-input-control">
-                                                    <label class="wr-input-control checkbox">
-                                                        <input type="checkbox" checked />
-                                                        <span class="helper" title="Support S/MIME for this account">Enable S/MIME<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></span>
-                                                    </label>
-                                                </div>
+                                                                <label class="wr-input-label" title="Wireless network encryption to use when connecting">Security Type<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
+                                                                <div class="wr-input-control">
+                                                                    <select class="form-control">
+                                                                        <option>WPA/WPA2 Personal</option>
+                                                                    </select>
+                                                                </div>
 
-                                                <label class="wr-input-label" title="The protocol for accessing the email account">Mail Server and Port<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
-                                                <div class="wr-input-control">
-                                                    <div class="cus-col-70">
+                                                                <label class="wr-input-label" title="Password for the wireless network">Password<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
+                                                                <div class="wr-input-control">
+                                                                    <input type="password" value="" placeholder="input text"/>
+                                                                </div>
+
+                                                                <label class="wr-input-label" title="Configures network to appear as legacy or Passport">Network Type<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
+                                                                <div class="wr-input-control">
+                                                                    <select class="form-control">
+                                                                        <option>Standard</option>
+                                                                    </select>
+                                                                </div>
+                                                            </fieldset>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li data-multi-view="#applications">
+                                                <div class="panel-heading">
+                                                    <h2 class="panel-title">
+                                                        Applications
+                                                    </h2>
+                                                </div>
+                                                <div class="panel-body">
+
+                                                </div>
+                                            </li>
+                                            <li data-multi-view="#mail">
+                                                <div class="panel-heading">
+                                                    <h2 class="panel-title">
+                                                        Mail Configurations
+                                                    </h2>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <label class="wr-input-label" title="The display name of the account">Account Description<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
+                                                    <div class="wr-input-control">
                                                         <input type="text" value="" placeholder="input text"/>
                                                     </div>
-                                                    <div class="cus-col-25">
-                                                        <span> : </span><input type="text" value="993" placeholder="input text" />
+
+                                                    <label class="wr-input-label" title="The protocol for accessing the email account">Account Type<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
+                                                    <div class="wr-input-control">
+                                                        <div class="cus-col-25">
+                                                            <select class="form-control">
+                                                                <option>IMAP</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="cus-col-50">
+                                                            <span>Path Prefix</span> <input type="text" value="" placeholder="input text" />
+                                                        </div>
+                                                        <br class="c-both" />
                                                     </div>
-                                                    <br class="c-both" />
-                                                </div>
 
-                                                <label class="wr-input-label" title="The username used to connect to the server for incoming mail">Username<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
-                                                <div class="wr-input-control">
-                                                    <input type="text" value="" placeholder="input text"/>
-                                                </div>
+                                                    <label class="wr-input-label" title="The display name of the user">User Display Name<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
+                                                    <div class="wr-input-control">
+                                                        <input type="text" value="" placeholder="input text"/>
+                                                    </div>
 
-                                                <label class="wr-input-label" title="The autyentication method for the incoming mail server">Authentication Type<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
-                                                <div class="wr-input-control">
-                                                    <select class="form-control">
-                                                        <option>Password</option>
-                                                    </select>
-                                                </div>
+                                                    <label class="wr-input-label" title="The address of the account">Email Address<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
+                                                    <div class="wr-input-control">
+                                                        <input type="text" value="" placeholder="input text"/>
+                                                    </div>
 
-                                                <label class="wr-input-label" title="The password for the incoming mail server">Password<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
-                                                <div class="wr-input-control">
-                                                    <input type="text" value="" placeholder="input text"/>
-                                                </div>
+                                                    <div class="wr-input-control">
+                                                        <label class="wr-input-control checkbox">
+                                                            <input type="checkbox" checked />
+                                                            <span class="helper" title="Messages can be moved from this account to another">Allow user to move messages from this account<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></span>
+                                                        </label>
+                                                    </div>
 
-                                                <div class="wr-input-control">
-                                                    <label class="wr-input-control checkbox">
-                                                        <input type="checkbox" checked />
-                                                        <span class="helper" title="Retrieve incoming mail through secure socket layer">Use SSL<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></span>
-                                                    </label>
+                                                    <div class="wr-input-control">
+                                                        <label class="wr-input-control checkbox">
+                                                            <input type="checkbox" checked />
+                                                            <span class="helper" title="Include this account in recent address syncing">Allow Recent Address syncing<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></span>
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="wr-input-control">
+                                                        <label class="wr-input-control checkbox">
+                                                            <input type="checkbox" checked />
+                                                            <span class="helper" title="Send outgoing mail from this account only from Mail app">Use Only in Mail<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></span>
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="wr-input-control">
+                                                        <label class="wr-input-control checkbox">
+                                                            <input type="checkbox" checked />
+                                                            <span class="helper" title="Support S/MIME for this account">Enable S/MIME<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></span>
+                                                        </label>
+                                                    </div>
+
+                                                    <label class="wr-input-label" title="The protocol for accessing the email account">Mail Server and Port<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
+                                                    <div class="wr-input-control">
+                                                        <div class="cus-col-70">
+                                                            <input type="text" value="" placeholder="input text"/>
+                                                        </div>
+                                                        <div class="cus-col-25">
+                                                            <span> : </span><input type="text" value="993" placeholder="input text" />
+                                                        </div>
+                                                        <br class="c-both" />
+                                                    </div>
+
+                                                    <label class="wr-input-label" title="The username used to connect to the server for incoming mail">Username<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
+                                                    <div class="wr-input-control">
+                                                        <input type="text" value="" placeholder="input text"/>
+                                                    </div>
+
+                                                    <label class="wr-input-label" title="The autyentication method for the incoming mail server">Authentication Type<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
+                                                    <div class="wr-input-control">
+                                                        <select class="form-control">
+                                                            <option>Password</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <label class="wr-input-label" title="The password for the incoming mail server">Password<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></label>
+                                                    <div class="wr-input-control">
+                                                        <input type="text" value="" placeholder="input text"/>
+                                                    </div>
+
+                                                    <div class="wr-input-control">
+                                                        <label class="wr-input-control checkbox">
+                                                            <input type="checkbox" checked />
+                                                            <span class="helper" title="Retrieve incoming mail through secure socket layer">Use SSL<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></span>
+                                                        </label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                        <li data-multi-view="#general">
-                                            <div class="panel-heading">
-                                                <h2 class="panel-title">
-                                                    General Configurations
-                                                </h2>
-                                            </div>
-                                            <div class="panel-body">
-                                                <div data-help-text="add-form">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut dignissim dolor, in sagittis velit. Aliquam convallis, nisl eget aliquam tempus, nisi eros pharetra ligula, ornare gravida elit arcu sit amet nibh. Donec eu erat sem. Vivamus sed tempus odio. In lacus arcu, elementum sit amet erat vitae, rutrum rutrum urna.
+                                            </li>
+                                            <li data-multi-view="#general">
+                                                <div class="panel-heading">
+                                                    <h2 class="panel-title">
+                                                        General Configurations
+                                                    </h2>
                                                 </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                                                <div class="panel-body">
+                                                    <div data-help-text="add-form">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut dignissim dolor, in sagittis velit. Aliquam convallis, nisl eget aliquam tempus, nisi eros pharetra ligula, ornare gravida elit arcu sit amet nibh. Donec eu erat sem. Vivamus sed tempus odio. In lacus arcu, elementum sit amet erat vitae, rutrum rutrum urna.
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
 
                     <div class="btn-group">
