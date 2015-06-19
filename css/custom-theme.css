@@ -437,6 +437,7 @@ a.ctrl-filter-category:hover {
 	background-image: none;
 	border: 1px solid transparent;
 	border-radius: 0;
+	transition: background 0.2s;
 }
 
 .col-centered {
@@ -446,6 +447,15 @@ a.ctrl-filter-category:hover {
 
 b, strong {
     font-weight: 500;
+}
+
+.form-horizontal .control-label {
+	font-weight: 500;
+}
+
+.form-horizontal .control-value {
+	padding-top: 7px;
+	margin-bottom: 0;
 }
 
 .panel-group .panel-heading + .panel-collapse > .panel-body, .panel-group .panel-heading + .panel-collapse > .list-group {
@@ -478,6 +488,11 @@ b, strong {
 .row.no-gutter [class*='col-']:not(:first-child), .row.no-gutter [class*='col-']:not(:last-child) {
     padding-right:0;
     padding-left:0;
+}
+
+table.table tr.row.no-gutter td {
+	border-top: none;
+	padding: 0;
 }
 
 select.select2 {

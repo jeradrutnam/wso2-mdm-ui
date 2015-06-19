@@ -30,7 +30,7 @@ var multiViewFunction = (function(){
          * on page load init functions
          */
         $(document).ready(function(){
-            multiViewMinHeight();
+            //multiViewMinHeight();
             multiViewDefaultActiveState();
         });
 
@@ -39,7 +39,7 @@ var multiViewFunction = (function(){
          * @require jquery.resize.js
          */
         $(multiViewContainer).resize(function(){
-            multiViewMinHeight();
+            //multiViewMinHeight();
         });
 
         /**
@@ -55,7 +55,7 @@ var multiViewFunction = (function(){
                             .removeClass('fw-up-arrow')
                             .addClass('fw-down-arrow');
 
-                        multiViewMinHeight();
+                        //multiViewMinHeight();
                     }
                     else {
                         $(this).siblings('a')
@@ -63,7 +63,7 @@ var multiViewFunction = (function(){
                             .removeClass('fw-down-arrow')
                             .addClass('fw-up-arrow');
 
-                        multiViewMinHeight();
+                        //multiViewMinHeight();
                     }
                 });
             }
