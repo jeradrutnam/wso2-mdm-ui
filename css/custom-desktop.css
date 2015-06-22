@@ -1830,6 +1830,11 @@ a.wr-side-panel-toggle-btn.selected {
     color: #080808;
 }
 
+.wr-list-group .wr-sort-index input.has-error {
+    background: #a94442;
+    color: #fff;
+}
+
 .wr-list-group .wr-desc-list-configs {
     min-height: 50px;
     height: 100%;
