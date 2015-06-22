@@ -27,21 +27,27 @@ var sortableListFunction = (function(){
             currentElemId,
             sortableElemLength = $(sortableElem + ' .list-group-item').not('.ui-sortable-placeholder').length;
 
+        for(var i = 1; i <= sortableElemLength; i++){
+            sortableElemList.push(i.toString());
+        }
+
         function addSortableIndexNumbers(){
             $(sortableElem + ' .list-group-item').not('.ui-sortable-placeholder').each(function(i){
                 $('.wr-sort-index input.index', this).val(i+1);
+                $(this).attr('data-sort-index', i+1);
             });
-        }
-
-        for(var i = 1; i <= sortableElemLength; i++){
-            sortableElemList.push(i.toString());
         }
 
         $(sortableElem).on('focus', '.wr-sort-index input.index', function(){
             currentElemId = $(this).val();
             $(this).autocomplete({
                 source: sortableElemList,
-                minLength: 0
+                minLength: 0,
+                close: function(event, ui){
+                    if($.inArray($(this).val(), sortableElemList) !== -1){
+                        $(this).removeClass('has-error');
+                    }
+                }
             });
         });
 
@@ -49,21 +55,37 @@ var sortableListFunction = (function(){
             $(this).siblings('input.index').focus();
         });
 
+        $(sortableElem).on('keyup', '.wr-sort-index input.index', function(e){
+            if (e.which == 13) {
+                $(this).focusout();
+            }
+            else if ($.inArray($(this).val(), sortableElemList) == -1){
+                $(this).addClass('has-error');
+            }
+            else {
+                $(this).removeClass('has-error');
+            }
+        });
+
         $(sortableElem).on('blur', '.wr-sort-index input.index', function(){
             if(($(this).val() > 0) && ($(this).val() < sortableElemLength+1)){
+
                 $(this).closest('.list-group-item').attr('data-sort-index', $(this).val());
 
                 $(sortableElem + ' .list-group-item').not('.ui-sortable-placeholder').sort(function(a, b) {
-                    return parseInt($(a).data('sort-index')) > parseInt($(b).data('sort-index'));
+                    return parseInt($(a).data('sort-index')) < parseInt($(b).data('sort-index'));
                 }).each(function(){
                     var elem = $(this);
                     elem.remove();
-                    $(elem).appendTo(sortableElem);
+                    $(elem).prependTo(sortableElem);
                 });
+
+                addSortableIndexNumbers();
             }
             else{
                 $(this).val(currentElemId);
             }
+            $(this).removeClass('has-error');
         });
 
         $(function() {
