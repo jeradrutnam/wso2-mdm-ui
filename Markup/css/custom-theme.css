@@ -555,3 +555,12 @@ select.select2 {
 .select2-dropdown {
     z-index: 10000;
 }
+
+.ui-autocomplete {
+	max-height: 400px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+* html .ui-autocomplete {
+	height: 400px;
+}

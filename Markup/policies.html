@@ -24,6 +24,7 @@
     <title>Mobile Device Manager</title>
 
     <link rel="icon" href="favicon.png" type="image/x-icon" />
+    <link href="css/jquery-ui.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom-common.css" rel="stylesheet">    
     <link href="css/custom-desktop.css" rel="stylesheet">
@@ -123,11 +124,17 @@
 
                 <div class="wr-list-group wr-sortable policy-list">
 
-                    <span class="list-group-item" id="policy1">
+                    <span class="list-group-item" id="policy1" data-sort-index="1">
                         <div class="row no-gutter">
                             <div class="col-lg-4 clearfix">
                                 <span class="wr-sortable-icon"><i class="fw fw-sort"></i></span>
-                                <span class="wr-sort-index"><i></i></span>
+                                <span class="wr-sort-index">
+                                    <input type="text" id="dd" class="index">
+                                    <span class="icon fw-stack">
+                                        <i class="fw fw-ring fw-stack-2x"></i>
+                                        <i class="fw fw-edit fw-stack-1x"></i>
+                                    </span>
+                                </span>
                                 <span class="wr-list-icon"><i class=" fw fw-android"></i></span>
                                 <span class="wr-list-desc">
                                     <h3 class="wr-list-name">Management Team Policy</h3>
@@ -175,11 +182,17 @@
                         </div>
                     </span>
 
-                    <span class="list-group-item" id="policy2">
+                    <span class="list-group-item" id="policy2" data-sort-index="2">
                         <div class="row no-gutter">
                             <div class="col-lg-4 clearfix">
                                 <span class="wr-sortable-icon"><i class="fw fw-sort"></i></span>
-                                <span class="wr-sort-index"><i></i></span>
+                                <span class="wr-sort-index">
+                                    <input type="text" class="index">
+                                    <span class="icon fw-stack">
+                                        <i class="fw fw-ring fw-stack-2x"></i>
+                                        <i class="fw fw-edit fw-stack-1x"></i>
+                                    </span>
+                                </span>
                                 <span class="wr-list-icon"><i class=" fw fw-android"></i></span>
                                 <span class="wr-list-desc">
                                     <h3 class="wr-list-name">Management Team Policy</h3>
@@ -227,11 +240,17 @@
                         </div>
                     </span>
 
-                    <span class="list-group-item" id="policy3">
+                    <span class="list-group-item" id="policy3" data-sort-index="3">
                         <div class="row no-gutter">
                             <div class="col-lg-4 clearfix">
                                 <span class="wr-sortable-icon"><i class="fw fw-sort"></i></span>
-                                <span class="wr-sort-index"><i></i></span>
+                                <span class="wr-sort-index">
+                                    <input type="text" class="index">
+                                    <span class="icon fw-stack">
+                                        <i class="fw fw-ring fw-stack-2x"></i>
+                                        <i class="fw fw-edit fw-stack-1x"></i>
+                                    </span>
+                                </span>
                                 <span class="wr-list-icon"><i class=" fw fw-windows"></i></span>
                                 <span class="wr-list-desc">
                                     <h3 class="wr-list-name">Management Team Policy</h3>
@@ -279,11 +298,17 @@
                         </div>
                     </span>
 
-                    <span class="list-group-item" id="policy4">
+                    <span class="list-group-item" id="policy4"  data-sort-index="4">
                         <div class="row no-gutter">
                             <div class="col-lg-4 clearfix">
                                 <span class="wr-sortable-icon"><i class="fw fw-sort"></i></span>
-                                <span class="wr-sort-index"><i></i></span>
+                                <span class="wr-sort-index">
+                                    <input type="text" class="index">
+                                    <span class="icon fw-stack">
+                                        <i class="fw fw-ring fw-stack-2x"></i>
+                                        <i class="fw fw-edit fw-stack-1x"></i>
+                                    </span>
+                                </span>
                                 <span class="wr-list-icon"><i class=" fw fw-apple"></i></span>
                                 <span class="wr-list-desc">
                                     <h3 class="wr-list-name">Management Team Policy</h3>
@@ -365,8 +390,7 @@
 <script src="js/jquery.js"></script>
 <script src="js/jquery-ui.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/assetmenu.js"></script>
-<script src="js/operationsmenu.js"></script>
+<script src="js/sortable-list.js"></script>
 
 <script type="text/javascript">
 
@@ -388,34 +412,6 @@ $( document ).ready(function() {
 	        top: $('header').height()
 	      }
 	});
-
-    /* sorting function */
-    var sortUpdateBtn = '#sortUpdateBtn',
-        sortedIDs;
-
-    function addSortableIndexNumbers(){
-        $('.wr-sortable .list-group-item').not('.ui-sortable-placeholder').each(function(i){
-            $('.wr-sort-index', this).html(i+1);
-        });
-    }
-
-    $(function() {
-        addSortableIndexNumbers();
-        var sortableElem = '.wr-sortable';
-        $(sortableElem).sortable({
-            beforeStop: function(event, ui){
-                sortedIDs = $(this).sortable('toArray');
-                addSortableIndexNumbers();
-                $(sortUpdateBtn).prop('disabled', false);
-            }
-        });
-        $(sortableElem).disableSelection();
-    });
-
-    $(sortUpdateBtn).click(function(){
-        console.log(sortedIDs);
-        $(sortUpdateBtn).prop('disabled', true);
-    });
 
 });
 
