@@ -126,8 +126,12 @@ a.ast-type-item:hover {
 }
 
 .wr-action-btn-bar .page-title {
-    background-color: #14212E;
+    background-color: #526A84;
     margin: 0;
+}
+
+.wr-action-btn-bar .page-title:hover {
+    background-color: #526A84;
 }
 
 .wr-action-btn-bar .page-title .fw-stack {
@@ -1796,12 +1800,34 @@ a.wr-side-panel-toggle-btn.selected {
     font-weight: 400;
     background: #14212E;
     color: #fff;
-    width: 50px;
+    width: 105px;
     height: 50px;
     margin: 0;
     line-height: 50px;
     text-align: center;
     float: left;
+}
+
+.wr-list-group .wr-sort-index .icon {
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.wr-list-group .wr-sort-index input, .wr-list-group .wr-sort-index input:focus {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 60px;
+    height: 40px;
+    margin-top: 5px;
+    line-height: 18px;
+    padding: 0 5px;
+    text-align: center;
+}
+
+.wr-list-group .wr-sort-index input:focus {
+    background: #fff;
+    color: #080808;
 }
 
 .wr-list-group .wr-desc-list-configs {
