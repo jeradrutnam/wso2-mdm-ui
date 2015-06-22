@@ -27,10 +27,16 @@ var sortableListFunction = (function(){
             currentElemId,
             sortableElemLength = $(sortableElem + ' .list-group-item').not('.ui-sortable-placeholder').length;
 
+        /**
+         * create list of available index numbers for autocomplete listing
+         */
         for(var i = 1; i <= sortableElemLength; i++){
             sortableElemList.push(i.toString());
         }
 
+        /**
+         * sort index number reset function
+         */
         function addSortableIndexNumbers(){
             $(sortableElem + ' .list-group-item').not('.ui-sortable-placeholder').each(function(i){
                 $('.wr-sort-index input.index', this).val(i+1);
@@ -38,6 +44,9 @@ var sortableListFunction = (function(){
             });
         }
 
+        /**
+         * on input text field focus autocomplete bind function
+         */
         $(sortableElem).on('focus', '.wr-sort-index input.index', function(){
             currentElemId = $(this).val();
             $(this).autocomplete({
@@ -51,10 +60,16 @@ var sortableListFunction = (function(){
             });
         });
 
+        /**
+         * on index edit icon click focusing input text field function
+         */
         $(sortableElem).on('click', '.wr-sort-index .icon', function(){
             $(this).siblings('input.index').focus();
         });
 
+        /**
+         * on input key press validation function
+         */
         $(sortableElem).on('keyup', '.wr-sort-index input.index', function(e){
             if (e.which == 13) {
                 $(this).focusout();
@@ -67,6 +82,9 @@ var sortableListFunction = (function(){
             }
         });
 
+        /**
+         * on input text value enter re-sorting function with validation
+         */
         $(sortableElem).on('blur', '.wr-sort-index input.index', function(){
             if(($(this).val() > 0) && ($(this).val() < sortableElemLength+1)){
 
@@ -80,6 +98,7 @@ var sortableListFunction = (function(){
                     $(elem).prependTo(sortableElem);
                 });
 
+                $(sortUpdateBtn).prop('disabled', false);
                 addSortableIndexNumbers();
             }
             else{
@@ -88,6 +107,11 @@ var sortableListFunction = (function(){
             $(this).removeClass('has-error');
         });
 
+        /**
+         * on page loaded functions
+         *          add sortable list index numbers
+         *          enable drag & drop sortable function
+         */
         $(function() {
             addSortableIndexNumbers();
 
@@ -101,6 +125,9 @@ var sortableListFunction = (function(){
             $(sortableElem).disableSelection();
         });
 
+        /**
+         * update button click function
+         */
         $(sortUpdateBtn).click(function(){
             console.log(sortedIDs);
             $(sortUpdateBtn).prop('disabled', true);
