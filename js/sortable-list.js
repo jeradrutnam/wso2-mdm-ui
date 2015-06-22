@@ -64,6 +64,7 @@ var sortableListFunction = (function(){
          * on index edit icon click focusing input text field function
          */
         $(sortableElem).on('click', '.wr-sort-index .icon', function(){
+            $(sortableElem + ' .wr-sort-index input.index').focusout();
             $(this).siblings('input.index').focus();
         });
 
