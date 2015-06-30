@@ -1954,11 +1954,11 @@ a.collapsed .fw-arrow:before {
     transition: left 0.4s ease 0s;
     overflow-y: hidden;
     overflow-x: hidden;
+    padding: 10px;
 }
 
 .wr-advance-operations {
     height: 100%;
-    background: #e4e4e4;
     border: 1px solid #e4e4e4;
 }
 
@@ -1978,10 +1978,11 @@ a.collapsed .fw-arrow:before {
     display: block;
     background: #fff;
     color: #526A84;
-    border-bottom: 1px solid #e4e4e4;
+    border: 1px solid #e4e4e4;
     padding: 10px;
     text-decoration: none;
     font-size: 16px;
+    margin: 5px;
 }
 
 .wr-advance-operations .wr-hidden-operations-nav a.has-error,
@@ -2022,7 +2023,6 @@ a.collapsed .fw-arrow:before {
     overflow-x: hidden;
     height: 100%;
     background: #fff;
-    border-left: 1px solid #e4e4e4;
 }
 
 .wr-hidden-operations-content::-webkit-scrollbar {
@@ -2043,7 +2043,7 @@ a.collapsed .fw-arrow:before {
 
 .wr-hidden-operations-content .panel-body {
     margin-bottom: 0;
-    padding: 15px;
+    padding: 25px;
 }
 
 .wr-advance-operations.wizard-content .panel-title .fw-stack {
@@ -2056,7 +2056,6 @@ a.collapsed .fw-arrow:before {
 
 .wr-hidden-operations-content .panel-title {
     padding: 5px;
-    background: #e4e4e4;
     border-bottom: 1px solid #fff;
     color: #555;
 }
@@ -2646,4 +2645,10 @@ a.cu-btn-inner.inverse:hover {
     float: left;
     width: 250px;
     min-height: 50px;
+}
+
+ul.listing, ul.listing li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
