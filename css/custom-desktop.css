@@ -1814,7 +1814,7 @@ a.wr-side-panel-toggle-btn.selected {
 }
 
 .wr-list-group .wr-sort-index input, .wr-list-group .wr-sort-index input:focus {
-    background: transparent;
+    background: #9F9F9F;
     border: none;
     outline: none;
     width: 60px;
