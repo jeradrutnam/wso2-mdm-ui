@@ -1835,6 +1835,14 @@ a.wr-side-panel-toggle-btn.selected {
     color: #fff;
 }
 
+.wr-list-group .wr-input-control {
+    margin: 8px;
+}
+
+.wr-list-group input {
+    width: 100%;
+}
+
 .wr-list-group .wr-desc-list-configs {
     min-height: 50px;
     height: 100%;
@@ -2458,10 +2466,11 @@ a.cu-btn-inner.inverse:hover {
 
 .multi-view {
     margin: 40px 0;
+    border: 1px solid #e4e4e4;
 }
 
 .multi-view .nav {
-    background: #526a84;
+    padding: 10px;
 }
 
 .multi-view .nav ul:first-child {
@@ -2475,17 +2484,19 @@ a.cu-btn-inner.inverse:hover {
     padding: 0;
     font-size: 20px;
     line-height: 30px;
-    border-bottom: 1px solid #8fa0b4;
 }
 
 .multi-view .nav ul:first-child li {
     position: relative;
+    border: 1px solid #e4e4e4;
+    margin: 5px;
 }
 
 .multi-view .nav ul:first-child li li {
     font-size: 14px;
     line-height: 25px;
     list-style: none;
+    border: none;
 }
 
 .multi-view .nav ul:first-child li ul {
@@ -2497,7 +2508,6 @@ a.cu-btn-inner.inverse:hover {
     padding: 10px 15px;
     text-decoration: none;
     display: block;
-    color: #fff;
     transition: background 0.2s;
 }
 
@@ -2532,6 +2542,7 @@ a.cu-btn-inner.inverse:hover {
 
 .multi-view .nav ul:first-child li li .status-icon {
     top: -2px;
+    right: 15px;
 }
 
 .multi-view .nav ul:first-child li a[data-multi-view-behavior=collapse] {
@@ -2542,17 +2553,12 @@ a.cu-btn-inner.inverse:hover {
     border-right-color: #349300;
 }
 
-.multi-view .nav ul:first-child li a[data-multi-view-behavior=collapse]:hover {
-    background: transparent;
-    color: #fff;
-}
-
 .multi-view .nav ul:first-child li.has-error a[data-multi-view-behavior=collapse] {
     border-right-color: #ff964a;
 }
 
 .multi-view .nav ul:first-child li.has-success .status-icon {
-    color: #fff;
+    color: #11375b;
 }
 
 .multi-view .nav ul:first-child li.has-error a, .multi-view .nav ul:first-child li.has-error .status-icon {
@@ -2560,22 +2566,26 @@ a.cu-btn-inner.inverse:hover {
 }
 
 .multi-view .content {
-    background: #f4f4f4;
+    padding: 15px;
 }
 
-.multi-view .content ul, .multi-view .content ul li {
+.multi-view .content > ul, .multi-view .content > ul > li {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.multi-view .content ul li {
+.multi-view .content > ul > li {
     display: none;
     padding: 0 20px;
 }
 
 .multi-view .content .panel-body {
-     padding: 30px 0;
+     padding: 30px 0 0;
+}
+
+.multi-view .content .panel-body .wr-list-group {
+    margin-top: 0;
 }
 
 .multi-view .content .panel-body .well fieldset legend a {
@@ -2595,7 +2605,7 @@ a.cu-btn-inner.inverse:hover {
 }
 
 .multi-view .content .panel-heading {
-    padding: 6px 0 12px;
+    padding: 15px 0;
     margin-bottom: 10px;
     border-bottom:1px solid #e4e4e4;
 }
@@ -2651,4 +2661,17 @@ ul.listing, ul.listing li {
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+.input-group input[type=text] + .input-group-btn button.btn-default {
+    background: #11375B;
+    color: #fff;
+    margin: 0;
+    padding: 0 5px;
+    height: 34px;
+    line-height: 1px;
+    border: none;
+}
+.input-group input[type=text] + .input-group-btn button.btn-default:hover {
+    background: #23527c;
 }
