@@ -24,7 +24,7 @@ var multiViewFunction = (function(){
             navButton = '[data-click-event=multi-view]',
             nav = '.nav',
             content = '.content',
-            contentItem = content+' ul li';
+            contentItem = content+' > ul > li';
 
         /**
          * on page load init functions
