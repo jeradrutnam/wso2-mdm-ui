@@ -2558,7 +2558,7 @@ a.cu-btn-inner.inverse:hover {
 }
 
 .multi-view .nav ul:first-child li.has-success .status-icon {
-    color: #11375b;
+    color: #349300;
 }
 
 .multi-view .nav ul:first-child li.has-error a, .multi-view .nav ul:first-child li.has-error .status-icon {
@@ -2592,10 +2592,7 @@ a.cu-btn-inner.inverse:hover {
     padding: 5px 5px 1px 10px;
     float: right;
     font-size: 14px;
-}
-
-.multi-view .content .panel-body .well fieldset legend a:hover .icon.fw-stack .fw-ring {
-    display: none;
+    text-decoration: none;
 }
 
 .multi-view .content .panel-body .well fieldset legend {
@@ -2614,14 +2611,32 @@ a.cu-btn-inner.inverse:hover {
     font-size: 22px;
 }
 
-.multi-view .content .panel-heading .panel-title a {
-    padding: 5px 5px 1px 10px;
+.multi-view .content .panel-title a {
+    padding: 3px 5px 3px 10px;
     float: right;
     font-size: 18px;
 }
 
-.multi-view .content .panel-heading .panel-title a:hover {
+.multi-view .content .panel-title a:hover {
     background: #e4e4e4;
+}
+
+.multi-view .content .panel-body {
+    padding: 30px 0;
+}
+
+.multi-view .content .panel-body .panel-body {
+    padding: 20px 0;
+}
+
+.multi-view .content .panel-body .panel-title a {
+    padding: 3px 5px 3px 10px;
+    font-size: 16px;
+    margin-top: -8px;
+}
+
+.multi-view .content .panel-body .panel-title a .fw-stack {
+    font-size: 14px;
 }
 
 .multi-view .content .panel-heading .panel-title .wr-input-control.switch {
@@ -2674,4 +2689,46 @@ ul.listing, ul.listing li {
 }
 .input-group input[type=text] + .input-group-btn button.btn-default:hover {
     background: #23527c;
+}
+
+/* responsive table style */
+@media only screen and (max-width: 800px) {
+    .table-responsive table,
+    .table-responsive thead,
+    .table-responsive tbody,
+    .table-responsive th,
+    .table-responsive td,
+    .table-responsive tr {
+        display: block;
+    }
+
+    .table-responsive thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .table-responsive tr { border: 1px solid #ccc; }
+
+    .table-responsive tbody > tr > td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+        white-space: normal;
+        text-align:left;
+    }
+
+    .table-responsive tr > td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align:left;
+        font-weight: bold;
+    }
+
+    .table-responsive tbody > tr > td:before { content: attr(data-title); }
 }
