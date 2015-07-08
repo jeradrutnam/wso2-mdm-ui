@@ -32,9 +32,8 @@ var addFormFunction = (function(){
 
             var addFormContainer = $('[data-add-form-container='+$(this).attr('href')+']');
 
-            var clonedForm = $(addFormContainer)
+            var clonedForm = $('[data-add-form='+$(this).attr('href')+']')
                 .clone()
-                .find('[data-add-form='+$(this).attr('href')+']')
                 .find('[data-add-form-element=clone]')
                 .attr('data-add-form-clone', $(this).attr('href'));
 
@@ -67,8 +66,8 @@ var addFormFunction = (function(){
         function setId(addFormContainer){
             $(addFormContainer).find('[data-add-form-clone]').each(function(i){
                 $(this).attr('id', $(this).attr('data-add-form-clone').slice(1)+'-'+(i+1));
-                if($(this).find('legend .count').length > 0) {
-                    $(this).find('legend .count').html(i+1);
+                if($(this).find('.index').length > 0) {
+                    $(this).find('.index').html(i+1);
                 }
             });
         }
