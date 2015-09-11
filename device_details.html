@@ -1,0 +1,418 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Device Manager</title>
+
+    <link rel="icon" href="favicon.png" type="image/x-icon" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom-common.css" rel="stylesheet">    
+    <link href="css/custom-desktop.css" rel="stylesheet">
+    <link href="css/custom-theme.css" rel="stylesheet">
+
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+<div class="wr-modalpopup">
+    <div class="modalpopup-container">
+        <div class="modalpopup-close-btn" onclick="hidePopup();">
+            <span class="fw-stack">
+                <i class="fw fw-ring fw-stack-2x"></i>
+                <i class="fw fw-left-arrow fw-stack-1x"></i>
+            </span>
+            GO BACK
+        </div>
+        <div class="modalpopup-content"><!-- dynamic content --></div>
+    </div>
+    <div class="modalpopup-bg"></div>
+</div>
+
+<div class="wr-notification-bar">
+    <div class="wr-notification-desc new">
+        <div class="wr-notification-operation">Device Lock Operation Successful!</div>
+        <div class="wr-notification-time"><i class="fw fw-clock"></i> 14 seconds ago</div>
+        <hr />
+    </div>
+    <div class="wr-notification-desc new">
+        <div class="wr-notification-operation">Device Lock Operation Successful!</div>
+        <div class="wr-notification-time"><i class="fw fw-clock"></i> 14 seconds ago</div>
+        <hr />
+    </div>
+    <div class="wr-notification-desc">
+        <div class="wr-notification-operation">Device Lock Operation Successful!</div>
+        <div class="wr-notification-time"><i class="fw fw-clock"></i> 14 seconds ago</div>
+        <hr />
+    </div>
+</div>
+
+<div class="container col-lg-12 col-md-12 col-sm-12">
+
+    <!-- header -->
+    <header>
+        <div class="row wr-global-header">
+            <div class="col-xs-6 col-sm-6 col-lg-8 app-logo">
+                <a href="home.html"><img src="images/logo.png" /><h2 class="app-title"><span>Mobile Device Manager</span></h2></a>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-lg-4 wr-auth-container">
+                <div class="wr-auth pull-right">
+                    <a href="#" data-toggle="dropdown">
+                        <div class="auth-img">
+                            Administrator
+                            <span class="fw-stack-md fw-lg">
+                                <i class="fw fw-user fw-stack-1-5x"></i>
+                            </span>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="cu-arrow"></div>
+                        <div class="dropdown-menu-content">
+                            <a class="filter-item">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- /header -->
+
+    <!-- secondary header - app bar -->
+    <div id="nav" class="row wr-app-bar">
+        <div class="wr-action-container">
+            <div class="wr-action-btn-bar">
+                <a href="javascript:openCollapsedNav()" class="cu-btn wr-hidden-nav-toggle-btn">
+                    <span class="fw-stack">
+                        <i class="fw fw-tiles fw-stack-1-5x"></i>
+                    </span>
+                </a><a class="cu-btn page-title" href='home.html'>
+                    <span class="fw-stack"></span>
+                    Devices
+                </a><a href="javascript:history.go(-1)" class="cu-btn">
+                    <span class="fw-stack">
+                        <i class="fw fw-ring fw-stack-2x"></i>
+                        <i class="fw fw-left-arrow fw-stack-1x"></i>
+                    </span>
+                    Go Back
+                </a>
+
+                <a href="javascript:toggleNotificationbar()" class="cu-btn wr-notification-toggle-btn">
+                    <span class="fw-stack-md">
+                        <i class="fw fw-bell fw-stack-1-5x"></i>
+                    </span>
+                    <span class="wr-notification-bubble">35</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- secondary header - app bar -->
+
+    <!-- common navigation -->
+    <div id="hiddenNav" class="wr-hidden-nav">
+        <ul>
+            <li><a href="#"><i class="fw fw-user"></i>User Management</a></li>
+            <li><a href="#"><i class="fw fw-settings"></i>Profile Management</a></li>
+            <li><a href="#"><i class="fw fw-policy"></i>Policy Management</a></li>
+        </ul>
+    </div>
+    <!-- /common navigation -->
+    
+    <div class="row wr-device-board">
+        <div class="col-lg-12 wr-secondary-bar">
+        <label>Dulitha's iPad <span class="lbl-device">(Apple iPad Air 2)</span></label>
+        </div>
+    </div>
+    
+    <!-- #page-content-wrapper -->
+    <div class="page-content-wrapper">
+        
+        <!-- content/body -->
+        <div class="container-fluid body-wrapper">
+
+            <div class="row no-gutter add-padding-5x add-margin-top-5x" style="border: 1px solid #e4e4e4;">
+
+                <div class="media">
+                    <div class="media-left media-middle asset-image col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                        <div class="thumbnail icon"><i class="square-element text fw fw-mobile"></i></div>
+                    </div>
+                    <div class="media-body asset-desc add-padding-left-5x">
+                        
+                        <div style="background: #11375B; color: #fff; padding: 10px; margin-bottom: 5px">Device Overview</div>
+                        <table class="table table-responsive table-striped" id="members">
+                            <tbody>
+                                <tr role="row" class="even"><td class="sorting_1" style="padding:10px 15px; width: 1%;;">Name</td><td style="padding:10px 15px;">John's Office Phone</td></tr>
+                                <tr role="row" class="odd"><td class="sorting_1" style="padding:10px 15px;">Device</td><td style="padding:10px 15px;">Galaxy S4</td></tr>
+                                <tr role="row" class="even"><td class="sorting_1" style="padding:10px 15px;">Type</td><td style="padding:10px 15px;">GT-i9505</td></tr>
+                                <tr role="row" class="even"><td class="sorting_1" style="padding:10px 15px;">IMEI</td><td style="padding:10px 15px;">351776060691383</td></tr>
+                                <tr role="row" class="even">
+                                    <td class="sorting_1" style="padding:10px 15px;">Status</td>
+                                    <td style="padding:10px 15px;">
+                                        <span><i class="fw fw-ok icon-success"></i> Enrolled</span>
+                                        <span><i class="fw fw-ok icon-success"></i> Compliant</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <div style="background: #11375B; color: #fff; padding: 10px; margin-bottom: 5px">Operations</div>
+                        <div class="add-margin-top-4x">
+                            <ul class="tiles">
+                                <li class="square">
+                                    <a class="btn square-element" data-click-event="delete-selected-rows">
+                                <span class="icon fw-stack">
+                                    <i class="fw fw-ring fw-stack-2x"></i>
+                                    <i class="fw fw-delete fw-stack-1x"></i>
+                                </span>
+                                        Delete Selected
+                                    </a>
+                                </li>
+                                <li class="square">
+                                    <a class="btn square-element" data-toggle="modal" data-target="#modalDemo">
+                                <span class="icon fw-stack">
+                                    <i class="fw fw-ring fw-stack-2x"></i>
+                                    <i class="fw fw-edit fw-stack-1x"></i>
+                                </span>
+                                        Edit Selected
+                                    </a>
+                                </li>
+                                <li class="square">
+                                    <a class="btn square-element" data-click-event="delete-selected-rows">
+                                <span class="icon fw-stack">
+                                    <i class="fw fw-ring fw-stack-2x"></i>
+                                    <i class="fw fw-delete fw-stack-1x"></i>
+                                </span>
+                                        Delete Selected
+                                    </a>
+                                </li>
+                                <li class="square">
+                                    <a class="btn square-element" data-toggle="modal" data-target="#modalDemo">
+                                <span class="icon fw-stack">
+                                    <i class="fw fw-ring fw-stack-2x"></i>
+                                    <i class="fw fw-edit fw-stack-1x"></i>
+                                </span>
+                                        Edit Selected
+                                    </a>
+                                </li>
+                                <li class="square">
+                                    <a class="btn square-element" data-click-event="delete-selected-rows">
+                                <span class="icon fw-stack">
+                                    <i class="fw fw-ring fw-stack-2x"></i>
+                                    <i class="fw fw-delete fw-stack-1x"></i>
+                                </span>
+                                        Delete Selected
+                                    </a>
+                                </li>
+                                <li class="square">
+                                    <a class="btn square-element" data-toggle="modal" data-target="#modalDemo">
+                                <span class="icon fw-stack">
+                                    <i class="fw fw-ring fw-stack-2x"></i>
+                                    <i class="fw fw-edit fw-stack-1x"></i>
+                                </span>
+                                        Edit Selected
+                                    </a>
+                                </li>
+                                <li class="square">
+                                    <a class="btn square-element" data-click-event="delete-selected-rows">
+                                <span class="icon fw-stack">
+                                    <i class="fw fw-ring fw-stack-2x"></i>
+                                    <i class="fw fw-delete fw-stack-1x"></i>
+                                </span>
+                                        Delete Selected
+                                    </a>
+                                </li>
+                                <li class="square">
+                                    <a class="btn square-element" data-toggle="modal" data-target="#modalDemo">
+                                <span class="icon fw-stack">
+                                    <i class="fw fw-ring fw-stack-2x"></i>
+                                    <i class="fw fw-edit fw-stack-1x"></i>
+                                </span>
+                                        Edit Selected
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="media">
+                    <div class="media-left col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                        <ul class="list-group" role="tablist">
+                            <li class="active"><a class="list-group-item" href="#device_location" role="tab" data-toggle="tab" aria-controls="device_location">Device Location</a></li>
+                            <li><a class="list-group-item" href="#installed_applications" role="tab" data-toggle="tab" aria-controls="installed_applications">Installed Applications</a></li>
+                        </ul>
+                    </div>
+                    <div class="media-body add-padding-left-5x remove-padding-xs tab-content">
+                        <div class="panel-group tab-content">
+                            <div class="panel panel-default tab-pane active" id="device_location" role="tabpanel" aria-labelledby="device_location">
+                                <div class="panel-heading">Device Location</div>
+                                <div class="panel-body">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d31685.790279428384!2d79.85860875927737!3d6.923585351516181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2slk!4v1426479547647" width="100%" height="450" frameborder="0" style="border:0"></iframe>
+                                </div>
+                            </div>
+                            <div class="panel panel-default tab-pane" id="installed_applications" role="tabpanel" aria-labelledby="installed_applications">
+                                <div class="panel-heading">Installed Applications</div>
+                                <div class="panel-body">
+                                    <div class="wr-app-listing">
+                                        <ul class="thumbnail-list">
+                                            <li>
+                                                <div class="thumbnail">
+                                                    <img src="images/app9.png" />
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="thumbnail">
+                                                    <img src="images/app10.png" />
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="thumbnail">
+                                                    <img src="images/app11.png" />
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="thumbnail">
+                                                    <img src="images/app12.png" />
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="thumbnail">
+                                                    <img src="images/app13.png" />
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="thumbnail">
+                                                    <img src="images/app14.png" />
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="thumbnail">
+                                                    <img src="images/app15.png" />
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="thumbnail">
+                                                    <img src="images/app16.png" />
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="thumbnail">
+                                                    <img src="images/app17.png" />
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="thumbnail">
+                                                    <img src="images/app18.png" />
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="thumbnail">
+                                                    <img src="images/app19.png" />
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="thumbnail">
+                                                    <img src="images/app20.png" />
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="thumbnail">
+                                                    <img src="images/app21.png" />
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- /content/body -->
+        
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+        <p>Mobile Device Manager v.2.0.0 | &copy; <script>document.write(new Date().getFullYear());</script> <a href="http://wso2.com/" target="_blank"><i class="fw fw-wso2"></i> Inc</a>. All Rights Reserved.</p>
+    </footer>
+    <!-- /footer -->
+
+</div>
+
+<div id="content-filter-types" style="display: none">
+    <div class="sort-title">Sort By</div>
+    <div class="sort-options">
+    	<a href="#">Device Name</a>
+    	<a href="#">OS</a>
+    	<a href="#">User</a>
+    	<a href="#">Model</a>   
+    </div>
+</div>
+
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/responsive-text.js"></script>
+<script src="js/jquery.resize.js"></script>
+<script src="js/operationsmenu.js"></script>
+<script src="js/notificationbar.js"></script>
+
+<script type="text/javascript">
+    
+function scrollVibrateFix(){
+    /* fix for vibrate issue on navfix */
+    if(($(document).height() > $('body').height()) && (($(document).height() - $('body').height()) < 100)){
+        $('body > .container').css('padding-bottom', ($('#nav').height() + $('header').height()));
+    }
+    else{
+        $('body > .container').css('padding-bottom', $('#nav').height() + 15);
+    }
+}
+
+$( document ).ready(function() {
+
+    $('[data-toggle="tooltip"]').tooltip();   
+
+    $("[data-toggle=popover]").popover();
+
+    $(".ctrl-asset-type-switcher").popover({
+        html : true, 
+        content: function() {
+          return $('#content-asset-types').html();
+        }
+    });
+
+	$('#nav').affix({
+	      offset: {
+	        top: $('header').height()
+	      }
+	});
+    
+    scrollVibrateFix();
+});
+
+function openCollapsedNav(){
+    $('.wr-hidden-nav-toggle-btn').addClass('active');
+    $('#hiddenNav').slideToggle('slideDown', function(){
+        if($(this).css('display') == 'none'){
+            $('.wr-hidden-nav-toggle-btn').removeClass('active');
+        }
+    });
+}
+    
+$(window).resize(function(){
+    scrollVibrateFix();
+});
+
+
+</script>
+
+</body>
+</html>

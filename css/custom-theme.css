@@ -249,13 +249,6 @@ a.ctrl-filter-category:hover {
 }
 
 .panel-default > .panel-heading {
-	color: #fff;
-	background-color: #999;
-	border-color: #e4e4e4;
-}
-
-.panel-default > .panel-heading {
-	color: #fff;
 	background-color: #999;
 	border-color: #e4e4e4;
 }
