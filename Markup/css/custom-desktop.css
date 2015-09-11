@@ -3235,7 +3235,8 @@ body.inverse .fade-edge:after {
     border: 5px solid #F47415;
 }
 .table.table-selectable:not(.grid-view) > tbody > tr.DTTT_selected td {
-    background: #e4e4e4 !important;
+    background: #526A84 !important;
+    color: #fff;
 }
 .table.table-selectable > tbody > tr:hover td:first-child:after,
 .table.table-selectable > tbody > tr.DTTT_selected td:first-child:after {
@@ -3272,8 +3273,8 @@ body.inverse .fade-edge:after {
     display: none;
 }
 .table.list-table:not(.grid-view) .thumbnail {
-    max-width: 60px;
-    min-width: 60px;
+    max-width: 70px;
+    min-width: 70px;
 }
 .table.list-table > thead > tr {
     margin: 0 15px;
@@ -3349,11 +3350,6 @@ body.inverse .fade-edge:after {
     padding: 0;
 }
 @media (max-width: 767px) {
-  .table.list-table.grid-view > thead > tr,
-  .table.list-table.grid-view > thead > tr > td,
-  .table.list-table.grid-view > thead > tr > th {
-      /*display: block;*/
-  }
   .table.list-table > thead > tr.filter-row > td,
   .table.list-table > thead > tr.filter-row > th {
       display: block;
@@ -3557,6 +3553,26 @@ table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child:first-child {
 }
 
 /* ========================================================================
+ * thumbnail list styles
+ * ======================================================================== */
+.thumbnail-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.thumbnail-list:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.thumbnail-list li {
+  float: left;
+}
+
+/* ========================================================================
  * pagination styles
  * ======================================================================== */
 .pagination > li > a,
@@ -3640,31 +3656,85 @@ ul.tiles .icon {
 }
 
 /* ========================================================================
- * modal popup styles
+ * asset details styles
  * ======================================================================== */
-.modal-open {
-    padding: 0 !important;
+.asset-image {
+  max-width: 150px;
+  background: #11375B;
+  float: none !important;
 }
-.modal {
-    z-index: 100000001;
-    padding: 0 !important;
+.asset-desc .asset-name {
+  font-size: 24px;
+  margin-bottom: 0;
 }
-.modal-backdrop {
-    z-index: 0;
+.asset-desc .asset-publisher {
+  font-size: 14px;
+  margin-bottom: 20px;
 }
-.modal-content {
+
+/* ========================================================================
+ * list group styles
+ * ======================================================================== */
+.list-group-item:first-child,
+.list-group-item:last-child {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.list-group-item:hover a {
+  text-decoration: none;
+}
+.list-group-item.active,
+.list-group-item.active:focus,
+.list-group-item.active:hover {
+    background: #11375B;
+    border-color: #11375B;
+    color:#fff;
+}
+.list-group-item.active a {
+    color:#fff;
+    text-decoration: none;
+}
+
+/* ========================================================================
+ * panel styles
+ * ======================================================================== */
+.panel-group .panel,
+.panel-heading,
+.panel-footer,
+.panel-body {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
+    padding: 0;
+}
+.panel {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
+    border: none;
 }
-.modal-dialog {
-    margin: 80px auto;
+.panel-default > .panel-heading {
+    background: transparent;
+    font-size: 24px;
+    font-weight: 300;
+    border-bottom: 1px solid #e4e4e4;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
-@media only screen and (max-width: 768px) {
-  .modal {
-      padding: 0 15px !important;
-  }
+
+/* ========================================================================
+ * icon styles
+ * ======================================================================== */
+.icon-success {
+  color: #5cb85c;
+}
+.icon-info {
+  color: #009da7;
+}
+.icon-warning {
+  color: #f0ad4e;
+}
+.icon-danger {
+  color: #d9534f;
 }

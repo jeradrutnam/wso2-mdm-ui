@@ -27,8 +27,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/select2.min.css" rel="stylesheet">
     <link href="css/custom-common.css" rel="stylesheet">    
-    <link href="css/custom-desktop.css" rel="stylesheet">
     <link href="css/custom-theme.css" rel="stylesheet">
+    <link href="css/custom-desktop.css" rel="stylesheet">
 
 	<!--[if lt IE 9]>
 	<script src="js/html5shiv.min.js"></script>
@@ -638,7 +638,7 @@ function scrollVibrateFix(){
         $('body > .container').css('padding-bottom', ($('#nav').height() + $('header').height()));
     }
     else{
-        $('body > .container').css('padding-bottom', $('#nav').height());
+        $('body > .container').css('padding-bottom', $('#nav').height() + 15);
     }
 }
 
