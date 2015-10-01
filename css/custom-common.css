@@ -213,9 +213,19 @@ h2.app-title {
     h2.app-title span {
         display: none;
     }
-    .table.list-table.grid-view .padding-reduce-on-grid-view a{
+    table.responsive .btn{
         padding-left:2px;
         padding-right:2px;
+    }
+    table.responsive h4,
+    table.responsive div{
+        max-width:60px;
+        word-wrap: break-word;
+    }
+    table.grid-view h4,
+    table.grid-view div{
+        max-width:100%;
+        word-wrap: normal;
     }
 }
 
