@@ -213,6 +213,10 @@ h2.app-title {
     h2.app-title span {
         display: none;
     }
+    .table.list-table.grid-view .padding-reduce-on-grid-view a{
+        padding-left:2px;
+        padding-right:2px;
+    }
 }
 
 .wr-app-bar {
