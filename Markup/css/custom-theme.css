@@ -487,11 +487,11 @@ b, strong {
 }
 
 select.select2 {
-    height:0 !important;
+	/*height:0 !important;*/
     overflow: hidden;
     padding: 0;
     margin: 0;
-    border: none;
+  	/*border: none;*/
     outline: none;
 }
 
