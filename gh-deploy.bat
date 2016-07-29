@@ -1,7 +1,7 @@
 @echo off
 title Deploy Markups to gh-pages
 
-echo "Markup" folder contains will deploy to gh-pages brunch
+echo "Markup" folder contains will deploy to gh-pages branch
 echo =======================================================
 echo please commit all the changes before continue
 echo.
@@ -18,7 +18,7 @@ echo Deploying.....
 echo.
 git subtree push --prefix Markup origin gh-pages
 echo.
-echo Deploying Successful!
+echo Finished!
 pause
 exit /b 0 
 
